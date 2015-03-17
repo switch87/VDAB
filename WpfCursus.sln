@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCursus", "WpfCursus\WpfCursus.csproj", "{F343F67F-94CA-4599-ADEA-7782C81ACB66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Verkeerslicht", "Verkeerslicht\Verkeerslicht.csproj", "{F60FA44D-E285-43FF-BFED-F07C9DF8F9BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F343F67F-94CA-4599-ADEA-7782C81ACB66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F343F67F-94CA-4599-ADEA-7782C81ACB66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F343F67F-94CA-4599-ADEA-7782C81ACB66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F60FA44D-E285-43FF-BFED-F07C9DF8F9BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F60FA44D-E285-43FF-BFED-F07C9DF8F9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F60FA44D-E285-43FF-BFED-F07C9DF8F9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F60FA44D-E285-43FF-BFED-F07C9DF8F9BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
