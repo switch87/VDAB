@@ -19,5 +19,10 @@
             <RadioButton Content="Red" GroupName="kleur" Margin="5 0" Checked="Kleur_Checked"></RadioButton>
             <RadioButton Content="Black" GroupName="kleur" Margin="5 0" Checked="Kleur_Checked"></RadioButton>
         </StackPanel>
+        <Label Margin="0 30 0 10" BorderBrush="Blue" BorderThickness="1">Bold en Italic</Label>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox Name="CheckBoxBold" Content="Bold" Margin="10 0" Click="CheckBoxBold_Click"></CheckBox>
+            <CheckBox Name="CheckBoxItalic" Content="Italic" Margin="10 0" Click="ButtonItalic_Click"></CheckBox>
+        </StackPanel>
     </StackPanel>
 </Window>
