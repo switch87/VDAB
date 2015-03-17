@@ -24,5 +24,12 @@ namespace TekstVerwerken
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TextBlockAanmelding.TextWrapping = TextWrapping.Wrap;
+            TextBlockAanmelding.Text = "Je probeerde aan te melden met: " +
+                textBoxGebruikersnaam.Text + " en paswoord: " + psdBox.Password;
+        }
     }
 }
