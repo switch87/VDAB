@@ -12,7 +12,12 @@
                     <Label>Bold</Label>
                 </StackPanel>
             </ToggleButton>
-            <ToggleButton Margin="10" Name="ButtonItalic" Click="ButtonItalic_Click">Italic</ToggleButton>
+            <ToggleButton Margin="10" Name="ButtonItalic" Click="ButtonItalic_Click">
+                <StackPanel>
+                    <Image Source="pack://application:,,,/Images/Italic.png"></Image>
+                    <Label>Italic</Label>
+                </StackPanel>
+            </ToggleButton>
             <TextBlock Margin="10">Lettertype vergroten of verkleinen</TextBlock>
             <RepeatButton Margin="10" Width="30" Name="RepeatButtonGroter" Interval="100" Delay="1000" Click="RepeatButtonGroter_Click">+</RepeatButton>
             <RepeatButton Margin="10" Width="30" Name="RepeatButtonKleiner" Interval="100" Delay="1000" Click="RepeatButtonKleiner_Click">-</RepeatButton>
