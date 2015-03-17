@@ -8,6 +8,9 @@
         <StackPanel Orientation="Horizontal">
             <ToggleButton Margin="10" Name="ButtonBold" Checked="ButtonBold_Checked" Unchecked="ButtonBold_Unchecked">Bold</ToggleButton>
             <ToggleButton Margin="10" Name="ButtonItalic" Click="ButtonItalic_Click">Italic</ToggleButton>
+            <TextBlock Margin="10">Lettertype vergroten of verkleinen</TextBlock>
+            <RepeatButton Margin="10" Width="30" Name="RepeatButtonGroter" Interval="100" Delay="1000" Click="RepeatButtonGroter_Click">+</RepeatButton>
+            <RepeatButton Margin="10" Width="30" Name="RepeatButtonKleiner" Interval="100" Delay="1000" Click="RepeatButtonKleiner_Click">-</RepeatButton>
         </StackPanel>
     </StackPanel>
 </Window>

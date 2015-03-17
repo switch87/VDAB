@@ -43,5 +43,17 @@ namespace ButtonGebruik
                 LabelTekst.FontStyle = FontStyles.Normal;
         }
 
+        private void RepeatButtonGroter_Click(object sender, RoutedEventArgs e)
+        {
+            if (LabelTekst.FontSize < 25)
+                LabelTekst.FontSize++;
+        }
+
+        private void RepeatButtonKleiner_Click(object sender, RoutedEventArgs e)
+        {
+            if (LabelTekst.FontSize > 1)
+                LabelTekst.FontSize--;
+        }
+
     }
 }
