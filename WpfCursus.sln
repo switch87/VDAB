@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekstVerwerken", "TekstVerw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonGebruik", "ButtonGebruik\ButtonGebruik.csproj", "{DA805D39-2673-4ABF-8D20-3FF1897DB954}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestelbonPizza", "BestelbonPizza\BestelbonPizza.csproj", "{AF397822-D96C-4CE0-AEBF-B3A131364BEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DA805D39-2673-4ABF-8D20-3FF1897DB954}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA805D39-2673-4ABF-8D20-3FF1897DB954}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA805D39-2673-4ABF-8D20-3FF1897DB954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF397822-D96C-4CE0-AEBF-B3A131364BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF397822-D96C-4CE0-AEBF-B3A131364BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF397822-D96C-4CE0-AEBF-B3A131364BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF397822-D96C-4CE0-AEBF-B3A131364BEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
