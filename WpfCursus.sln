@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Verkeerslicht", "Verkeersli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekstVerwerken", "TekstVerwerken\TekstVerwerken.csproj", "{92967CCF-0CDA-437F-9FAD-7FB5FD262654}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonGebruik", "ButtonGebruik\ButtonGebruik.csproj", "{DA805D39-2673-4ABF-8D20-3FF1897DB954}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{92967CCF-0CDA-437F-9FAD-7FB5FD262654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92967CCF-0CDA-437F-9FAD-7FB5FD262654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92967CCF-0CDA-437F-9FAD-7FB5FD262654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA805D39-2673-4ABF-8D20-3FF1897DB954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA805D39-2673-4ABF-8D20-3FF1897DB954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA805D39-2673-4ABF-8D20-3FF1897DB954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA805D39-2673-4ABF-8D20-3FF1897DB954}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
