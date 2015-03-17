@@ -55,5 +55,11 @@ namespace ButtonGebruik
                 LabelTekst.FontSize--;
         }
 
+        private void Kleur_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton knop = (RadioButton)sender;
+            LabelTekst.Foreground = (SolidColorBrush)new BrushConverter().ConvertFromString(knop.Content.ToString());
+        }
+
     }
 }

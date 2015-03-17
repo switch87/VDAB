@@ -12,5 +12,12 @@
             <RepeatButton Margin="10" Width="30" Name="RepeatButtonGroter" Interval="100" Delay="1000" Click="RepeatButtonGroter_Click">+</RepeatButton>
             <RepeatButton Margin="10" Width="30" Name="RepeatButtonKleiner" Interval="100" Delay="1000" Click="RepeatButtonKleiner_Click">-</RepeatButton>
         </StackPanel>
+        <Label Margin="0 30 0 10" BorderBrush="Blue" BorderThickness="1">TeksKleur</Label>
+        <StackPanel>
+            <RadioButton Content="Blue" GroupName="kleur" Margin="5 0" Checked="Kleur_Checked"></RadioButton>
+            <RadioButton Content="Green" GroupName="kleur" Margin="5 0" Checked="Kleur_Checked"></RadioButton>
+            <RadioButton Content="Red" GroupName="kleur" Margin="5 0" Checked="Kleur_Checked"></RadioButton>
+            <RadioButton Content="Black" GroupName="kleur" Margin="5 0" Checked="Kleur_Checked"></RadioButton>
+        </StackPanel>
     </StackPanel>
 </Window>
