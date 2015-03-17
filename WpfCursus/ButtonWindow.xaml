@@ -15,11 +15,11 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Button Grid.Row="0" Grid.Column="0" DockPanel.Dock="Right" Name="ButtonRed" Background="Red"
-            Margin="10" Content="Rode achtergrond" Click="ButtonKleur_Click" Tag="Red"></Button>
+            Margin="10" Content="_Rode achtergrond" Click="ButtonKleur_Click" Tag="Red"></Button>
         <Button Grid.Row="1" Grid.Column="1" Name="ButtonGreen" DockPanel.Dock="Left" Background="Green" VerticalAlignment="Top"
-            Margin="25" Content="Groene achtergrond" Click="ButtonKleur_Click" Tag="Green"></Button>
+            Margin="25" Content="_Groene achtergrond" Click="ButtonKleur_Click" Tag="Green"></Button>
         <Button Grid.Row="2" Grid.Column="0" Name="ButtonBlue" Background="Blue" DockPanel.Dock="Top" HorizontalAlignment="Right"
-            Margin="10" Content="Blauwe achtergrond" Click="ButtonKleur_Click" Tag="Blue"></Button>
+            Margin="10" Content="_Blauwe achtergrond" Click="ButtonKleur_Click" Tag="Blue"></Button>
         <TextBlock Grid.Row="3" Grid.ColumnSpan="2" Foreground="HotPink" VerticalAlignment="Center" HorizontalAlignment="Center">Hallo, ik ben het lelijke programmatje dat niet veel nuttigs doet.</TextBlock>
         <GridSplitter Grid.Row="0" Grid.RowSpan="3" BorderBrush="AntiqueWhite"
 BorderThickness="2"></GridSplitter>
