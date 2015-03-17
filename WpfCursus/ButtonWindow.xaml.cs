@@ -24,5 +24,20 @@ namespace WpfCursus
         {
             InitializeComponent();
         }
+
+        private void ButtonRed_Click(object sender, RoutedEventArgs e)
+        {
+            this.gridje.Background = new SolidColorBrush(Colors.Red);
+        }
+
+        private void ButtonGreen_Click(object sender, RoutedEventArgs e)
+        {
+            this.gridje.Background = new SolidColorBrush(Colors.Green);
+        }
+
+        private void ButtonBlue_Click(object sender, RoutedEventArgs e)
+        {
+            this.gridje.Background = new SolidColorBrush(Colors.Blue);
+        }
     }
 }
