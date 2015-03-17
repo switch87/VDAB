@@ -1,7 +1,7 @@
-﻿<Application x:Class="WindowText.App"
+﻿<Application x:Class="TekstVerwerken.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="MainWindow.xaml">
+             StartupUri="WindowText.xaml">
     <Application.Resources>
          
     </Application.Resources>

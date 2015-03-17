@@ -23,6 +23,7 @@ namespace Verkeerslicht
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void ButtonGo_Click(object sender, RoutedEventArgs e)

@@ -13,10 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WindowText
+namespace TekstVerwerken
 {
     /// <summary>
-    /// Interaction logic for WindowText.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class WindowText : Window
     {
