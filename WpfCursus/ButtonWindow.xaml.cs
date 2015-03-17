@@ -25,19 +25,12 @@ namespace WpfCursus
             InitializeComponent();
         }
 
-        private void ButtonRed_Click(object sender, RoutedEventArgs e)
+        private void ButtonKleur_Click(object sender, RoutedEventArgs e)
         {
-            this.gridje.Background = new SolidColorBrush(Colors.Red);
-        }
-
-        private void ButtonGreen_Click(object sender, RoutedEventArgs e)
-        {
-            this.gridje.Background = new SolidColorBrush(Colors.Green);
-        }
-
-        private void ButtonBlue_Click(object sender, RoutedEventArgs e)
-        {
-            this.gridje.Background = new SolidColorBrush(Colors.Blue);
+            Button Knop = ( Button)sender;
+            SolidColorBrush kleur = (SolidColorBrush)new BrushConverter().
+                ConvertFromString(Knop.Tag.ToString());
+            this.gridje.Background = kleur;
         }
     }
 }
