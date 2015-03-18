@@ -9,11 +9,11 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 20">
             <ListBox Name="ListBoxHobbies" Height="100" Width="300" Margin="10 0" DisplayMemberPath="Activiteit"></ListBox>
-            <Button Name="ButtonKies" Width="150" Height="20" VerticalAlignment="Top" Margin="10" >kies</Button>
+            <Button Name="ButtonKies" Width="150" Height="20" VerticalAlignment="Top" Margin="10" Click="ButtonKies_Click" >kies</Button>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0 10">
             <ListBox Name="ListBoxGekozen" Height="100" Width="300" Margin="10 0"></ListBox>
-            <Button Name="ButtonVerwijderen" Height="20" Width="150" VerticalAlignment="Top" Margin="10">Verwijderen</Button>
+            <Button Name="ButtonVerwijderen" Height="20" Width="150" VerticalAlignment="Top" Margin="10" Click="ButtonVerwijderen_Click">Verwijderen</Button>
         </StackPanel>
     </StackPanel>
 </Window>
