@@ -84,6 +84,34 @@ namespace HobbyLijst
             if (ListBoxGekozen.SelectedIndex >= 0)
                 ListBoxGekozen.Items.RemoveAt(ListBoxGekozen.SelectedIndex);
         }
+
+        private void ButtonSamenvatting_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Wil je de gekozen hobby's op een rijtje?", "Samenvatting", MessageBoxButton.YesNo,MessageBoxImage.Question,MessageBoxResult.No) == MessageBoxResult.Yes)
+            {
+                string mijnText = "Mijn hobby's zijn: ";
+                string cat = string.Empty;
+
+                foreach (object item in ListBoxGekozen.Items)
+                {
+                    Hobby mijnHobby = (Hobby)item;
+                    if (cat != mijnHobby.Categorie)
+                    {
+                        cat = mijnHobby.Categorie;
+                        mijnText+="\n" +mijnHobby.Categorie+" : "+mijnHobby.Activiteit;
+                    }
+                    else
+                    {
+                        mijnText+=", "+mijnHobby.Activiteit;
+                    }
+                }
+                if (ListBoxGekozen.Items.Count == 0)
+                    MessageBox.Show("Ik heb geen Hobby's","Samenvatting",MessageBoxButton.OK,MessageBoxImage.Information);
+                else 
+                    MessageBox.Show(mijnText,"Samenvatting",MessageBoxButton.OK,MessageBoxImage.Information);
+                
+            }
+        }
     }
 
 }
