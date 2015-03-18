@@ -69,10 +69,15 @@ namespace HobbyLijst
         private void ButtonKies_Click(object sender, RoutedEventArgs e)
         {
             if (ListBoxHobbies.SelectedItem != null)
-                {
-                    Hobby gekozenHobby = (Hobby)ListBoxHobbies.SelectedItem;
-                    ListBoxGekozen.Items.Add(gekozenHobby.Categorie + " : " + gekozenHobby.Activiteit);
-                }
+            {
+                Hobby gekozenHobby = (Hobby)ListBoxHobbies.SelectedItem;
+                //ListBoxGekozen.Items.Add(gekozenHobby.Categorie + " : " + gekozenHobby.Activiteit);
+                ListBoxGekozen.Items.Add(gekozenHobby);
+                ListBoxGekozen.Items.SortDescriptions.Add(
+                    new SortDescription("Categorie", ListSortDirection.Ascending));
+                ListBoxGekozen.Items.SortDescriptions.Add(
+                    new SortDescription("Activiteit", ListSortDirection.Ascending));
+            }
         }
         private void ButtonVerwijderen_Click(object sender, RoutedEventArgs e)
         {
