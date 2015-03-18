@@ -13,24 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfCursus
+namespace TekstVerwerken
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class ButtonWindow : Window
+    public partial class WindowText : Window
     {
-        public ButtonWindow()
+        public WindowText()
         {
             InitializeComponent();
         }
 
-        private void ButtonKleur_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Button Knop = ( Button)sender;
-            SolidColorBrush kleur = (SolidColorBrush)new BrushConverter().
-                ConvertFromString(Knop.Tag.ToString());
-            this.gridje.Background = kleur;
+            TextBlockAanmelding.TextWrapping = TextWrapping.Wrap;
+            TextBlockAanmelding.Text = "Je probeerde aan te melden met: " +
+                textBoxGebruikersnaam.Text + " en paswoord: " + psdBox.Password;
         }
     }
 }
