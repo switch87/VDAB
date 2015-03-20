@@ -64,7 +64,16 @@
             </ToolBar>
         </ToolBarTray>
         
-        <StatusBar DockPanel.Dock="Bottom" Height="24"></StatusBar>
+        <StatusBar DockPanel.Dock="Bottom" Height="24">
+            <StatusBarItem Name="StatusVet" DockPanel.Dock="Right" Width="50"
+                           HorizontalAlignment="Right"
+                           FontWeight="{Binding ElementName=TextBoxVoorbeeld, Path=FontWeight}">Vet</StatusBarItem>
+            <StatusBarItem Name="StatusSchuin" DockPanel.Dock="Right" Width="50"
+                           HorizontalAlignment="Right"
+                           FontStyle="{Binding ElementName=TextBoxVoorbeeld, Path=FontStyle}">Schuin</StatusBarItem>
+            <StatusBarItem Name="StatusLettertype"
+                           Content="{Binding ElementName=LettertypeComboBox, Path=SelectedValue}"></StatusBarItem>
+        </StatusBar>
         <TextBox Name="TextBoxVoorbeeld" Text="Dit is voorbeeldtext"
                  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                  FontSize="24" TextWrapping="Wrap" MaxWidth="600" MaxHeight="900"
