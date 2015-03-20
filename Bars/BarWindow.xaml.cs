@@ -56,11 +56,13 @@ namespace Bars
             {
                 TextBoxVoorbeeld.FontWeight = FontWeights.Bold;
                 MenuVet.IsChecked = true;
+                ButtonVet.IsChecked = true;
             }
             else
             {
                 TextBoxVoorbeeld.FontWeight = FontWeights.Normal;
                 MenuVet.IsChecked = false;
+                ButtonVet.IsChecked = false;
             }
         }
         private void MenuVet_Click(object sender, RoutedEventArgs e)
@@ -73,11 +75,13 @@ namespace Bars
             {
                 TextBoxVoorbeeld.FontStyle = FontStyles.Italic;
                 MenuSchuin.IsChecked = true;
+                ButtonSchuin.IsChecked = true;
             }
             else
             {
                 TextBoxVoorbeeld.FontStyle = FontStyles.Normal;
                 MenuSchuin.IsChecked = false;
+                ButtonSchuin.IsChecked = false;
             }
         }
         private void MenuSchuin_Click(object sender, RoutedEventArgs e)
@@ -92,7 +96,13 @@ namespace Bars
                 huidig.IsChecked = false;
             }
             hetLettertype.IsChecked = true;
-            TextBoxVoorbeeld.FontFamily = new FontFamily(hetLettertype.Header.ToString());
+            LettertypeComboBox.SelectedItem = new FontFamily(hetLettertype.Header.ToString());
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            LettertypeComboBox.Items.SortDescriptions.Add(new System.ComponentModel.SortDescription("Source", System.ComponentModel.ListSortDirection.Ascending));
+            LettertypeComboBox.SelectedItem = new FontFamily(TextBoxVoorbeeld.FontFamily.ToString());
         }
 
     }
