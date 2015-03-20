@@ -19,6 +19,14 @@
     </Window.InputBindings>
     <DockPanel>
         <Menu Height="24" Name="MenuBalk" DockPanel.Dock="Top">
+            <MenuItem Header="_Bestand">
+                <MenuItem Header="Openen" Command="Open"></MenuItem>
+                <MenuItem Header="Opslaan" Command="Save"></MenuItem>
+                <MenuItem Header="Afdrukvoorbeeld" Command="PrintPreview"></MenuItem>
+                <MenuItem Header="Afdrukken..." Command="Print"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Afsluiten" Command="Close"></MenuItem>
+            </MenuItem>
             <MenuItem Header="Editeren">
                 <MenuItem Header="Knippen" Command="Cut"></MenuItem>
                 <MenuItem Header="Kopiëren" Command="Copy"></MenuItem>
@@ -35,8 +43,25 @@
                 
             </MenuItem>
         </Menu>
-        <ToolBarTray DockPanel.Dock="Top">
-            <ToolBar Name="EditeerBalk">
+            <ToolBarTray DockPanel.Dock="Top" Height="30">
+                <ToolBar Name="BestandBalk">
+                    <Button Command="Close">
+                        <Image Source="images/afsluiten.png"></Image>
+                    </Button>
+                    <Button Command="Open">
+                        <Image Source="images/open.png"></Image>
+                    </Button>
+                    <Button Command="Save">
+                        <Image Source="images/save.png"></Image>
+                    </Button>
+                    <Button Command="PrintPreview">
+                        <Image Source="images/preview.png"></Image>
+                    </Button>
+                    <Button Command="Print">
+                        <Image Source="images/print.png"></Image>
+                    </Button>
+                </ToolBar>
+                <ToolBar Name="EditeerBalk">
                 <Button Command="Cut">
                     <Image Source="Images/cut.png"></Image></Button>
                 <Button Command="Copy">
