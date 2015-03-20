@@ -15,8 +15,8 @@
                     <MenuItem Name="Arial" Header="Arial" IsCheckable="True" Click="Lettertype_Click"></MenuItem>
                     <MenuItem Name="Comic" Header="Comic Sans MS" IsCheckable="True" Click="Lettertype_Click"></MenuItem>
                 </MenuItem>
-                <MenuItem Name="MenuVet" Header="Vetdruk" IsCheckable="True" Click="MenuVet_Click"></MenuItem>
-                <MenuItem Name="MenuSchuin" Header="Schuindruk" IsCheckable="True" Click="MenuSchuin_Click"></MenuItem>
+                <MenuItem Name="MenuVet" Header="Vetdruk" IsCheckable="True" Click="MenuVet_Click" InputGestureText="Ctrl+B"></MenuItem>
+                <MenuItem Name="MenuSchuin" Header="Schuindruk" IsCheckable="True" Click="MenuSchuin_Click" InputGestureText="Ctrl+I"></MenuItem>
                 
             </MenuItem>
         </Menu>

@@ -20,9 +20,34 @@ namespace Bars
     /// </summary>
     public partial class BarWindow : Window
     {
+        public static RoutedCommand mijnRouteCtrlB = new RoutedCommand();
+        public static RoutedCommand mijnRouteCtrlI = new RoutedCommand();
+
         public BarWindow()
         {
             InitializeComponent();
+
+            CommandBinding mijnCtrlB = new CommandBinding(mijnRouteCtrlB, ctrlBExecuted);
+            this.CommandBindings.Add(mijnCtrlB);
+            KeyGesture toetsCtrlB = new KeyGesture(Key.B, ModifierKeys.Control);
+            KeyBinding mijnKeyCtrlB = new KeyBinding(mijnRouteCtrlB, toetsCtrlB);
+            this.InputBindings.Add(mijnKeyCtrlB);
+
+            CommandBinding mijnCtrlI = new CommandBinding(mijnRouteCtrlI, ctrlIExecuted);
+            this.CommandBindings.Add(mijnCtrlI);
+            KeyGesture toetsCtrlI = new KeyGesture(Key.I, ModifierKeys.Control);
+            KeyBinding mijnKeyCtrlI = new KeyBinding(mijnRouteCtrlI,toetsCtrlI)
+            this.InputBindings.Add(mijnKeyCtrlI);
+        }
+
+        private void ctrlBExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            Vet_Aan_Uit();
+        }
+
+        private void ctrlIExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            Schuin_Aan_Uit();
         }
 
         private void Vet_Aan_Uit()
