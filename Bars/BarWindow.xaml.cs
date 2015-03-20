@@ -206,6 +206,10 @@ namespace Bars
             }
         }
 
+
+        // Afdrukken
+        //=========
+
         private double A4breedte = 21 / 2.54 * 96;
         private double A4hoogte = 29.7 / 2.54 * 96;
         private double vertPositie;
@@ -259,12 +263,29 @@ namespace Bars
             }
         }
 
+        // Afdrukvoorbeeld
+        // =============
+
         private void PreviewExecuted(object sender, ExecutedRoutedEventArgs e)
         {
             Afdrukvoorbeeld preview = new Afdrukvoorbeeld();
             preview.Owner = this;
             preview.AfdrukDocument = StelAfdrukSamen();
             preview.ShowDialog();
+        }
+
+        // Afsluiten
+        // =======
+
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            if (MessageBox.Show("Programma afsluiten?", "Afsluiten", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No) == MessageBoxResult.No)
+                e.Cancel = true;
+        }
+
+        private void CloseExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Close();
         }
 
 
