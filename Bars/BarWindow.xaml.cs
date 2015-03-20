@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using System.IO;
 
 namespace Bars
 {
@@ -104,6 +105,32 @@ namespace Bars
         {
             LettertypeComboBox.Items.SortDescriptions.Add(new System.ComponentModel.SortDescription("Source", System.ComponentModel.ListSortDirection.Ascending));
             LettertypeComboBox.SelectedItem = new FontFamily(TextBoxVoorbeeld.FontFamily.ToString());
+        }
+
+        private void SaveExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            try
+            {
+                SaveFileDialog dlg = new SaveFileDialog();
+                dlg.FileName = "Document";
+                dlg.DefaultExt = ".txt";
+                dlg.Filter = "text documents | *.txt";
+
+                if (dlg.ShowDialog()==true)
+                {
+                    using (StreamWriter bestand = new StreamWriter(dlg.FileName))
+                    {
+                        bestand.WriteLine(LettertypeComboBox.SelectedValue);
+                        bestand.WriteLine(TextBoxVoorbeeld.FontWeight.ToString());
+                        bestand.WriteLine(TextBoxVoorbeeld.FontStyle.ToString());
+                        bestand.WriteLine(TextBoxVoorbeeld.Text);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("opslaan mislukt : " + ex.Message);
+            }
         }
 
     }
