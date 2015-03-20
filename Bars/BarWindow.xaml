@@ -12,6 +12,7 @@
             Executed="ctrlIExecuted" />
         <CommandBinding Command="Save" Executed="SaveExecuted"></CommandBinding>
         <CommandBinding Command="Open" Executed="OpenExecution"></CommandBinding>
+        <CommandBinding Command="Print" Executed="PrintExecuted"></CommandBinding>
     </Window.CommandBindings>
     <Window.InputBindings>
         <KeyBinding Key="B" Modifiers="Control"
