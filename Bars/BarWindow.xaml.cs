@@ -27,17 +27,17 @@ namespace Bars
         {
             InitializeComponent();
 
-            CommandBinding mijnCtrlB = new CommandBinding(mijnRouteCtrlB, ctrlBExecuted);
-            this.CommandBindings.Add(mijnCtrlB);
-            KeyGesture toetsCtrlB = new KeyGesture(Key.B, ModifierKeys.Control);
-            KeyBinding mijnKeyCtrlB = new KeyBinding(mijnRouteCtrlB, toetsCtrlB);
-            this.InputBindings.Add(mijnKeyCtrlB);
+            //CommandBinding mijnCtrlB = new CommandBinding(mijnRouteCtrlB, ctrlBExecuted);
+            //this.CommandBindings.Add(mijnCtrlB);
+            //KeyGesture toetsCtrlB = new KeyGesture(Key.B, ModifierKeys.Control);
+            //KeyBinding mijnKeyCtrlB = new KeyBinding(mijnRouteCtrlB, toetsCtrlB);
+            //this.InputBindings.Add(mijnKeyCtrlB);
 
-            CommandBinding mijnCtrlI = new CommandBinding(mijnRouteCtrlI, ctrlIExecuted);
-            this.CommandBindings.Add(mijnCtrlI);
-            KeyGesture toetsCtrlI = new KeyGesture(Key.I, ModifierKeys.Control);
-            KeyBinding mijnKeyCtrlI = new KeyBinding(mijnRouteCtrlI,toetsCtrlI)
-            this.InputBindings.Add(mijnKeyCtrlI);
+            //CommandBinding mijnCtrlI = new CommandBinding(mijnRouteCtrlI, ctrlIExecuted);
+            //this.CommandBindings.Add(mijnCtrlI);
+            //KeyGesture toetsCtrlI = new KeyGesture(Key.I, ModifierKeys.Control);
+            //KeyBinding mijnKeyCtrlI = new KeyBinding(mijnRouteCtrlI,toetsCtrlI)
+            //this.InputBindings.Add(mijnKeyCtrlI);
         }
 
         private void ctrlBExecuted(object sender, ExecutedRoutedEventArgs e)
