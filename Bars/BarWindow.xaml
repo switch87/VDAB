@@ -48,7 +48,7 @@
                 
             </MenuItem>
         </Menu>
-            <ToolBarTray DockPanel.Dock="Top" Height="30">
+        <ToolBarTray DockPanel.Dock="Top" Height="30">
                 <ToolBar Name="BestandBalk">
                     <Button Command="Close">
                         <Image Source="images/afsluiten.png"></Image>
