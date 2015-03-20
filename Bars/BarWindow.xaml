@@ -11,6 +11,7 @@
             Command="{x:Static custom:BarWindow.mijnRouteCtrlI}"
             Executed="ctrlIExecuted" />
         <CommandBinding Command="Save" Executed="SaveExecuted"></CommandBinding>
+        <CommandBinding Command="Open" Executed="OpenExecution"></CommandBinding>
     </Window.CommandBindings>
     <Window.InputBindings>
         <KeyBinding Key="B" Modifiers="Control"
