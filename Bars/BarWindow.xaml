@@ -3,7 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Werken met bars" Height="350" Width="525">
     <DockPanel>
-        <Menu Height="24" Name="MenuBalk" DockPanel.Dock="Top"></Menu>
+        <Menu Height="24" Name="MenuBalk" DockPanel.Dock="Top">
+            <MenuItem Header="Lettertype">
+                <MenuItem Name="Fontjes" Header="Font">
+                    <MenuItem Name="Courier" Header="Courier New" IsCheckable="True" Click="Lettertype_Click"></MenuItem>
+                    <MenuItem Name="Arial" Header="Arial" IsCheckable="True" Click="Lettertype_Click"></MenuItem>
+                    <MenuItem Name="Comic" Header="Comic Sans MS" IsCheckable="True" Click="Lettertype_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Name="MenuVet" Header="Vetdruk" IsCheckable="True" Click="MenuVet_Click"></MenuItem>
+                <MenuItem Name="MenuSchuin" Header="Schuindruk" IsCheckable="True" Click="MenuSchuin_Click"></MenuItem>
+                
+            </MenuItem>
+        </Menu>
         <ToolBarTray Height="24" DockPanel.Dock="Top"></ToolBarTray>
         <StatusBar DockPanel.Dock="Bottom" Height="24"></StatusBar>
         <TextBox Name="TextBoxVoorbeeld" Text="Dit is voorbeeldtext"
