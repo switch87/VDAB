@@ -259,6 +259,14 @@ namespace Bars
             }
         }
 
+        private void PreviewExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            Afdrukvoorbeeld preview = new Afdrukvoorbeeld();
+            preview.Owner = this;
+            preview.AfdrukDocument = StelAfdrukSamen();
+            preview.ShowDialog();
+        }
+
 
     }
 }
