@@ -1,0 +1,15 @@
+﻿<Window x:Class="Bars.BarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Werken met bars" Height="350" Width="525">
+    <DockPanel>
+        <Menu Height="24" Name="MenuBalk" DockPanel.Dock="Top"></Menu>
+        <ToolBarTray Height="24" DockPanel.Dock="Top"></ToolBarTray>
+        <StatusBar DockPanel.Dock="Bottom" Height="24"></StatusBar>
+        <TextBox Name="TextBoxVoorbeeld" Text="Dit is voorbeeldtext"
+                 VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                 FontSize="24" TextWrapping="Wrap" MaxWidth="600" MaxHeight="900">
+            
+        </TextBox>
+    </DockPanel>
+</Window>
