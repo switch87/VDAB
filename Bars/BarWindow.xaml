@@ -4,6 +4,11 @@
         Title="Werken met bars" Height="350" Width="525">
     <DockPanel>
         <Menu Height="24" Name="MenuBalk" DockPanel.Dock="Top">
+            <MenuItem Header="Editeren">
+                <MenuItem Header="Knippen" Command="Cut"></MenuItem>
+                <MenuItem Header="Kopiëren" Command="Copy"></MenuItem>
+                <MenuItem Header="Plakken" Command="Paste"></MenuItem>
+            </MenuItem>
             <MenuItem Header="Lettertype">
                 <MenuItem Name="Fontjes" Header="Font">
                     <MenuItem Name="Courier" Header="Courier New" IsCheckable="True" Click="Lettertype_Click"></MenuItem>
