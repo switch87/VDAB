@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA805D39-2673-4ABF-8D20-3FF1897DB954}</ProjectGuid>
+    <ProjectGuid>{28C9D173-784F-4C00-B885-4EC96A5B5EAB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ButtonGebruik</RootNamespace>
-    <AssemblyName>ButtonGebruik</AssemblyName>
+    <RootNamespace>Telefoon</RootNamespace>
+    <AssemblyName>Telefoon</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,7 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ButtonGebruikWindow.xaml">
+    <Page Include="TelefoonWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -62,8 +62,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ButtonGebruikWindow.xaml.cs">
-      <DependentUpon>ButtonGebruikWindow.xaml</DependentUpon>
+    <Compile Include="Persoon.cs" />
+    <Compile Include="TelefoonWindow.xaml.cs">
+      <DependentUpon>TelefoonWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -95,10 +96,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\bold.png" />
+    <Resource Include="images\anne.jpg" />
+    <Resource Include="images\bob.jpg" />
+    <Resource Include="images\collega1.jpg" />
+    <Resource Include="images\collega2.jpg" />
+    <Resource Include="images\collega3.jpg" />
+    <Resource Include="images\ed.jpg" />
+    <Resource Include="images\grotezus.jpg" />
+    <Resource Include="images\kleinezus.jpg" />
+    <Resource Include="images\tantenon.jpg" />
+    <Resource Include="images\telefoon2.jpg" />
+    <Resource Include="images\vader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\italic.png" />
+    <Content Include="PHONE.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

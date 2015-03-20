@@ -1,0 +1,42 @@
+﻿<Window x:Class="BestelbonPizza.PizzaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="403" Width="440">
+    <StackPanel>
+        <Label FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Pizza bestellen</Label>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" Width="250" Margin="10">
+                <RadioButton GroupName="Maat" Content="small" Checked="Maat_Checked" Margin="2"></RadioButton>
+                <RadioButton GroupName="Maat" Content="medium" Checked="Maat_Checked" IsChecked="True" Margin="2"></RadioButton>
+                <RadioButton GroupName="Maat" Content="large" Checked="Maat_Checked" Margin="2"></RadioButton>
+                <Rectangle Height="1" Width="250" Margin="0,10" Fill="Black"></Rectangle>
+                <StackPanel Name="Beleg">
+                    <CheckBox IsChecked="True" IsEnabled="False" Margin="2">tomaat</CheckBox>
+                    <CheckBox IsChecked="True" IsEnabled="False" Margin="2">kaas</CheckBox>
+                    <CheckBox Name="ham"  Margin="2">ham</CheckBox>
+                    <CheckBox Name="ananas" Margin="2">ananas</CheckBox>
+                    <CheckBox Name="salami" Margin="2">salami</CheckBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Width="147">
+                <ToggleButton Name="ExtraDikkeKorst" Margin="10" >extra dikke korst</ToggleButton>
+                <ToggleButton Name="ExtraKaas" Margin="10">extra kaas</ToggleButton>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" Margin="7">Hoeveelheid:</TextBlock>
+                    <Label Name="Aantal" VerticalAlignment="Center" Margin="7">1</Label>
+                    <StackPanel Orientation="Vertical">
+                        <Button Click="plus_Click" Height="20">+</Button>
+                        <Button Name="Min" Click="min_Click" IsEnabled="False" Height="20">-</Button>
+                    </StackPanel>
+                </StackPanel>
+                <Button Margin="2" Click="Button_Click">
+                    <StackPanel>
+                        <Image Source="Images\pizza.jpg" Height="90" Width="90" Margin="5"></Image>
+                        <Label HorizontalAlignment="Center">BESTELLEN</Label>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Name="bestelling"></TextBlock>
+    </StackPanel>
+</Window>
