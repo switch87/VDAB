@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- 
+    Definitie op applicatie-niveau
+        Key = aanroepnaam binnen de applicatie 
+    
+    ARGB
+        A: alpha channel = transparantie:   00 = doorzichtig
+                                            FF = ondoorzichtig
+        R: Red
+        G: Green
+        B: Blue
+    -->
+    <Color x:Key="turquoiseColor" A="255" R="50" G="220" B="200"></Color>
+    
+    <!--
+    Brush vult gebied op
+        bv: Background, Fill, BorderBrush, Stroke ...
+    -->
+    <SolidColorBrush x:Key="turquoiseBrush" 
+                     Color="{StaticResource turquoiseColor}">
+    </SolidColorBrush>
+    
+</ResourceDictionary>

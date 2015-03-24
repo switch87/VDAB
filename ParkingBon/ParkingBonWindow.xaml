@@ -3,13 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:custom="clr-namespace:ParkingBon"
         Title="Parking Bon" Height="379" Width="525" Closing="Window_Closing">
+    <Window.CommandBindings>
+        <CommandBinding Command="New" Executed="NewExecuted"></CommandBinding>
+        <CommandBinding Command="Open" Executed="OpenExecuted"></CommandBinding>
+        <CommandBinding Command="Save" Executed="SaveExecuted"></CommandBinding>
+        <CommandBinding Command="Print" Executed="PrintPreviewExecuted"></CommandBinding>
+        <CommandBinding Command="PrintPreview" Executed="PrintPreviewExecuted"></CommandBinding>
+        <CommandBinding Command="Close" Executed="CloseExecuted"></CommandBinding>
+    </Window.CommandBindings>
     <DockPanel>
         <Menu Height="24" Name="MenuBalk" DockPanel.Dock="Top">
             <MenuItem Header="Bon operaties" Name="BonOperaties">
                 <MenuItem Header="Nieuwe Bon" Command="New"></MenuItem>
                 <MenuItem Header="Bon openen" Command="Open"></MenuItem>
                 <MenuItem Header="Bon opslaan" Command="Save"></MenuItem>
-                <MenuItem Header="Bon afdrukken" Command="Print"></MenuItem>
+                <MenuItem Name="PrintMenu" Header="Bon afdrukken" Command="Print" IsEnabled="False"></MenuItem>
                 <Separator/>
                 <MenuItem Header="Afsluiten" Command="Close"></MenuItem>
             </MenuItem>
@@ -33,7 +41,7 @@
                     <TextBlock>Opslaan</TextBlock>
                 </StackPanel>
             </Button>
-            <Button Command="PrintPreview">
+            <Button Name="PrintButton" Command="PrintPreview" IsEnabled="False">
                 <StackPanel Orientation="Vertical">
                     <Image Source="images/print.jpg" Height="35"></Image>
                     <TextBlock>Afdrukvoorbeeld</TextBlock>
@@ -46,7 +54,9 @@
                 </StackPanel>
             </Button>
         </ToolBar>
-        <StatusBar Name="Status" DockPanel.Dock="Bottom" Height="24"></StatusBar>
+        <StatusBar Name="Status" DockPanel.Dock="Bottom" Height="24">
+            <StatusBarItem Name="StatusItem"></StatusBarItem>
+        </StatusBar>
         <Grid Margin="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"></RowDefinition>

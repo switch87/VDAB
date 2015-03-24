@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bars", "Bars\Bars.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingBon", "ParkingBon\ParkingBon.csproj", "{D40DD93D-C6E4-4B0E-B9DB-932B1DE4E56C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KleurenKiezer", "KleurenKiezer\KleurenKiezer.csproj", "{71BEBAEB-232D-40A0-B0C0-9C4240E2BD95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{D40DD93D-C6E4-4B0E-B9DB-932B1DE4E56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D40DD93D-C6E4-4B0E-B9DB-932B1DE4E56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D40DD93D-C6E4-4B0E-B9DB-932B1DE4E56C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71BEBAEB-232D-40A0-B0C0-9C4240E2BD95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71BEBAEB-232D-40A0-B0C0-9C4240E2BD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71BEBAEB-232D-40A0-B0C0-9C4240E2BD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71BEBAEB-232D-40A0-B0C0-9C4240E2BD95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
