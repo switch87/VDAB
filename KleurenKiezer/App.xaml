@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="BrushesWindow.xaml">
     <Application.Resources>
-         
+        <!-- Definitie op applicatie-niveau -->
+        <ResourceDictionary Source="Resources/turquoise.xaml"></ResourceDictionary>
     </Application.Resources>
 </Application>
