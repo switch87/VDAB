@@ -31,6 +31,6 @@
             <Rectangle Name="dropIndigo" Fill="White" MouseMove="Rectangle_MouseMove" AllowDrop="True" DragEnter="Rectangle_DragEnter" DragLeave="Rectangle_DragLeave" Drop="Rectangle_Drop"></Rectangle>
             <Rectangle Name="dropViolet" Fill="White" MouseMove="Rectangle_MouseMove" AllowDrop="True" DragEnter="Rectangle_DragEnter" DragLeave="Rectangle_DragLeave" Drop="Rectangle_Drop"></Rectangle>
         </StackPanel>
-        <Button Name="ButtonCheck" Content="Check volgorde" Margin="5,50"></Button>
+        <Button Name="ButtonCheck" Content="Check volgorde" Margin="5,50" Click="ButtonCheck_Click"></Button>
     </StackPanel>
 </Window>
