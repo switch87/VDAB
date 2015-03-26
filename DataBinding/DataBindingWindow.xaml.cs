@@ -20,12 +20,55 @@ namespace DataBinding
     /// </summary>
     public partial class DataBindingWindow : Window
     {
+        public Persoon persoon = new Persoon("Jan");
+        
         public DataBindingWindow()
         {
             InitializeComponent();
             SortDescription sd = new SortDescription("Source", ListSortDirection.Ascending);
             lettertypeComboBox.Items.SortDescriptions.Add(sd);
             lettertypeComboBox.SelectedItem = new FontFamily("Arial");
+            veranderTextBox.DataContext = persoon;
         }
+
+        private void toonNaamButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(persoon.Naam);
+        }
+
+        private void veranderButton_Click(object sender, RoutedEventArgs e)
+        {
+            persoon.Naam = "piet";
+        }
+    }
+
+    public class Persoon : INotifyPropertyChanged
+    {
+        private string naamValue;
+        public string Naam 
+        {
+            get
+            {
+                return naamValue;
+            }
+            set
+            {
+                naamValue = value;
+                RaisePropertyChanged("Naam");
+            }
+        }
+        public Persoon(string nNaam)
+        {
+            Naam = nNaam;
+        }
+
+        private void RaisePropertyChanged(String info)
+        {
+            if (PropertyChanged!=null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
