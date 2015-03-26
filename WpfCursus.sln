@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegenboogDragDrop", "Regenb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpleidingenDragDrop", "OpleidingenDragDrop\OpleidingenDragDrop.csproj", "{1862EC41-F300-44BC-823F-8C69EC4A5B7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchuifSpel", "SchuifSpel\SchuifSpel.csproj", "{534062B3-D1E3-4AED-A4B0-C0F5B4D025E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{1862EC41-F300-44BC-823F-8C69EC4A5B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1862EC41-F300-44BC-823F-8C69EC4A5B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1862EC41-F300-44BC-823F-8C69EC4A5B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534062B3-D1E3-4AED-A4B0-C0F5B4D025E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534062B3-D1E3-4AED-A4B0-C0F5B4D025E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534062B3-D1E3-4AED-A4B0-C0F5B4D025E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534062B3-D1E3-4AED-A4B0-C0F5B4D025E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
