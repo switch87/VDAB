@@ -24,8 +24,11 @@
                 <RibbonApplicationSplitMenuItem Header="Afdrukmogelijkheden" ImageSource="images\printer64.png">
                     <RibbonApplicationMenuItem Header="Afdrukken" Command="Print" ImageSource="images\printer64.png"></RibbonApplicationMenuItem>
                     <RibbonApplicationMenuItem Header="Afdrukvoorbeeld" Command="PrintPreview" ImageSource="images\preview64.png"></RibbonApplicationMenuItem>
-                </RibbonApplicationSplitMenuItem>
-            </RibbonApplicationMenu>
+                    </RibbonApplicationSplitMenuItem>
+                    <RibbonApplicationMenu.FooterPaneContent>
+                        <RibbonButton Command="Close" SmallImageSource="images\close64.png" HorizontalAlignment="Right" Label="Afsluiten"></RibbonButton>
+                    </RibbonApplicationMenu.FooterPaneContent>
+                </RibbonApplicationMenu>
             </Ribbon.ApplicationMenu>
         </Ribbon>
         <TextBox  Name="TextBoxVoorbeeld" Text="Dit is voorbeeldtekst" 
