@@ -18,7 +18,13 @@
             <Slider Name="grootteSlider" Style="{StaticResource baseControlStijl}" Width="200" Minimum="0" Maximum="96" IsSnapToTickEnabled="True" SmallChange="1" Value="12"></Slider>
             <ComboBox Name="lettertypeComboBox" Width="180" 
                       Style="{StaticResource baseControlStijl}"
-                      ItemsSource="{Binding Source={x:Static Member=Fonts.SystemFontFamilies}}">
+                      DataContext="{x:Static Member=Fonts.SystemFontFamilies}"
+                      ItemsSource="{Binding}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock FontFamily="{Binding}" Text="{Binding}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
                 
             </ComboBox>
         </StackPanel>
