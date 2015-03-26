@@ -93,7 +93,7 @@ namespace SchuifSpel
             puzzelGrid.Children.Add(stuk);
         }
 
-
+        private int sleeprij, sleepkolom, legerij, legekolom;
 
         private void Shuffle()
         {
@@ -137,6 +137,8 @@ namespace SchuifSpel
             leegstuk.Name = "stuk33";
             leegstuk.Source = bl;
             zetImage(3, 3, leegstuk);
+            legekolom = 3;
+            legerij = 3;
         }
 
 
@@ -148,10 +150,51 @@ namespace SchuifSpel
 
         private void stuk_MouseMove(object sender, MouseEventArgs e)
         {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                Image stuk = (Image)sender;
+                sleeprij = Grid.GetRow(stuk);
+                sleepkolom = Grid.GetColumn(stuk);
+                DataObject sleepstuk = new DataObject("sleepstuk", stuk);
+                DragDrop.DoDragDrop(stuk, sleepstuk, DragDropEffects.Move);
+            }
+        }
+
+        // leeg stuk moet naast het sleepstuk liggen
+        private Boolean geldig()
+        {
+            if (((sleeprij + 1 == legerij) || (sleeprij - 1 == legerij)) &&
+                (sleepkolom == legekolom))
+                return true; 
+            
+            else
+            {
+                if (((sleepkolom + 1 == legekolom) || (sleepkolom - 1 == legekolom)) &&
+                    (sleeprij == legerij))
+                    return true;
+            }
+            return false;
         }
 
         private void puzzelGrid_Drop(object sender, DragEventArgs e)
         {
+            if (e.Data.GetDataPresent("sleepstuk"))
+            {
+                if (geldig())
+                {
+                    Image gesleeptstuk = (Image)e.Data.GetData("sleepstuk");
+                    Image dropstuk = (Image)sender;
+                    legerij = Grid.GetRow(dropstuk);
+                    legekolom = Grid.GetColumn(dropstuk);
+                    puzzelGrid.Children.Remove(gesleeptstuk);
+                    puzzelGrid.Children.Remove(dropstuk);
+                    zetImage(legerij, legekolom, gesleeptstuk);
+                    zetImage(sleeprij, sleepkolom, dropstuk);
+                    legerij = sleeprij;
+                    legekolom = sleepkolom;
+                    Check();
+                }
+            }
         }
 
     }
