@@ -14,8 +14,8 @@
     <StackPanel>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10">
             <TextBox Name="grootteTextBox" Style="{StaticResource baseControlStijl}" Width="30" HorizontalAlignment="Left" 
-                     Text="{Binding ElementName=grootteSlider, Path=Value}"></TextBox>
-            <Slider Name="grootteSlider" Style="{StaticResource baseControlStijl}" Width="200" Minimum="6" Maximum="96" IsSnapToTickEnabled="True" SmallChange="1" Value="12"></Slider>
+                     Text="{Binding ElementName=grootteSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Slider Name="grootteSlider" Style="{StaticResource baseControlStijl}" Width="200" Minimum="0" Maximum="96" IsSnapToTickEnabled="True" SmallChange="1" Value="12"></Slider>
         </StackPanel>
         <TextBlock Margin="10" FontSize="{Binding ElementName=grootteSlider, Path=Value}" Text="Tekst"></TextBlock>
     </StackPanel>
