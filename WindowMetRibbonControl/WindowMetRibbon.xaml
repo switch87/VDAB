@@ -16,8 +16,16 @@
     <DockPanel LastChildFill="True">
         <Ribbon DockPanel.Dock="Top">
             <Ribbon.ApplicationMenu>
-                <RibbonApplicationMenu SmallImageSource="images\bestand64.png" KeyTip="A">
-                </RibbonApplicationMenu>
+            <RibbonApplicationMenu SmallImageSource="images\bestand64.png" KeyTip="A">
+                <RibbonApplicationMenuItem Header="New" Command="New" ImageSource="images\new16.png"></RibbonApplicationMenuItem>
+                <RibbonApplicationMenuItem Header="Open" Command="Open" ImageSource="images\open16.png"></RibbonApplicationMenuItem>
+                <RibbonApplicationMenuItem Header="Save" Command="Save" ImageSource="images\save16.png"></RibbonApplicationMenuItem>
+                <RibbonSeparator></RibbonSeparator>
+                <RibbonApplicationSplitMenuItem Header="Afdrukmogelijkheden" ImageSource="images\printer64.png">
+                    <RibbonApplicationMenuItem Header="Afdrukken" Command="Print" ImageSource="images\printer64.png"></RibbonApplicationMenuItem>
+                    <RibbonApplicationMenuItem Header="Afdrukvoorbeeld" Command="PrintPreview" ImageSource="images\preview64.png"></RibbonApplicationMenuItem>
+                </RibbonApplicationSplitMenuItem>
+            </RibbonApplicationMenu>
             </Ribbon.ApplicationMenu>
         </Ribbon>
         <TextBox  Name="TextBoxVoorbeeld" Text="Dit is voorbeeldtekst" 
