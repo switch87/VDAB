@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding", "DataBinding\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloemSamenstellen", "BloemSamenstellen\BloemSamenstellen.csproj", "{3B051E3D-90F7-467C-9414-AE7241135327}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegenboogDragDrop", "RegenboogDragDrop\RegenboogDragDrop.csproj", "{10539F1A-2E84-446A-BEAE-83608AF3B76F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{3B051E3D-90F7-467C-9414-AE7241135327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B051E3D-90F7-467C-9414-AE7241135327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B051E3D-90F7-467C-9414-AE7241135327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10539F1A-2E84-446A-BEAE-83608AF3B76F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10539F1A-2E84-446A-BEAE-83608AF3B76F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10539F1A-2E84-446A-BEAE-83608AF3B76F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10539F1A-2E84-446A-BEAE-83608AF3B76F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
