@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloemSamenstellen", "BloemS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegenboogDragDrop", "RegenboogDragDrop\RegenboogDragDrop.csproj", "{10539F1A-2E84-446A-BEAE-83608AF3B76F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpleidingenDragDrop", "OpleidingenDragDrop\OpleidingenDragDrop.csproj", "{1862EC41-F300-44BC-823F-8C69EC4A5B7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{10539F1A-2E84-446A-BEAE-83608AF3B76F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10539F1A-2E84-446A-BEAE-83608AF3B76F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10539F1A-2E84-446A-BEAE-83608AF3B76F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1862EC41-F300-44BC-823F-8C69EC4A5B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1862EC41-F300-44BC-823F-8C69EC4A5B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1862EC41-F300-44BC-823F-8C69EC4A5B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1862EC41-F300-44BC-823F-8C69EC4A5B7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
