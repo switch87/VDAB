@@ -23,6 +23,9 @@ namespace DataBinding
         public DataBindingWindow()
         {
             InitializeComponent();
+            SortDescription sd = new SortDescription("Source", ListSortDirection.Ascending);
+            lettertypeComboBox.Items.SortDescriptions.Add(sd);
+            lettertypeComboBox.SelectedItem = new FontFamily("Arial");
         }
     }
 }

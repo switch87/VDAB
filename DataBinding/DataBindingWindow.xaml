@@ -16,7 +16,12 @@
             <TextBox Name="grootteTextBox" Style="{StaticResource baseControlStijl}" Width="30" HorizontalAlignment="Left" 
                      Text="{Binding ElementName=grootteSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             <Slider Name="grootteSlider" Style="{StaticResource baseControlStijl}" Width="200" Minimum="0" Maximum="96" IsSnapToTickEnabled="True" SmallChange="1" Value="12"></Slider>
+            <ComboBox Name="lettertypeComboBox" Width="180" 
+                      Style="{StaticResource baseControlStijl}"
+                      ItemsSource="{Binding Source={x:Static Member=Fonts.SystemFontFamilies}}">
+                
+            </ComboBox>
         </StackPanel>
-        <TextBlock Margin="10" FontSize="{Binding ElementName=grootteSlider, Path=Value}" Text="Tekst"></TextBlock>
+        <TextBlock Margin="10" FontSize="{Binding ElementName=grootteSlider, Path=Value}" Text="Tekst" FontFamily="{Binding ElementName=lettertypeComboBox, Path=SelectedValue}"></TextBlock>
     </StackPanel>
 </Window>
