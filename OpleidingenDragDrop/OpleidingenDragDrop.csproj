@@ -94,7 +94,6 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="images\access.png" />
     <Resource Include="images\excel.png" />
