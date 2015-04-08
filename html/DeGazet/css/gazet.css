@@ -1,10 +1,80 @@
 ﻿@charset "utf-8";
 /* CSS Document voor deGazet*/
-body
-{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    color:#333;
+
+/* basis 1em = 16px
+4px = 0.25em
+6 = 0.375em
+8 = 0.5em
+10 = 0.625em
+12 = 0.75em
+14 = 0.875em
+18 = 1.125em
+20 = 1.25em
+22 = 1.375em
+24 = 1.5em
+32 = 2em
+100 = 6.25em;
+*/
+
+/* NORMALIZE */
+html, body, div, section, article, aside, nav {
+    margin: 0;
+    padding: 0;
 }
+
+img {
+    border: none;
+    float: left;
+    margin: 0 1.25em 0.5em 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: hide;
+}
+
+tr, td {
+    margin: 0;
+    padding: 0;
+}
+
+/* TYPOGRAFIE */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    color:#005689;
+    font-weight: normal;
+}
+
+a, a:visited {
+    text-decoration: underline;
+}
+/* KLEURENSCHEMAS */
+body {
+    background-color: white;
+    color: #333;
+}
+
+#topbanner, footer {
+    background-color: #EDEDED;
+}
+
+.nieuws h1, .nieuws h2, .nieuws h3, .nieuws h4, .nieuws h5, .nieuws h6 {
+    color: #005689;
+}
+
+.nieuws a, .nieuws a:visited, .nieuws a:hover, .nieuws a:active {
+    color: #005689;
+}
+
+/**** STRUCTUUR EN LAY-OUT ****/
+/* deze oef gaat door een aantal stadia:
+1. FIXED LAY-OUT: 980px container, basis 5 kol
+*/
+.wikkel {
+    width: 980px;
+    margin: 0 auto;
 }
