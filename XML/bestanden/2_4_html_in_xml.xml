@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<naam>
+<voornaam>Joske</voornaam>
+<familienaam>Vermeulen</familienaam>
+<![CDATA[
+<html>
+   <head>
+		 <title>de Titel</title>
+   </head>
+   <body>
+	   <p>Hello World</p>
+   </body>
+</html>
+
+]]>
+<gemeente>Heverlee</gemeente>
+</naam>

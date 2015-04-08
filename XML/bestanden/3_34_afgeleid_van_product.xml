@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblio xmlns="http://www.vdab.be/XML" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.vdab.be/XML 3_33_afgeleid_van_product.xsd">
+	<boek id="405">
+		<titel>Database Programming with C#</titel>
+		<schrijver>Thomsen</schrijver>
+		<uitgever>Apress</uitgever>
+		<isbn_nr>1590590104</isbn_nr>
+	</boek>
+	<cd id="300">
+		<titel>De vier seizoenen</titel>
+		<uitvoerder>Filharmonisch orkest van de VRT</uitvoerder>
+		<tekstschrijver></tekstschrijver>
+		<componist>Vivaldi</componist>
+	</cd>
+</biblio>

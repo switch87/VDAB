@@ -1,0 +1,6 @@
+C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CSharpPFOEfenmap\bin\Debug\CSharpPFOEfenmap.exe.config
+C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CSharpPFOEfenmap\obj\Debug\CSharpPFOEfenmap.csprojResolveAssemblyReference.cache
+C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CSharpPFOEfenmap\bin\Debug\CSharpPFOEfenmap.exe
+C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CSharpPFOEfenmap\bin\Debug\CSharpPFOEfenmap.pdb
+C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CSharpPFOEfenmap\obj\Debug\CSharpPFOEfenmap.exe
+C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CSharpPFOEfenmap\obj\Debug\CSharpPFOEfenmap.pdb

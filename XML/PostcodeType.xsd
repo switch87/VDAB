@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xs:schema
+	targetNamespace="http://www.vdab.be/xmlcursus/postcode"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns="http://www.vdab.be/xmlcursus/postcode"
+		elementFormDefault="qualified">
+
+    <xs:simpleType name="postcodeType">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:minInclusive value="1000"/>
+			<xs:maxInclusive value="9999"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<boek xmlns="http://www.vdab.be/XML" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	  xsi:schemaLocation="http://www.vdab.be/XML 3_21_mixed_content.xsd">
+	<boek_id>404</boek_id>
+	<titel>Teach Yourself C# Web Programming in 21 days</titel>
+	<schrijvers>
+		Samenwerking tussen
+			<schrijver>Philip Syme</schrijver>
+		en
+			<schrijver>Peter Aitken</schrijver>
+	</schrijvers>
+	<uitgever>Sams</uitgever>
+	<isbn_nr>0672322358</isbn_nr>
+</boek>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % basis "IGNORE">
+<!ENTITY % uitgebreid "IGNORE">
+<![%basis; [
+<!ELEMENT boek (boek_id, titel, isbn_nr)>
+]]>
+<![%uitgebreid; [
+<!ELEMENT boek (boek_id, titel, schrijver, uitgever,isbn_nr)>
+<!ELEMENT schrijver (#PCDATA)>
+<!ELEMENT uitgever (#PCDATA)>
+]]>
+<!ELEMENT boek_id (#PCDATA)>
+<!ELEMENT titel (#PCDATA)>
+<!ELEMENT isbn_nr (#PCDATA)>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<boeken xmlns="http://www.vdab.be/XML" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.vdab.be/XML 3_23_primary_key.xsd">
+	<boek boek_id="404">
+		<titel>Database Programming with C#</titel>
+		<schrijver>Thomsen</schrijver>
+		<uitgever>Apress</uitgever>
+		<isbn_nr>1590590104</isbn_nr>
+	</boek>
+	<boek boek_id="405">
+		<titel>Teach Yourself C# Web Programming in 21 days</titel>
+		<schrijver>Philip Syme &amp;amp; Peter Aitken</schrijver>
+		<uitgever>Sams</uitgever>
+		<isbn_nr>0672322358</isbn_nr>
+	</boek>
+	<boek boek_id="403">
+		<titel>visual C# .NET</titel>
+		<schrijver>Price Gunderloy</schrijver>
+		<uitgever>Sybex</uitgever>
+		<isbn_nr>0782129110</isbn_nr>
+	</boek>
+	<boek boek_id="402">
+		<titel>The PHP Anthology Object Oriented PHP Solution 1</titel>
+		<schrijver>Harry Fuecks</schrijver>
+		<uitgever>Sitepoint</uitgever>
+ 		<isbn_nr>0957921853</isbn_nr>
+	</boek>
+	<boek boek_id="401">
+		<titel>The PHP Anthology - Volume II: Applications</titel>
+		<schrijver>Harry Fuecks</schrijver>
+		<uitgever>Sitepoint</uitgever>
+		<isbn_nr>0957921845</isbn_nr>
+	</boek>
+	<boek boek_id="400">
+		<titel>DHTML Utopia Modern Web Design using javascript &amp;amp; DOM</titel>
+		<schrijver>Stuart Langridge</schrijver>
+		<uitgever>Sitepoint</uitgever>
+		<isbn_nr>0957921896</isbn_nr>
+	</boek>
+</boeken>

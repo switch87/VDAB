@@ -1,0 +1,12 @@
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\TypeScriptHTMLApp1\bin\TypeScriptHTMLApp1.dll.config
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\TypeScriptHTMLApp1\bin\TypeScriptHTMLApp1.dll
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\TypeScriptHTMLApp1\bin\TypeScriptHTMLApp1.pdb
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\TypeScriptHTMLApp1\obj\Debug\TypeScriptHTMLApp1.csprojResolveAssemblyReference.cache
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\TypeScriptHTMLApp1\obj\Debug\TypeScriptHTMLApp1.dll
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\TypeScriptHTMLApp1\obj\Debug\TypeScriptHTMLApp1.pdb
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\TypeScriptHTMLApp1\bin\TypeScriptHTMLApp1.dll.config
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\TypeScriptHTMLApp1\bin\TypeScriptHTMLApp1.dll
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\TypeScriptHTMLApp1\bin\TypeScriptHTMLApp1.pdb
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\TypeScriptHTMLApp1\obj\Debug\TypeScriptHTMLApp1.csprojResolveAssemblyReference.cache
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\TypeScriptHTMLApp1\obj\Debug\TypeScriptHTMLApp1.dll
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\TypeScriptHTMLApp1\obj\Debug\TypeScriptHTMLApp1.pdb

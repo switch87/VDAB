@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<xs:schema targetNamespace="http://www.vdab.be/xmlcursus/eindoefening"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:reizen="http://www.vdab.be/xmlcursus/eindoefening"
+           elementFormDefault="qualified">
+
+	<xs:complexType name="bijkomendeInformatieType">
+		<xs:sequence>
+			<xs:element name="info" type="xs:string"
+                        minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="vertrekdataType">
+		<xs:sequence>
+			<xs:element name="vertrekdatum" type="xs:string"
+                        minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="dagType">
+		<xs:sequence>
+			<xs:element name="titel" type="xs:string"/>
+			<xs:element name="omschrijving" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="nr" type="xs:unsignedInt"/>
+	</xs:complexType>
+
+	<xs:complexType name="dagprogrammaType">
+		<xs:sequence>
+			<xs:element name="dag" type="reizen:dagType"
+                        minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="opmerkingenType">
+		<xs:sequence>
+			<xs:element name="opmerking" type="xs:string"
+                        minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="beeldType">
+		<xs:attribute name="foto" type="xs:string"/>
+		<xs:attribute name="breedte" type="xs:unsignedInt"/>
+		<xs:attribute name="hoogte" type="xs:unsignedInt"/>
+		<xs:attribute name="alt" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="prijsType">
+		<xs:simpleContent>
+			<xs:extension base="xs:decimal">
+				<xs:attribute name="valuta" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:simpleType name="jaNeeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ja"/>
+			<xs:enumeration value="nee"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="vluchtType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="inbegrepen" type="reizen:jaNeeType"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="reisType">
+		<xs:sequence>
+			
+			<xs:element name="titel" type="xs:string"/>
+			<xs:element name="reisduur" type="xs:string"/>
+			<xs:element name="begeleid" type="reizen:jaNeeType"/>
+			<xs:element name="vlucht" type="reizen:vluchtType"/>
+			<xs:element name="prijs" type="reizen:prijsType"/>
+			<xs:element name="beeld" type="reizen:beeldType"/>
+			<xs:element name="beschrijving" type="xs:string"/>
+			<xs:element name="opmerkingen" type="reizen:opmerkingenType" minOccurs="0"/>
+			<xs:element name="dagprogramma" type="reizen:dagprogrammaType"/>
+			<xs:element name="vertrekdata" type="reizen:vertrekdataType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="bijkomendeInformatie" type="reizen:bijkomendeInformatieType"/>
+		</xs:sequence>
+		<xs:attribute name="reisnr" type="xs:unsignedInt"/>
+	</xs:complexType>
+
+	<xs:complexType name="reizenType">
+		<xs:sequence>
+			<xs:element name="reis" type="reizen:reisType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="reizen" type="reizen:reizenType">
+		<xs:key name="reisKey">
+			<xs:selector xpath="reizen:reis"/>
+			<xs:field xpath="@reisnr"/>
+		</xs:key>
+	</xs:element>
+
+</xs:schema>

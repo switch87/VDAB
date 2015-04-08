@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Schema xmlns="urn:schemas-microsoft-com:xml-data"
+ xmlns:dt="urn:schemas-microsoft-com:datatypes"
+ xmlns:sql="urn:schemas-microsoft-com:xml-sql">
+<ElementType name="boek_id" dt:type="int"/>
+<ElementType name="titel" dt:type="string" />
+<ElementType name="schrijver" dt:type="string" />
+<ElementType name="uitgever" dt:type="string" />
+<ElementType name="isbn_nr" dt:type="string" />
+<ElementType name="boek" >
+	<element type="boek_id" />
+	<element type="titel" />
+	<element type="schrijver" />
+	<element type="uitgever" />
+	<element type="isbn_nr" />	
+</ElementType>
+</Schema>

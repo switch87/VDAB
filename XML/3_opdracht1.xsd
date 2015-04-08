@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Boek">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Titel"/>
+        <xs:element ref="Schrijver"/>
+        <xs:element ref="Uitgever"/>
+        <xs:element ref="Curriculum"/>
+        <xs:element ref="Onderwerp"/>
+      </xs:sequence>
+      <xs:attribute name="boeknr" use="required" type="xs:integer"/>
+      <xs:attribute name="isbn" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Titel" type="xs:string"/>
+  <xs:element name="Schrijver" type="xs:NCName"/>
+  <xs:element name="Uitgever" type="xs:NCName"/>
+  <xs:element name="Curriculum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Naam"/>
+        <xs:element ref="Beroepencode"/>
+      </xs:sequence>
+      <xs:attribute name="nr" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Naam" type="xs:string"/>
+  <xs:element name="Beroepencode" type="xs:integer"/>
+  <xs:element name="Onderwerp">
+    <xs:complexType mixed="true">
+      <xs:attribute name="nr" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

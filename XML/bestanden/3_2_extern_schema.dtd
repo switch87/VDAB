@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT boek (boek_id, titel, schrijver, uitgever, isbn_nr)>
+<!ELEMENT boek_id (#PCDATA)>
+<!ELEMENT titel (#PCDATA)>	
+<!ELEMENT schrijver (#PCDATA)>
+<!ELEMENT uitgever (#PCDATA)>
+<!ELEMENT isbn_nr (#PCDATA)>

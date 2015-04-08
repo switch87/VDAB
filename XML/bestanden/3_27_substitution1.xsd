@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.vdab.be/XML" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   targetNamespace="http://www.vdab.be/XML" 
+		   elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="abstract_schrijver" abstract="true" type="xs:string"/>
+	<xs:complexType name="boekType">
+		<xs:sequence>
+			<xs:element name="titel" type="xs:string"/>
+			<xs:element ref="abstract_schrijver"/>
+			<xs:element name="uitgever" type="xs:string"/>
+			<xs:element name="isbn_nr" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="boek_id" type="xs:positiveInteger"/>
+	</xs:complexType>
+		<xs:complexType name="bibliotheekType">
+		<xs:sequence>
+			<xs:element name="boek" type="boekType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="schrijver" type="xs:string" substitutionGroup="abstract_schrijver"/>
+	<xs:element name="auteur" type="xs:string" substitutionGroup="abstract_schrijver"/>
+	<xs:element name="biblio" type="bibliotheekType"/>
+</xs:schema>

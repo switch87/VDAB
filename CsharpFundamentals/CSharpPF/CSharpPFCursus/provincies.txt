@@ -1,0 +1,10 @@
+Antwerpen:2867 
+Vlaams-Brabant:2106 
+Waals-Brabant:1091 
+Henegouwen:3786 
+Luik:3862 
+Limburg:2422 
+Luxemburg:4440 
+Namen:3666 
+Oost-Vlaanderen:2942 
+West-Vlaanderen:3125

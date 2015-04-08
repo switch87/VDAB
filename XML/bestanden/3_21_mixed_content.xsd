@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns="http://www.vdab.be/XML" 
+		   targetNamespace="http://www.vdab.be/XML" 
+		   elementFormDefault="qualified">
+	<xs:simpleType name="schrijverType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="schrijversType" mixed="true">
+			<xs:sequence minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="schrijver" type="schrijverType"/>
+			</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="boekType">
+		<xs:sequence>
+			<xs:element name="boek_id" type="xs:integer"/>
+			<xs:element name="titel" type="xs:string"/>
+			<xs:element name="schrijvers" type="schrijversType"/>
+			<xs:element name="uitgever" type="xs:string"/>
+			<xs:element name="isbn_nr" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="boek" type="boekType"/>
+</xs:schema>

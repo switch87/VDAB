@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:bier="http://www.vdab.be/xmlkursus/bieren"
+           targetNamespace="http://www.vdab.be/xmlcursus/bieren"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="bierType">
+
+        <xs:sequence>
+
+            <xs:element name="naam" type="xs:string"/>
+
+            <xs:element name="brouwernr" type="xs:positiveInteger"/>
+
+            <xs:element name="soortnr" type="xs:positiveInteger"/>
+
+            <xs:element name="alcohol" type="xs:float" minOccurs="0"/>
+
+        </xs:sequence>
+
+    </xs:complexType>
+
+    <xs:complexType name="bierenType">
+
+        <xs:sequence>
+
+            <xs:element name="bier" type="bier:bierType" minOccurs="0" maxOccurs="unbounded"/>
+
+        </xs:sequence>
+
+    </xs:complexType>
+
+    <xs:element name="bieren" type="bier:bierenType">
+
+        <xs:key name="bierKey">
+
+            <xs:selector xpath="bier:bier"/>
+
+            <xs:field xpath="@biernr"/>
+
+        </xs:key>
+
+    </xs:element>
+
+</xs:schema>

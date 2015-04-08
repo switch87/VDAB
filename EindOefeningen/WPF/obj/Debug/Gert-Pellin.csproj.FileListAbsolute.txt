@@ -1,0 +1,16 @@
+H:\WPF\Gert-Pellin\bin\Debug\Gert-Pellin.exe.config
+H:\WPF\Gert-Pellin\bin\Debug\Gert-Pellin.exe
+H:\WPF\Gert-Pellin\bin\Debug\Gert-Pellin.pdb
+H:\WPF\Gert-Pellin\obj\Debug\MainWindow.baml
+H:\WPF\Gert-Pellin\obj\Debug\MainWindow.g.cs
+H:\WPF\Gert-Pellin\obj\Debug\App.g.cs
+H:\WPF\Gert-Pellin\obj\Debug\Gert-Pellin_MarkupCompile.cache
+H:\WPF\Gert-Pellin\obj\Debug\Gert-Pellin.g.resources
+H:\WPF\Gert-Pellin\obj\Debug\Gert-Pellin.csproj.GenerateResource.Cache
+H:\WPF\Gert-Pellin\obj\Debug\Gert-Pellin.exe
+H:\WPF\Gert-Pellin\obj\Debug\Gert-Pellin.pdb
+H:\WPF\Gert-Pellin\obj\Debug\Afdrukvoorbeeld.baml
+H:\WPF\Gert-Pellin\obj\Debug\Afdrukvoorbeeld.g.cs
+H:\WPF\Gert-Pellin\obj\Debug\Gert-Pellin.csprojResolveAssemblyReference.cache
+H:\WPF\Gert-Pellin\obj\Debug\bol.baml
+H:\WPF\Gert-Pellin\obj\Debug\WensKaart.Properties.Resources.resources

@@ -1,0 +1,9 @@
+c:\users\net04\documents\visual studio 2013\Projects\CSharpPF\CSharpPFCursus\bin\Debug\CSharpPFCursus.exe.config
+C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPF\CSharpPFCursus\bin\Debug\CSharpPFCursus.exe
+C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPF\CSharpPFCursus\bin\Debug\CSharpPFCursus.pdb
+C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPF\CSharpPFCursus\obj\Debug\CSharpPFCursus.csprojResolveAssemblyReference.cache
+C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPF\CSharpPFCursus\obj\Debug\CSharpPFCursus.exe
+C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPF\CSharpPFCursus\obj\Debug\CSharpPFCursus.pdb
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\CsharpFundamentals\CSharpPF\CSharpPFCursus\bin\Debug\CSharpPFCursus.exe.config
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\CsharpFundamentals\CSharpPF\CSharpPFCursus\obj\Debug\CSharpPFCursus.exe
+C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\CsharpFundamentals\CSharpPF\CSharpPFCursus\obj\Debug\CSharpPFCursus.pdb

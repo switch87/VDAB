@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblio xmlns="http://www.vdab.be/XML" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.vdab.be/XML 3_27_substitution1.xsd">
+	<boek boek_id="405">
+		<titel>Database Programming with C#</titel>
+		<schrijver>Thomsen</schrijver>
+		<uitgever>Apress</uitgever>
+		<isbn_nr>1590590104</isbn_nr>
+	</boek>
+	<boek boek_id="404">
+		<titel>Teach Yourself C# Web Programming in 21 days</titel>
+		<auteur>Philip Syme &amp;amp; Peter Aitken</auteur>
+		<uitgever>Sams</uitgever>
+		<isbn_nr>0672322358</isbn_nr>
+	</boek>
+</biblio>

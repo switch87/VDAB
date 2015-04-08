@@ -1,0 +1,55 @@
+
+<project type="cont" name="Project1" expanded="yes" catalog="no" pluginOwner="-1">
+	<file plugId="3" URL="PostcodeType.xsd" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="3_2_11_3_Bierendb.xsd" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="3_2_11_2_Boeken.xsd" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="3_2_11_1_Bieren.xsd" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="3_2_10.xsd" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="3_2_7_2_4_ISBN10nummerType.xsd" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="3_2_7_2_3_AlcoholPercentageType.xsd" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="oef-2_2.dtd" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="oef-2_1.dtd" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="bestanden\3_11_boek.xml" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="bestanden\3_12_boeken.xml" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="bestanden\3_37_bieren.xml" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+	<file plugId="3" URL="bestanden\3_38_bierendb.xml" catalog="no">
+		<queries/>
+		<namespaces/>
+	</file>
+</project>

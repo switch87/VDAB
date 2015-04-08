@@ -1,0 +1,485 @@
+<Boeken>
+  <Boek boeknr="405" isbn="1590590104">
+    <Titel>Database Programming with C#</Titel>
+    <Schrijver>Thomsen</Schrijver>
+    <Uitgever>Apress</Uitgever>
+    <Curriculums>
+      <Curriculum nr="38">
+        <Naam>.NET ontwikkelaar met C#</Naam>
+        <Beroepencode>750412</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="11">C#</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="404" isbn="0672322358">
+    <Titel>Teach Yourself C# Web Programming in 21 days</Titel>
+    <Schrijver>Philip Syme &amp;amp; Peter Aitken</Schrijver>
+    <Uitgever>Sams</Uitgever>
+    <Curriculums>
+      <Curriculum nr="38">
+        <Naam>.NET ontwikkelaar met C#</Naam>
+        <Beroepencode>750412</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="11">C#</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="403" isbn="0782129110">
+    <Titel>visual C# .NET</Titel>
+    <Schrijver>Price Gunderloy</Schrijver>
+    <Uitgever>Sybex</Uitgever>
+    <Curriculums>
+      <Curriculum nr="38">
+        <Naam>.NET ontwikkelaar met C#</Naam>
+        <Beroepencode>750412</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="11">C#</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="402" isbn="0957921853">
+    <Titel>The PHP Anthology Object Oriented PHP Solution 1</Titel>
+    <Schrijver>Harry Fuecks</Schrijver>
+    <Uitgever>Sitepoint</Uitgever>
+    <Curriculums>
+      <Curriculum nr="30">
+        <Naam>PHP ontwikkelaar</Naam>
+        <Beroepencode>750414</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="41">PHP</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="401" isbn="0957921845">
+    <Titel>The PHP Anthology - Volume II: Applications</Titel>
+    <Schrijver>Harry Fuecks</Schrijver>
+    <Uitgever>Sitepoint</Uitgever>
+    <Curriculums>
+      <Curriculum nr="30">
+        <Naam>PHP ontwikkelaar</Naam>
+        <Beroepencode>750414</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="41">PHP</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="400" isbn="0957921896">
+    <Titel>DHTML Utopia Modern Web Design using javascript &amp;amp; DOM</Titel>
+    <Schrijver>Stuart Langridge</Schrijver>
+    <Uitgever>Sitepoint</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="30">
+        <Naam>PHP ontwikkelaar</Naam>
+        <Beroepencode>750414</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="37">
+        <Naam>.NET ontwikkelaar met VB</Naam>
+        <Beroepencode>750411</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="38">
+        <Naam>.NET ontwikkelaar met C#</Naam>
+        <Beroepencode>750412</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="30">JAVASCRIPT</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="399" isbn="1590595424">
+    <Titel>Foundation Flash 8</Titel>
+    <Schrijver>Sham Bhangal and Kristian Basley</Schrijver>
+    <Uitgever>friendsof</Uitgever>
+    <Curriculums>
+      <Curriculum nr="30">
+        <Naam>PHP ontwikkelaar</Naam>
+        <Beroepencode>750414</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="24">FLASH</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="398" isbn="1590595823">
+    <Titel>Foundations of Ajax</Titel>
+    <Schrijver>Ryan Asleon and Nathaniel T. Schutta</Schrijver>
+    <Uitgever>Apress</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="37">
+        <Naam>.NET ontwikkelaar met VB</Naam>
+        <Beroepencode>750411</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="38">
+        <Naam>.NET ontwikkelaar met C#</Naam>
+        <Beroepencode>750412</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="4">AJAX</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="397" isbn="1590596188">
+    <Titel>Actionscript for flash 8</Titel>
+    <Schrijver>Besley Bhangal Powers</Schrijver>
+    <Uitgever>friendsof</Uitgever>
+    <Curriculums>
+      <Curriculum nr="30">
+        <Naam>PHP ontwikkelaar</Naam>
+        <Beroepencode>750414</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="24">FLASH</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="396" isbn="1590594665">
+    <Titel>Foundation PHP 5 for Flash</Titel>
+    <Schrijver>David Powers</Schrijver>
+    <Uitgever>friendsof</Uitgever>
+    <Curriculums>
+      <Curriculum nr="30">
+        <Naam>PHP ontwikkelaar</Naam>
+        <Beroepencode>750414</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="41">PHP</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="395" isbn="0975240234">
+    <Titel>Build your own Standards compliant website using Dreamweaver 8</Titel>
+    <Schrijver>Rachel Andrew</Schrijver>
+    <Uitgever>Sitepoint</Uitgever>
+    <Curriculums>
+      <Curriculum nr="30">
+        <Naam>PHP ontwikkelaar</Naam>
+        <Beroepencode>750414</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="20">Dreamweaver</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="394" isbn="1590595947">
+    <Titel>Flash Application Design Solutions</Titel>
+    <Schrijver>Cheung Bryant</Schrijver>
+    <Uitgever>friendsof</Uitgever>
+    <Curriculums>
+      <Curriculum nr="30">
+        <Naam>PHP ontwikkelaar</Naam>
+        <Beroepencode>750414</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="24">FLASH</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="393" isbn="047177197x">
+    <Titel>Flash 8 ActionScript</Titel>
+    <Schrijver>Joey Lott and Robert Reinhardt</Schrijver>
+    <Uitgever>Wiley</Uitgever>
+    <Curriculums>
+      <Curriculum nr="30">
+        <Naam>PHP ontwikkelaar</Naam>
+        <Beroepencode>750414</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="24">FLASH</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="392" isbn="0782144365">
+    <Titel>VBA second edition</Titel>
+    <Schrijver>Hart-Davis</Schrijver>
+    <Uitgever>Sybex</Uitgever>
+    <Curriculums>
+      <Curriculum nr="41">
+        <Naam>IT medewerker</Naam>
+        <Beroepencode>750601</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="57">VBA</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="391" isbn="0321150406">
+    <Titel>Effective XML</Titel>
+    <Schrijver>Elliotte Rusty Harold</Schrijver>
+    <Uitgever>Addison Wesley</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="30">
+        <Naam>PHP ontwikkelaar</Naam>
+        <Beroepencode>750414</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="37">
+        <Naam>.NET ontwikkelaar met VB</Naam>
+        <Beroepencode>750411</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="38">
+        <Naam>.NET ontwikkelaar met C#</Naam>
+        <Beroepencode>750412</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="65">XML</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="390" isbn="1590596048">
+    <Titel>Beginning Apache Struts</Titel>
+    <Schrijver>Arnold Doray</Schrijver>
+    <Uitgever>Apress</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="29">JAVA</Onderwerp>
+      <Onderwerp nr="52">Struts</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="389" isbn="0201771861">
+    <Titel>Processing XML with Java</Titel>
+    <Schrijver>Elliotte Rusty Harold</Schrijver>
+    <Uitgever>Addison Wesley</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="29">JAVA</Onderwerp>
+      <Onderwerp nr="65">XML</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="388" isbn="1932394613">
+    <Titel>Ajax in Action</Titel>
+    <Schrijver>Dave Crane, Eric Pascarello, Darren James</Schrijver>
+    <Uitgever>Manning</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="37">
+        <Naam>.NET ontwikkelaar met VB</Naam>
+        <Beroepencode>750411</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="38">
+        <Naam>.NET ontwikkelaar met C#</Naam>
+        <Beroepencode>750412</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="4">AJAX</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="387" isbn="1590594703">
+    <Titel>Beginning Java EE 5</Titel>
+    <Schrijver>Kevin Mukhar, Chris Zelenak</Schrijver>
+    <Uitgever>APress</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="29">JAVA</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="386" isbn="193239415x">
+    <Titel>Hibernate in Action</Titel>
+    <Schrijver>Christian Bauer, Gavin King</Schrijver>
+    <Uitgever>Manning</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="29">JAVA</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="385" isbn="1932394583">
+    <Titel>POJOs in action</Titel>
+    <Schrijver>Chris Richardson</Schrijver>
+    <Uitgever>Manning</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="29">JAVA</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="384" isbn="9780321197887">
+    <Titel>Building Solutions With the Microsoft .NET Compact Framework</Titel>
+    <Schrijver>Dan Fox</Schrijver>
+    <Uitgever>Addison</Uitgever>
+    <Curriculums>
+      <Curriculum nr="37">
+        <Naam>.NET ontwikkelaar met VB</Naam>
+        <Beroepencode>750411</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="38">
+        <Naam>.NET ontwikkelaar met C#</Naam>
+        <Beroepencode>750412</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="2">.NET</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="383" isbn="9789039523148">
+    <Titel>Modern Redesign met xhtml CSS en XML</Titel>
+    <Schrijver>Peter Kassenaar</Schrijver>
+    <Uitgever>AS</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="30">
+        <Naam>PHP ontwikkelaar</Naam>
+        <Beroepencode>750414</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="37">
+        <Naam>.NET ontwikkelaar met VB</Naam>
+        <Beroepencode>750411</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="38">
+        <Naam>.NET ontwikkelaar met C#</Naam>
+        <Beroepencode>750412</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="16">CSS</Onderwerp>
+      <Onderwerp nr="26">HTML</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="382" isbn="9781590594667">
+    <Titel>Php 5 for Flash</Titel>
+    <Schrijver>David Powers</Schrijver>
+    <Uitgever>Friends of ed</Uitgever>
+    <Curriculums>
+      <Curriculum nr="30">
+        <Naam>PHP ontwikkelaar</Naam>
+        <Beroepencode>750414</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="41">PHP</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="381" isbn="9781565924918">
+    <Titel>LDAP System Administration</Titel>
+    <Schrijver>Gerald Carter</Schrijver>
+    <Uitgever>O'Reilly</Uitgever>
+    <Curriculums>
+      <Curriculum nr="4">
+        <Naam>Netwerkbeheerder</Naam>
+        <Beroepencode>09613</Beroepencode>
+      </Curriculum>
+      <Curriculum nr="39">
+        <Naam>Windows netwerkbeheerder</Naam>
+        <Beroepencode>750421</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="59">W2K</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="380" isbn="0596007345">
+    <Titel>JBoss at Work</Titel>
+    <Schrijver>Tom Marrs, Scott Davis</Schrijver>
+    <Uitgever>O'Reilly</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="29">JAVA</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="379" isbn="0596007108">
+    <Titel>Eclipse Cookbook</Titel>
+    <Schrijver>Steve Holzner</Schrijver>
+    <Uitgever>O'Reilly</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="29">JAVA</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="378" isbn="0672326485">
+    <Titel>JBoss 4.0 The Official Guide</Titel>
+    <Schrijver>Marc Fleury, Scott Stark, Norman Richards</Schrijver>
+    <Uitgever>SAMS</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="29">JAVA</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="377" isbn="0131290142">
+    <Titel>Java How To Program Sixth Edition</Titel>
+    <Schrijver>Deitel &amp;amp; Deitel</Schrijver>
+    <Uitgever>Deitel &amp;amp; Deitel</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="29">JAVA</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+  <Boek boeknr="376" isbn="0596100078">
+    <Titel>JBOSS a Developer's Notebook</Titel>
+    <Schrijver>Richards &amp;amp; Griffiths, Jr.</Schrijver>
+    <Uitgever>O'Reilly</Uitgever>
+    <Curriculums>
+      <Curriculum nr="16">
+        <Naam>Java Ontwikkelaar</Naam>
+        <Beroepencode>750413</Beroepencode>
+      </Curriculum>
+    </Curriculums>
+    <Onderwerpen>
+      <Onderwerp nr="29">JAVA</Onderwerp>
+    </Onderwerpen>
+  </Boek>
+</Boeken>
