@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<boek xmlns="http://www.vdab.be/XML" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.vdab.be/XML 3_15_met_namespace.xsd">
+	<boek_id>1</boek_id>
+	<titel>
+	Linux in A Nutshell : A Desktop Quick Reference (3rd Edition)
+	</titel>
+	<schrijver>
+	Ellen Siever (Editor), Jessica P. Hekman, Stephen Figgins, Stephen Spainhour
+	</schrijver>
+	<uitgever>O' Reilly</uitgever>
+	<isbn_nr>2</isbn_nr>
+</boek>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE boek SYSTEM "3_2_extern_schema.dtd">
+<boek>
+	<boek_id>1</boek_id>
+	<titel>
+	Linux in A Nutshell : A Desktop Quick Reference (3rd Edition)
+	</titel>
+	<schrijver>
+	Ellen Siever (Editor), Jessica P. Hekman, Stephen Figgins, Stephen Spainhour
+	</schrijver>
+	<uitgever>O' Reilly</uitgever>
+	<isbn_nr>2</isbn_nr>
+ </boek>

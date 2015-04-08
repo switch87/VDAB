@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % persoonattlist "nr ID #REQUIRED 
+	geslacht (Man|Vrouw) #REQUIRED 
+	vader IDREF #IMPLIED  
+	kinderen IDREFS #IMPLIED">
+<!ELEMENT stamboom (persoon+)>
+<!ELEMENT persoon (voornaam, familienaam)>
+<!ATTLIST persoon %persoonattlist;>
+<!ELEMENT voornaam (#PCDATA)> 
+<!ELEMENT familienaam (#PCDATA)> 

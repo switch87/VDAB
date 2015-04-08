@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- A list of employees -->
+ <name EmpType="Voltijds">
+  <first>Jan</first>
+  <Last>Janssens</last>
+  <name EmpType="Interim">
+  <first>Peter</first>
+  <last>Peters</last>
+  </name>

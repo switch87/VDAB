@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE stamboom SYSTEM "3_4_met_attributen.dtd">
+<stamboom>
+	<persoon nr="k1" geslacht="Man" kinderen="k2 k3" email="info@kiekeboe.be">
+		<voornaam>Marcel</voornaam>
+		<familienaam>Kiekeboe</familienaam>
+	</persoon>
+	<persoon nr="k2" geslacht="Vrouw" vader="k1" email="info@kiekeboe.be">
+		<voornaam>Fanny</voornaam>
+		<familienaam>Kiekeboe</familienaam>
+	</persoon>
+	<persoon nr="k3" geslacht="Man" vader="k1" email="info@kiekeboe.be">
+		<voornaam>Konstantinopel</voornaam>
+		<familienaam>Kiekeboe</familienaam>
+	</persoon>
+</stamboom>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:bier="http://www.vdab.be/xmlcursus/bier"
+		   xmlns:alcohol="http://www.vdab.be/xmlcursus/alcohol"
+           targetNamespace="http://www.vdab.be/xmlcursus/bier"
+           elementFormDefault="qualified">
+	<xs:import namespace="http://www.vdab.be/xmlcursus/alcohol"
+               schemaLocation="3_2_7_2_3_AlcoholPercentageType.xsd"/>
+	
+	<xs:complexType name="bierenType">
+		<xs:sequence>
+			<xs:element name="bier" type="bier:bierType" 
+					minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bierType">
+		<xs:sequence>
+			<xs:element name="naam" type="xs:string"/>
+			<xs:element name="brouwernr" type="xs:unsignedInt"/>
+			<xs:element name="soortnr" type="xs:unsignedInt"/>
+			<xs:element name="alcohol" type="xs:decimal"
+					minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="biernr" type="xs:unsignedInt"/>
+	</xs:complexType>
+
+	<xs:element name="bieren" type="bier:bierenType">
+		<xs:key name="bierKey">
+			<xs:selector xpath="bier:bier"/>
+			<xs:field xpath="@biernr"/>
+		</xs:key>
+	</xs:element>
+
+</xs:schema>

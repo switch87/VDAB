@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:boek="http://www.vdab.be/xmlcursus/boek"
+		   targetNamespace="http://www.vdab.be/xmlcursus/boek" 
+		   elementFormDefault="qualified">
+	<xs:simpleType name="beroepencodeType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{6}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="curriculumType">
+		<xs:sequence>
+			<xs:element name="Naam" type="xs:string"/>
+			<xs:element name="Beroepencode" type="boek:beroepencodeType"/>
+		</xs:sequence>
+		<xs:attribute name="nr" use="required" type="xs:unsignedInt"/>
+	</xs:complexType>
+	<xs:complexType name="onderwerpType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="nr" type="xs:unsignedInt" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="boekType">
+		<xs:sequence>
+			<xs:element name="Titel" type="xs:string" />
+			<xs:element name="Schrijver" type="xs:string" />
+			<xs:element name="Uitgever" type="xs:string" />
+			<xs:element name="Curriculum" type="boek:curriculumType" />
+			<xs:element name="Onderwerp" type="boek:onderwerpType" />
+		</xs:sequence>
+		<xs:attribute name="boeknr" type="xs:unsignedInt" />
+		<xs:attribute name="isbn" type="xs:string" />
+	</xs:complexType>
+	<xs:element name="Boek" type="boek:boekType" />
+</xs:schema>

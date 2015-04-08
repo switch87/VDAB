@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE Boek [
+	<!ELEMENT Boek (Titel, Schrijver, Uitgever, Curriculum, Onderwerp)>
+	<!ATTLIST Boek
+		boeknr CDATA #REQUIRED
+		isbn CDATA #REQUIRED
+	>
+	<!ELEMENT Titel (#PCDATA)>
+	<!ELEMENT Schrijver (#PCDATA)>
+	<!ELEMENT Uitgever (#PCDATA)>
+	<!ELEMENT Curriculum (Naam, Beroepencode)>
+	<!ATTLIST Curriculum
+		nr CDATA #REQUIRED
+	>
+	<!ELEMENT Naam (#PCDATA)>
+	<!ELEMENT Beroepencode (#PCDATA)>
+	<!ELEMENT Onderwerp (#PCDATA)>
+	<!ATTLIST Onderwerp 
+		nr CDATA #REQUIRED
+	>
+]>
+<Boek boeknr="405" isbn="1590590104">
+	<Titel>Database Programming with C#</Titel>
+	<Schrijver>Thomsen</Schrijver>
+	<Uitgever>Apress</Uitgever>
+	<Curriculum nr="38">
+		<Naam>.NET ontwikkelaar met C#</Naam>
+		<Beroepencode>750412</Beroepencode>
+	</Curriculum>
+	<Onderwerp nr="11">C#</Onderwerp>
+</Boek>

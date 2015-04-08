@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<literatuur:Boeken>
+  <literatuur:Boek>
+    <literatuur:Titel>Mijn ruimtereis</literatuur:Titel>
+		<persoon:auteur>
+			<persoon:titel>baron</persoon:titel>
+			<persoon:voornaam>Dirk</persoon:voornaam>
+			<persoon:naam>Frimout</persoon:naam>
+		</persoon:auteur>
+    <literatuur:Uitgever>Apress</literatuur:Uitgever>
+    <literatuur:Curriculums>
+      <literatuur:Curriculum>
+        <literatuur:Naam>
+            .NET ontwikkelaar met C#
+        </literatuur:Naam>
+        <literatuur:Beroepencode>750412</literatuur:Beroepencode>
+      </literatuur:Curriculum>
+    </literatuur:Curriculums>
+    <literatuur:Onderwerpen>
+      <literatuur:Onderwerp >C#</literatuur:Onderwerp>
+    </literatuur:Onderwerpen>
+  </literatuur:Boek>
+</literatuur:Boeken>
+

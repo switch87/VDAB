@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="jarenType">
+		<xs:list itemType="xs:gYear"/>
+	</xs:simpleType>
+	<xs:simpleType name="vijfJarenType">
+		<xs:restriction base="jarenType">
+			<xs:length value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="jaren" type="vijfJarenType"/>
+</xs:schema>

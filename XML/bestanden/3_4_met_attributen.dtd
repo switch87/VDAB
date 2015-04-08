@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT stamboom (persoon+)>
+<!ELEMENT persoon (voornaam, familienaam)>
+<!ATTLIST persoon 
+	nr ID #REQUIRED 
+	geslacht (Man|Vrouw) #REQUIRED 
+	vader IDREF #IMPLIED  
+	kinderen IDREFS #IMPLIED
+	email CDATA #FIXED "info@kiekeboe.be">
+<!ELEMENT voornaam (#PCDATA)> 
+<!ELEMENT familienaam (#PCDATA)> 
