@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Data.SqlClient;
 
 namespace AdoWPF
 {
@@ -24,31 +23,6 @@ namespace AdoWPF
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void buttonBieren_Click( object sender, RoutedEventArgs e )
-        {
-            try
-            {
-                // 2 schrijfwijzen voor connectie maken met sql-database
-
-                //using ( var conBieren = new SqlConnection() )
-                //{
-                //    conBieren.ConnectionString =
-                //    @"server=.\sqlexpress;database=Bieren;integrated security=true";
-
-                using (var conBieren = new SqlConnection(@"server=.\sqlexpress;database=Bieren;integrated security=true"))
-                {
-
-
-                    conBieren.Open();
-                    labelStatus.Content = "Bieren geopend";
-                }
-            }
-            catch ( Exception ex )
-            {
-                labelStatus.Content = ex.Message;
-            }
         }
     }
 }
