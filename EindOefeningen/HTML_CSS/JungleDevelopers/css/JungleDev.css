@@ -1,0 +1,260 @@
+﻿@charset "utf-8";
+/* CSS Document voor deGazet*/
+
+/* basis 1em = 16px
+4px = 0.25em
+6 = 0.375em
+8 = 0.5em
+10 = 0.625em
+12 = 0.75em
+14 = 0.875em
+18 = 1.125em
+20 = 1.25em
+22 = 1.375em
+24 = 1.5em
+32 = 2em
+100 = 6.25em;
+*/
+
+/* NORMALIZE */
+html, body, div, section, article, aside, nav {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+    float: left;
+    margin: 0 1.25em 0.5em 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: hide;
+}
+
+tr, td {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.clearFix:before, .clearFix:after {
+    content: " ";
+    display: table;
+}
+
+.clearFix:after {
+    clear: both;
+}
+/* enkel voor IE6/7 */
+.clearFix {
+    *zoom: 1;
+}
+
+/* TYPOGRAFIE */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+h1 {
+    color: #00735D;
+}
+
+h2 {
+    color: #D64708;
+}
+
+h3 {
+    font-style: italic;
+    font-weight: 600;
+    color: #52463f;
+}
+
+#profielen ul {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+footer, #profielen ul, a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+    a:hover, a:active {
+        text-decoration: none;
+    }
+
+
+.paars, .groen {
+    font-weight: 600;
+}
+
+.paars, a.groen.naarpaars:hover {
+    color: #9a3098;
+}
+
+a.groen {
+    text-decoration: none;
+    color: #00735d;
+}
+
+.groen:hover {
+    text-decoration: underline;
+}
+
+.witbg {
+    color: #303f43;
+    background-color: white;
+    float: right;
+    padding: 0.2em;
+}
+
+/* KLEURENSCHEMAS */
+body {
+    background-color: white;
+    color: #333;
+}
+
+#topbanner, #profielen ul li {
+    background-color: #D64708;
+}
+
+footer {
+    background-color: #303f43;
+}
+
+#topmenu li:hover, #topmenu #activepage {
+    background-color: #b61600;
+}
+
+#profielen ul li:hover {
+    background-color: #00735d;
+}
+
+/* Lay-out */
+
+.wikkel {
+    max-width: 1200px;
+    padding: 0 1em;
+    margin: 0 auto;
+}
+
+#topmenu {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+    #topmenu li {
+        box-sizing: border-box;
+        padding: 0.3em;
+        display: inline-block;
+        width: 20%;
+        border-left: 1px solid #b1b1b1;
+        float: left;
+        text-align: center;
+    }
+
+
+        #topmenu li:first-of-type {
+            margin-left: -2.2em;
+        }
+
+        #topmenu li:last-of-type {
+            border-right: 1px solid #b1b1b1;
+        }
+
+#topbanner img {
+    float: right;
+    width: 350px;
+}
+
+#inleiding {
+    width: 100%;
+    border-bottom: 1px solid #b1b1b1;
+}
+
+    #inleiding p {
+        width: 45%;
+    }
+
+#profielen {
+    list-style: none;
+}
+
+    #profielen ul li {
+        border-radius: 0.5em;
+        width: 17em;
+        padding: 0.2em;
+        margin: 0.2em;
+    }
+
+
+
+.tricol {
+    border-bottom: 1px solid #b1b1b1;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+    .tricol > div {
+        box-sizing: border-box;
+        width: 25%;
+    }
+
+        .tricol > div img {
+            width: 150px;
+        }
+
+    .tricol .left p, .tricol .right p {
+        margin-top: 160px;
+    }
+
+    .tricol .middle {
+        background-image: url(../img/drupal-8.png);
+        background-size: 500px auto;
+        background-repeat: no-repeat;
+        background-position: left;
+        padding: 1em;
+        width: 50%;
+    }
+
+
+#verwachtingen {
+    width: 100%;
+}
+
+    #verwachtingen img {
+        height: 70px;
+    }
+
+    #verwachtingen table {
+    }
+
+        #verwachtingen table p, #verwachtingen table h3 {
+            font-weight: 400;
+            text-align: left;
+        }
+
+footer {
+    padding: 2em 0;
+}
