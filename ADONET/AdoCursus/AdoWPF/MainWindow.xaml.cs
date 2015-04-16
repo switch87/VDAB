@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace AdoWPF
 {
@@ -37,10 +38,11 @@ namespace AdoWPF
                 //    conBieren.ConnectionString =
                 //    @"server=.\sqlexpress;database=Bieren;integrated security=true";
 
-                using (var conBieren = new SqlConnection(@"server=.\sqlexpress;database=Bieren;integrated security=true"))
+                using ( var conBieren = new SqlConnection() )
                 {
-
-
+                    ConnectionStringSettings conString =
+                    ConfigurationManager.ConnectionStrings["Bieren"];
+                    conBieren.ConnectionString = conString.ConnectionString;
                     conBieren.Open();
                     labelStatus.Content = "Bieren geopend";
                 }
