@@ -5,10 +5,16 @@
     <Grid>
         <Button x:Name="buttonBieren" Content="Bieren openen"
             HorizontalAlignment="Left" VerticalAlignment="Top"
-            Width="100" Margin="214,59,0,0"
+            Width="100" Margin="10,10,0,0"
             Click="buttonBieren_Click"/>
         <Label x:Name="labelStatus" Content=""
             HorizontalAlignment="Left" VerticalAlignment="Top"
-            Margin="230,154,0,0"/>
+            Margin="10,284,0,0"/>
+        <Button Name="buttonBonus" Content="Bonus op alle rekeningen" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="151" Click="buttonBonus_Click"/>
+        <Label Content="RekeningNr:" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="textBoxRekeningNr" HorizontalAlignment="Left" Height="23" Margin="90,66,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Te storten" HorizontalAlignment="Left" Margin="10,95,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="textBoxTeStorten" HorizontalAlignment="Left" Height="23" Margin="90,97,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Name="buttonStorten" Content="Storten" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Width="200" Click="buttonStorten_Click"/>
     </Grid>
 </Window>
