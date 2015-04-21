@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data.Common;
+using AdoGemeenschap;
 
 namespace AdoWPF
 {
@@ -31,18 +33,9 @@ namespace AdoWPF
         {
             try
             {
-                // 2 schrijfwijzen voor connectie maken met sql-database
-
-                //using ( var conBieren = new SqlConnection() )
-                //{
-                //    conBieren.ConnectionString =
-                //    @"server=.\sqlexpress;database=Bieren;integrated security=true";
-
-                using ( var conBieren = new SqlConnection() )
+                var manager = new BierenDbManager();
+                using ( var conBieren = manager.GetConnection() )
                 {
-                    ConnectionStringSettings conString =
-                    ConfigurationManager.ConnectionStrings["Bieren"];
-                    conBieren.ConnectionString = conString.ConnectionString;
                     conBieren.Open();
                     labelStatus.Content = "Bieren geopend";
                 }
