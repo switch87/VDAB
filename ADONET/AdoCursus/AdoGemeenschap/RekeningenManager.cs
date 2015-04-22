@@ -31,8 +31,14 @@ namespace AdoGemeenschap
             {
                 using ( var comStorten = conBank.CreateCommand() )
                 {
-                    comStorten.CommandType = System.Data.CommandType.Text;
-                    comStorten.CommandText = "update Rekeningen set Saldo=Saldo+@teStorten where RekeningNr=@RekeningNr";
+                    //comStorten.CommandType = System.Data.CommandType.Text;
+                    //comStorten.CommandText = "update Rekeningen set Saldo=Saldo+@teStorten where RekeningNr=@RekeningNr";
+
+                    // 5.4.3 Stored procedure aanroepen
+                    // in plaats van de sql procedure volledig uit te typen wordt een in de database opgeslagen procedure opgeroepen
+                    comStorten.CommandType = System.Data.CommandType.StoredProcedure;
+                    comStorten.CommandText = "storten";
+
                     DbParameter parTeStorten = comStorten.CreateParameter();
                     parTeStorten.ParameterName = "@teStorten";
                     parTeStorten.Value = teStorten;
