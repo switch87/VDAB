@@ -44,5 +44,19 @@ namespace WpfOpgave3
                 LabelStatus.Content = ex.Message;
             }
         }
+
+        private void buttonVervang_Click( object sender, RoutedEventArgs e )
+        {
+            try
+            {
+                var tuinManager = new KlantenManager();
+                tuinManager.VervangLeverancier( 2, 3 );
+                LabelStatus.Content = "Leverancier 2 is verwijderd en vervangen door 3";
+            }
+            catch ( Exception ex )
+            {
+                LabelStatus.Content = ex.Message;
+            }
+        }
     }
 }
