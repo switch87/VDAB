@@ -175,5 +175,10 @@ namespace AdoGemeenschap
                 }
             }
         }
+
+        public Decimal SaldoRekeningRaadplegen (String rekeningNr)
+        {
+
+        }
     }
 }
