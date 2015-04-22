@@ -16,7 +16,7 @@ using System.Configuration;
 using System.Data.Common;
 using TuinCentrumGemeenschap;
 
-namespace WpfOpgave2
+namespace WpfOpgave3
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -28,16 +28,16 @@ namespace WpfOpgave2
             InitializeComponent();
         }
 
-        private void Button_Click( object sender, RoutedEventArgs e )
+        private void Toevoegen_Click( object sender, RoutedEventArgs e )
         {
             try
             {
-                var manager = new TuincentrumDbManager();
-                using ( var conTuinCentrum = manager.GetConnection() )
+                var manager = new KlantenManager();
+                if ( manager.Klanttoevoegen( naamBox.Text, adresBox.Text, postNrBox.Text, woonplaatsBox.Text ) )
                 {
-                    conTuinCentrum.Open();
-                    LabelStatus.Content = "Tuincentrum geopend";
+                    LabelStatus.Content = "Nieuwe klant toegevoegd";
                 }
+                else LabelStatus.Content = "Nieuwe klant NIET toegevoegd";
             }
             catch ( Exception ex )
             {

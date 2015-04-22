@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.Common;
 
-namespace O2Gemeenschap
+namespace TuinCentrumGemeenschap
 {
     public class TuincentrumDbManager
     {

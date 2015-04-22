@@ -7,8 +7,8 @@
     <ProjectGuid>{84305EFE-267F-4F3A-8397-4AA6C387B2A7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>O2Gemeenschap</RootNamespace>
-    <AssemblyName>O2Gemeenschap</AssemblyName>
+    <RootNamespace>TuinCentrumGemeenschap</RootNamespace>
+    <AssemblyName>TuinCentrumGemeenschap</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KlantenManager.cs" />
     <Compile Include="TuincentrumDbManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
