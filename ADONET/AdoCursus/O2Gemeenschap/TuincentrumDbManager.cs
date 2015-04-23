@@ -5,15 +5,15 @@ namespace TuinCentrumGemeenschap
 {
     public class TuincentrumDbManager
     {
-        private static ConnectionStringSettings conTuincentrumSetting =
+        private static ConnectionStringSettings _conTuincentrumSetting =
             ConfigurationManager.ConnectionStrings["Tuincentrum"];
-        private static DbProviderFactory factory =
-            DbProviderFactories.GetFactory( conTuincentrumSetting.ProviderName );
+        private static DbProviderFactory _factory =
+            DbProviderFactories.GetFactory( _conTuincentrumSetting.ProviderName );
 
         public DbConnection GetConnection()
         {
-            var conTuincentrum = factory.CreateConnection();
-            conTuincentrum.ConnectionString = conTuincentrumSetting.ConnectionString;
+            var conTuincentrum = _factory.CreateConnection();
+            conTuincentrum.ConnectionString = _conTuincentrumSetting.ConnectionString;
             return conTuincentrum;
         }
     }
