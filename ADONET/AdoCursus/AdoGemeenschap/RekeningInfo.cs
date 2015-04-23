@@ -1,23 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdoGemeenschap
+﻿namespace AdoGemeenschap
 {
     public class RekeningInfo
     {
-        private Decimal saldoValue;
-        private String klantNaamValue;
-
-        public Decimal Saldo { get { return saldoValue; } }
-        public String Klantnaam { get { return klantNaamValue; } }
-
-        public RekeningInfo( Decimal saldo, String klantNaam )
+        public RekeningInfo(decimal saldo, string klantNaam)
         {
-            saldoValue = saldo;
-            klantNaamValue = klantNaam;
+            Saldo = saldo;
+            Klantnaam = klantNaam;
         }
+
+        public decimal Saldo { get; private set; }
+        public string Klantnaam { get; private set; }
     }
 }

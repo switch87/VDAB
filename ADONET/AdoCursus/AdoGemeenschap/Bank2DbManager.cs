@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Transactions;
 
 namespace AdoGemeenschap
 {
     public class Bank2DbManager
     {
-        private static ConnectionStringSettings conBankSetting = ConfigurationManager.ConnectionStrings["Bank2"];
-        private static DbProviderFactory factory = DbProviderFactories.GetFactory( conBankSetting.ProviderName );
+        private static readonly ConnectionStringSettings conBankSetting =
+            ConfigurationManager.ConnectionStrings["Bank2"];
+
+        private static readonly DbProviderFactory factory = DbProviderFactories.GetFactory(conBankSetting.ProviderName);
 
         public DbConnection GetConnection()
         {

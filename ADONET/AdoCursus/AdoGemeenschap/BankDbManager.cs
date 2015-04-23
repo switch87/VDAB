@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data.Common;
 
 namespace AdoGemeenschap
 {
-    class BankDbManager
+    internal class BankDbManager
     {
-        private static ConnectionStringSettings conBankSetting =
+        private static readonly ConnectionStringSettings conBankSetting =
             ConfigurationManager.ConnectionStrings["Bank"];
-        private static DbProviderFactory factory =
+
+        private static readonly DbProviderFactory factory =
             DbProviderFactories.GetFactory(conBankSetting.ProviderName);
 
         public DbConnection GetConnection()
