@@ -7,7 +7,7 @@ namespace AdoWPF
     /// <summary>
     ///     Interaction logic for SaldoRekeningRaadplegen.xaml
     /// </summary>
-    public partial class SaldoRekeningRaadplegen : Window
+    public partial class SaldoRekeningRaadplegen
     {
         public SaldoRekeningRaadplegen()
         {
@@ -19,11 +19,11 @@ namespace AdoWPF
             var manager = new RekeningenManager();
             try
             {
-                labelStatus.Content = manager.SaldoRekeningRaadplegen(textBoxRekeningNr.Text).ToString("N");
+                LabelStatus.Content = manager.SaldoRekeningRaadplegen(TextBoxRekeningNr.Text).ToString("N");
             }
             catch (Exception ex)
             {
-                labelStatus.Content = ex.Message;
+                LabelStatus.Content = ex.Message;
             }
         }
     }

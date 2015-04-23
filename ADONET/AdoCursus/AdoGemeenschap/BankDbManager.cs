@@ -5,16 +5,17 @@ namespace AdoGemeenschap
 {
     internal class BankDbManager
     {
-        private static readonly ConnectionStringSettings conBankSetting =
+        private static readonly ConnectionStringSettings ConBankSetting =
             ConfigurationManager.ConnectionStrings["Bank"];
 
-        private static readonly DbProviderFactory factory =
-            DbProviderFactories.GetFactory(conBankSetting.ProviderName);
+        private static readonly DbProviderFactory Factory =
+            DbProviderFactories.GetFactory(ConBankSetting.ProviderName);
 
         public DbConnection GetConnection()
         {
-            var conBank = factory.CreateConnection();
-            conBank.ConnectionString = conBankSetting.ConnectionString;
+            var conBank = Factory.CreateConnection();
+            // ReSharper disable once PossibleNullReferenceException
+            conBank.ConnectionString = ConBankSetting.ConnectionString;
             return conBank;
         }
     }

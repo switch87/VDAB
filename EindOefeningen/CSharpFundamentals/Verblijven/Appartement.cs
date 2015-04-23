@@ -1,47 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace TravelNet.Verblijven
 {
-    class Appartement : IVerblijfstype
+    internal class Appartement : IVerblijfstype
     {
-        private decimal schoonmaakPrijsValue;
-        private bool liftValue;
-        private List<Formule> beschikbareVerblijfsFormulesValue;
-        private PrijsInfo prijsInfoValue;
-        private string naamVerblijfValue;
-
-        public decimal SchoonmaakPrijs
-        {
-            get
-            {
-                return schoonmaakPrijsValue;
-            }
-            set
-            {
-                schoonmaakPrijsValue = value;
-            }
-        }
-        public bool Lift
-        {
-            get
-            {
-                return liftValue;
-            }
-            set
-            {
-                liftValue = value;
-            }
-        }
-
         public Appartement() // initialisatie van beschikbareVerblijfsFormulesValue
         {
-            beschikbareVerblijfsFormulesValue = new List<Formule>();
-            beschikbareVerblijfsFormulesValue.Add(Formule.Ontbijt);
-            beschikbareVerblijfsFormulesValue.Add(Formule.Ontbijt);
+            BeschikbareVerblijfsFormules = new List<Formule>();
+            BeschikbareVerblijfsFormules.Add(Formule.Ontbijt);
+            BeschikbareVerblijfsFormules.Add(Formule.Ontbijt);
         }
 
         public Appartement(string naamVerblijf, decimal schoonmaakPrijs, bool lift) : this()
@@ -51,38 +18,25 @@ namespace TravelNet.Verblijven
             Lift = lift;
         }
 
-        public List<Formule> BeschikbareVerblijfsFormules
-        {
-            get 
-            {
-                return beschikbareVerblijfsFormulesValue;
-            }
-        }
+        public decimal SchoonmaakPrijs { get; set; }
+        public bool Lift { get; set; }
+        public List<Formule> BeschikbareVerblijfsFormules { get; private set; }
 
         public bool ToeslagSingle
         {
             get { return false; }
         }
 
-        public PrijsInfo PrijsInfo
-        {
-            get { return prijsInfoValue; }
-            set { prijsInfoValue = value; }
-        }
-
-        public string NaamVerblijf
-        {
-            get { return naamVerblijfValue; }
-            set { naamVerblijfValue = value; }
-        }
+        public PrijsInfo PrijsInfo { get; set; }
+        public string NaamVerblijf { get; set; }
 
         public decimal BerekenVerblijfsPrijs(int aantalDagen, Formule gekozenFormule)
         {
             decimal totPrijs = 0;
-            if (this.PrijsInfo.PrijsPeriode == PrijsPeriode.Dag)
-                totPrijs += aantalDagen * PrijsInfo.BasisPrijs;
-            else totPrijs += aantalDagen / 7 * PrijsInfo.BasisPrijs;
-            totPrijs += totPrijs / 100 * (int)gekozenFormule + SchoonmaakPrijs;
+            if (PrijsInfo.PrijsPeriode == PrijsPeriode.Dag)
+                totPrijs += aantalDagen*PrijsInfo.BasisPrijs;
+            else totPrijs += aantalDagen/7*PrijsInfo.BasisPrijs;
+            totPrijs += totPrijs/100*(int) gekozenFormule + SchoonmaakPrijs;
 
             return totPrijs;
         }

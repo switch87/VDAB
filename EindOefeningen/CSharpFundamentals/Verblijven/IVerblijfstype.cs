@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace TravelNet.Verblijven
 {
-    interface IVerblijfstype
+    internal interface IVerblijfstype
     {
-        public List<Formule> BeschikbareVerblijfsFormules
-        {
-            get;
-        }
+        List<Formule> BeschikbareVerblijfsFormules { get; }
 
-        public bool ToeslagSingle { get; }
-        public PrijsInfo PrijsInfo { get; set; }
-        public string NaamVerblijf { get; set; }
-        public decimal BerekenVerblijfsPrijs(int aantalDagen, Formule gekozenFormule);
+        bool ToeslagSingle { get; }
+        PrijsInfo PrijsInfo { get; set; }
+        string NaamVerblijf { get; set; }
+        decimal BerekenVerblijfsPrijs(int aantalDagen, Formule gekozenFormule);
     }
 }

@@ -3,39 +3,38 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="550" Width="750" Closing="Window_Closing">
     <Window.Resources>
-        <ResourceDictionary Source="bol.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="bol.xaml" />
     </Window.Resources>
     <Window.CommandBindings>
-        <CommandBinding Command="New" Executed="NewExecuted"></CommandBinding>
-        <CommandBinding Command="Open" Executed="OpenExecuted"></CommandBinding>
-        <CommandBinding Command="Save" Executed="SaveExecuted"></CommandBinding>
-        <CommandBinding Command="PrintPreview" Executed="PrintPreviewExecuted"></CommandBinding>
-        <CommandBinding Command="Close" Executed="CloseExecuted"></CommandBinding>
+        <CommandBinding Command="New" Executed="NewExecuted" />
+        <CommandBinding Command="Open" Executed="OpenExecuted" />
+        <CommandBinding Command="Save" Executed="SaveExecuted" />
+        <CommandBinding Command="PrintPreview" Executed="PrintPreviewExecuted" />
+        <CommandBinding Command="Close" Executed="CloseExecuted" />
     </Window.CommandBindings>
     <DockPanel>
         <Menu Height="24" Name="MenuBalk" DockPanel.Dock="Top">
             <MenuItem Header="Bestand">
-                <MenuItem Name="New" Header="Nieuw" Command="New"></MenuItem>
-                <MenuItem Name="Open" Header="Openen" Command="Open"></MenuItem>
-                <MenuItem Name="Safe" Header="Opslaan" Command="Save" IsEnabled="False"></MenuItem>
-                <MenuItem Name="PrintPreview" Header="Afdrukvoorbeeld" Command="PrintPreview" IsEnabled="False"></MenuItem>
-                <Separator/>
-                <MenuItem Header="Afsluiten" Command="Close"></MenuItem>
+                <MenuItem Name="New" Header="Nieuw" Command="New" />
+                <MenuItem Name="Open" Header="Openen" Command="Open" />
+                <MenuItem Name="Safe" Header="Opslaan" Command="Save" IsEnabled="False" />
+                <MenuItem Name="PrintPreview" Header="Afdrukvoorbeeld" Command="PrintPreview" IsEnabled="False" />
+                <Separator />
+                <MenuItem Header="Afsluiten" Command="Close" />
             </MenuItem>
             <MenuItem Header="Kaarten" Name="KaartTypes">
-                <MenuItem Name="kerstkaart" Header="KerstKaart" IsCheckable="True" Click="KaartType_Click"></MenuItem>
-                <MenuItem Name="geboortekaart" Header="GeboorteKaart" IsCheckable="True" Click="KaartType_Click"></MenuItem>
+                <MenuItem Name="kerstkaart" Header="KerstKaart" IsCheckable="True" Click="KaartType_Click" />
+                <MenuItem Name="geboortekaart" Header="GeboorteKaart" IsCheckable="True" Click="KaartType_Click" />
             </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom" Height="24">
-            <StatusBarItem Name="StatusItem"></StatusBarItem>
+            <StatusBarItem Name="StatusItem" />
         </StatusBar>
         <StackPanel Orientation="Horizontal">
-            <StackPanel Orientation="Vertical" Width="520" >
-                <Canvas Name="KaartCanvas" Width="500" Height="400" Margin="10,10,10,0" Drop="KaartCanvas_Drop" >
-                    
-                </Canvas>
-                <TextBox Name="KaartTekst" Margin="10,0,10,0" Height="50" TextAlignment="Center" FontFamily="{Binding ElementName=LettertypeComboBox,Path=SelectedValue}">
+            <StackPanel Orientation="Vertical" Width="520">
+                <Canvas Name="KaartCanvas" Width="500" Height="400" Margin="10,10,10,0" Drop="KaartCanvas_Drop" />
+                <TextBox Name="KaartTekst" Margin="10,0,10,0" Height="50" TextAlignment="Center"
+                         FontFamily="{Binding ElementName=LettertypeComboBox,Path=SelectedValue}">
                     Zet hier uw bijschrift
                 </TextBox>
             </StackPanel>
@@ -47,43 +46,50 @@
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
                                     <Rectangle Fill="{Binding Path=Naam}" Stroke="Black"
-                                        StrokeThickness="2" Height="25" Width="50">
-                                    </Rectangle>
-                                    <Label Content="{Binding Path=Naam}" Foreground="Black"></Label>
+                                               StrokeThickness="2" Height="25" Width="50" />
+                                    <Label Content="{Binding Path=Naam}" Foreground="Black" />
                                 </StackPanel>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
                     <Ellipse Height="40" Width="40" Stroke="Black"
-                                        StrokeThickness="5"
-                             Fill="{Binding ElementName=comboBoxKleuren, Path=SelectedItem.Naam}" MouseMove="Ellipse_MouseMove"></Ellipse>
+                             StrokeThickness="5"
+                             Fill="{Binding ElementName=comboBoxKleuren, Path=SelectedItem.Naam}"
+                             MouseMove="Ellipse_MouseMove" />
                 </StackPanel>
                 <StackPanel>
-                    <Canvas></Canvas>
-                    <Image Name="Vuilbak" Source="images\vuilnisbak.png" Height="150" Width="150" Margin="5,50,5,50" AllowDrop="True" Drop="KaartCanvas_Drop"></Image>
+                    <Canvas />
+                    <Image Name="Vuilbak" Source="images\vuilnisbak.png" Height="150" Width="150" Margin="5,50,5,50"
+                           AllowDrop="True" Drop="KaartCanvas_Drop" />
                 </StackPanel>
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center">Lettertype</TextBlock>
                     <ComboBox Name="LettertypeComboBox" Width="150"
-                          ItemsSource="{Binding Source={x:Static Member=Fonts.SystemFontFamilies}}">
+                              ItemsSource="{Binding Source={x:Static Member=Fonts.SystemFontFamilies}}">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock FontFamily="{Binding}" Text="{Binding}"/>
+                                <TextBlock FontFamily="{Binding}" Text="{Binding}" />
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-                    <StackPanel Orientation="Horizontal" >
+                    <StackPanel Orientation="Horizontal">
                         <TextBlock>Grootte</TextBlock>
                         <Label Name="TekstGrootte">30</Label>
                         <StackPanel Orientation="Vertical">
-                            <RepeatButton Name="RepeatButtonGroter" Interval="100" Delay="1000" Click="RepeatButtonGroter_Click">+</RepeatButton>
-                            <RepeatButton Name="RepeatButtonKleiner" Interval="100" Delay="1000" Click="RepeatButtonKleiner_Click">-</RepeatButton>
+                            <RepeatButton Name="RepeatButtonGroter" Interval="100" Delay="1000"
+                                          Click="RepeatButtonGroter_Click">
+                                +
+                            </RepeatButton>
+                            <RepeatButton Name="RepeatButtonKleiner" Interval="100" Delay="1000"
+                                          Click="RepeatButtonKleiner_Click">
+                                -
+                            </RepeatButton>
                         </StackPanel>
-                        
+
                     </StackPanel>
-                    
+
                 </StackPanel>
             </StackPanel>
         </StackPanel>
-    </DockPanel >
+    </DockPanel>
 </Window>

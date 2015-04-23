@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TuinCentrumGemeenschap
 {
@@ -18,7 +14,7 @@ namespace TuinCentrumGemeenschap
             {
                 using ( var comNieuweKlant = conTuincentrum.CreateCommand() )
                 {
-                    comNieuweKlant.CommandType = System.Data.CommandType.StoredProcedure;
+                    comNieuweKlant.CommandType = CommandType.StoredProcedure;
                     comNieuweKlant.CommandText = "leverancierToevoegen";
 
                     DbParameter parNaam = comNieuweKlant.CreateParameter();

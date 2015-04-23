@@ -4,11 +4,11 @@
         Title="SaldoRekeningRaadplegen" Height="300" Width="300">
     <Grid>
         <Label Content="Reklening Nr.:" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" />
-        <TextBox Name="textBoxRekeningNr" HorizontalAlignment="Left" Height="23" Margin="142,49,0,0"
+        <TextBox Name="TextBoxRekeningNr" HorizontalAlignment="Left" Height="23" Margin="142,49,0,0"
                  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <Button Name="buttonSaldo" Content="Saldo" HorizontalAlignment="Left" Margin="142,107,0,0"
+        <Button Name="ButtonSaldo" Content="Saldo" HorizontalAlignment="Left" Margin="142,107,0,0"
                 VerticalAlignment="Top" Width="120" Click="buttonSaldo_Click" />
-        <Label Name="labelStatus" Content="" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top"
+        <Label Name="LabelStatus" Content="" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top"
                Width="272" />
 
     </Grid>

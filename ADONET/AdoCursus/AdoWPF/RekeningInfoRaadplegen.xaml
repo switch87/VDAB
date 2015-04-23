@@ -4,15 +4,15 @@
         Title="RekeningInfoRaadplegen" Height="255" Width="386">
     <Grid Margin="0,0,2,1">
         <Label Content="Rekening Nr.:" HorizontalAlignment="Left" Margin="41,42,0,0" VerticalAlignment="Top" />
-        <TextBox Name="textBoxRekeningNr" HorizontalAlignment="Left" Height="23" Margin="166,37,0,0"
+        <TextBox Name="TextBoxRekeningNr" HorizontalAlignment="Left" Height="23" Margin="166,37,0,0"
                  TextWrapping="Wrap" VerticalAlignment="Top" Width="156" />
-        <Button Name="buttonInfo" Content="Info" HorizontalAlignment="Left" Margin="166,77,0,0" VerticalAlignment="Top"
+        <Button Name="ButtonInfo" Content="Info" HorizontalAlignment="Left" Margin="166,77,0,0" VerticalAlignment="Top"
                 Width="156" Click="buttonInfo_Click" />
-        <Label Name="labelSaldo" Content="" HorizontalAlignment="Left" Margin="166,122,0,0" VerticalAlignment="Top"
+        <Label Name="LabelSaldo" Content="" HorizontalAlignment="Left" Margin="166,122,0,0" VerticalAlignment="Top"
                RenderTransformOrigin="8.1,-0.423" Width="156" />
-        <Label Name="labelStatus" Content="" HorizontalAlignment="Left" Margin="166,153,0,0" VerticalAlignment="Top"
+        <Label Name="LabelStatus" Content="" HorizontalAlignment="Left" Margin="166,153,0,0" VerticalAlignment="Top"
                Width="156" />
-        <Label Name="labelKlantNaam" Content="" HorizontalAlignment="Left" Margin="166,184,0,0" VerticalAlignment="Top"
+        <Label Name="LabelKlantNaam" Content="" HorizontalAlignment="Left" Margin="166,184,0,0" VerticalAlignment="Top"
                RenderTransformOrigin="-0.079,-0.192" Width="156" />
 
     </Grid>

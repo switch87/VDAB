@@ -36,13 +36,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -55,12 +51,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="KlantToevoegen.xaml.cs">
+      <DependentUpon>KlantToevoegen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RekeningInfoRaadplegen.xaml.cs">
       <DependentUpon>RekeningInfoRaadplegen.xaml</DependentUpon>
     </Compile>
     <Compile Include="SaldoRekeningRaadplegen.xaml.cs">
       <DependentUpon>SaldoRekeningRaadplegen.xaml</DependentUpon>
     </Compile>
+    <Page Include="KlantToevoegen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -120,6 +123,10 @@
     <ProjectReference Include="..\AdoGemeenschap\AdoGemeenschap.csproj">
       <Project>{40840ec7-5ede-4910-b736-33580b3903ba}</Project>
       <Name>AdoGemeenschap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\O2Gemeenschap\TuinCentrumGemeenschap.csproj">
+      <Project>{84305EFE-267F-4F3A-8397-4AA6C387B2A7}</Project>
+      <Name>TuinCentrumGemeenschap</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

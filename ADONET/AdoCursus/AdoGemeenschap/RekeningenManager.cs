@@ -115,8 +115,7 @@ namespace AdoGemeenschap
             var dbManager = new BankDbManager();
             var dbManager2 = new Bank2DbManager();
 
-            var opties = new TransactionOptions();
-            opties.IsolationLevel = IsolationLevel.ReadCommitted;
+            var opties = new TransactionOptions {IsolationLevel = IsolationLevel.ReadCommitted};
             using (var traOverschrijven = new TransactionScope(TransactionScopeOption.Required, opties))
             {
                 using (var conBank = dbManager.GetConnection())

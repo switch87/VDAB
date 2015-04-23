@@ -8,13 +8,13 @@
         <Label Content="Postcode:" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="97"/>
         <Label Content="Plaats:" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="97"/>
         <Label Name="LabelStatus" Content="" HorizontalAlignment="Center" Margin="10,197,311,0" VerticalAlignment="Top" Width="448" HorizontalContentAlignment="Center"/>
-        <TextBox Name="naamBox" HorizontalAlignment="Left" Height="23" Margin="112,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
-        <TextBox Name="adresBox" HorizontalAlignment="Left" Height="23" Margin="112,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
-        <TextBox Name="postNrBox" HorizontalAlignment="Left" Height="23" Margin="112,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
-        <TextBox Name="woonplaatsBox" HorizontalAlignment="Left" Height="23" Margin="112,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <TextBox Name="NaamBox" HorizontalAlignment="Left" Height="23" Margin="112,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <TextBox Name="AdresBox" HorizontalAlignment="Left" Height="23" Margin="112,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <TextBox Name="PostNrBox" HorizontalAlignment="Left" Height="23" Margin="112,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <TextBox Name="WoonplaatsBox" HorizontalAlignment="Left" Height="23" Margin="112,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
         <Button Name="Toevoegen" Content="Toevoegen" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" Width="75" Click="Toevoegen_Click"/>
         <Button Name="Eindejaarskorting" Content="Eindejaarskorting" HorizontalAlignment="Left" Margin="90,154,0,0" VerticalAlignment="Top" Width="128"/>
-        <Button Name="buttonVervang" Content="Vervang Leverancier" HorizontalAlignment="Left" Margin="223,154,0,0" VerticalAlignment="Top" Width="127" Click="buttonVervang_Click"/>
+        <Button Name="ButtonVervang" Content="Vervang Leverancier" HorizontalAlignment="Left" Margin="223,154,0,0" VerticalAlignment="Top" Width="127" Click="buttonVervang_Click"/>
 
     </Grid>
 </Window>

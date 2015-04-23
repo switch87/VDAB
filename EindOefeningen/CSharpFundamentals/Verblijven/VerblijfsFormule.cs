@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TravelNet.Verblijven
+﻿namespace TravelNet.Verblijven
 {
     public enum Formule
     {
@@ -14,34 +8,24 @@ namespace TravelNet.Verblijven
         VolPension = 50
     }
 
-    class VerblijfsFormule
+    internal class VerblijfsFormule
     {
-        private Formule formuleValue;
         private int factorValue;
 
-        public Formule Formule
+        public VerblijfsFormule(Formule formule)
         {
-            get
-            {
-                return formuleValue;
-            }
-            set
-            {
-                formuleValue = value;
-            }
+            Formule = formule;
         }
+
+        public Formule Formule { get; set; }
+
         public int Factor
         {
             get
             {
                 // geef de integerwaarde van de enum Formule terug
-                return (int)formuleValue;
+                return (int) Formule;
             }
-        }
-
-        public VerblijfsFormule(Formule formule)
-        {
-            Formule = formule;
         }
     }
 }

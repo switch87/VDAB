@@ -22,12 +22,12 @@ namespace AdoWPF
                 using (var conBieren = manager.GetConnection())
                 {
                     conBieren.Open();
-                    labelStatus.Content = "Bieren geopend";
+                    LabelStatus.Content = "Bieren geopend";
                 }
             }
             catch (Exception ex)
             {
-                labelStatus.Content = ex.Message;
+                LabelStatus.Content = ex.Message;
             }
         }
 
@@ -36,39 +36,34 @@ namespace AdoWPF
             try
             {
                 var manager = new RekeningenManager();
-                labelStatus.Content = manager.SaldoBonus() + " rekeningen aangepast";
+                LabelStatus.Content = manager.SaldoBonus() + " rekeningen aangepast";
             }
             catch (Exception ex)
             {
-                labelStatus.Content = ex.Message;
+                LabelStatus.Content = ex.Message;
             }
         }
 
         private void buttonStorten_Click(object sender, RoutedEventArgs e)
         {
             decimal teStorten;
-            if (decimal.TryParse(textBoxTeStorten.Text, out teStorten))
+            if (decimal.TryParse(TextBoxTeStorten.Text, out teStorten))
             {
                 try
                 {
                     var manager = new RekeningenManager();
-                    if (manager.Storten(teStorten, textBoxRekeningNr.Text))
-                    {
-                        labelStatus.Content = "OK";
-                    }
-                    else
-                    {
-                        labelStatus.Content = "Rekening niet gevonden";
-                    }
+                    LabelStatus.Content = manager.Storten(teStorten, TextBoxRekeningNr.Text)
+                        ? "OK"
+                        : "Rekening niet gevonden";
                 }
                 catch (Exception ex)
                 {
-                    labelStatus.Content = ex.Message;
+                    LabelStatus.Content = ex.Message;
                 }
             }
             else
             {
-                labelStatus.Content = "Tik een getal bij het storten";
+                LabelStatus.Content = "Tik een getal bij het storten";
             }
         }
     }

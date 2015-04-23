@@ -19,16 +19,16 @@ namespace AdoWPF
             try
             {
                 var manager = new RekeningenManager();
-                var info = manager.RekeningInfoRaadplegen(textBoxRekeningNr.Text);
-                labelSaldo.Content = info.Saldo.ToString("N");
-                labelKlantNaam.Content = info.Klantnaam;
-                labelStatus.Content = string.Empty;
+                var info = manager.RekeningInfoRaadplegen(TextBoxRekeningNr.Text);
+                LabelSaldo.Content = info.Saldo.ToString("N");
+                LabelKlantNaam.Content = info.Klantnaam;
+                LabelStatus.Content = string.Empty;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                labelSaldo.Content = string.Empty;
-                labelKlantNaam.Content = string.Empty;
-                labelStatus.Content = string.Empty;
+                LabelSaldo.Content = string.Empty;
+                LabelKlantNaam.Content = string.Empty;
+                LabelStatus.Content = string.Empty;
             }
         }
     }
