@@ -176,12 +176,12 @@ namespace AdoGemeenschap
             }
         }
 
-        public Decimal SaldoRekeningRaadplegen (String rekeningNr)
+        public Decimal SaldoRekeningRaadplegen( String rekeningNr )
         {
             var dbManager = new BankDbManager();
-            using (var conBank = dbManager.GetConnection())
+            using ( var conBank = dbManager.GetConnection() )
             {
-                using (var comSaldo = conBank.CreateCommand())
+                using ( var comSaldo = conBank.CreateCommand() )
                 {
                     comSaldo.CommandType = CommandType.StoredProcedure;
                     comSaldo.CommandText = "SaldoRekeningRaadplegen";
@@ -191,7 +191,7 @@ namespace AdoGemeenschap
                     comSaldo.Parameters.Add( parRekNr );
                     conBank.Open();
                     object resultaat = comSaldo.ExecuteScalar();
-                    if (resultaat == null)
+                    if ( resultaat == null )
                     {
                         throw new Exception( "Rekening bestaat niet" );
                     }
@@ -202,5 +202,45 @@ namespace AdoGemeenschap
                 }
             }
         }
+
+        public RekeningInfo RekeningInfoRaadplegen( string rekeningNr )
+        {
+            var dbManager = new BankDbManager();
+            using ( var conBank = dbManager.GetConnection() )
+            {
+                using ( var comSaldo = conBank.CreateCommand() )
+                {
+                    comSaldo.CommandType = CommandType.StoredProcedure;
+                    comSaldo.CommandText = "RekeningInfoRaadplegen";
+
+                    var parRekNr = comSaldo.CreateParameter();
+                    parRekNr.ParameterName = "@rekeningNr";
+                    parRekNr.Value = rekeningNr;
+                    comSaldo.Parameters.Add( parRekNr );
+
+                    var parSaldo = comSaldo.CreateParameter();
+                    parSaldo.ParameterName = "@saldo";
+                    parSaldo.DbType = DbType.Currency;
+                    parSaldo.Direction = ParameterDirection.Output;
+                    comSaldo.Parameters.Add( parSaldo );
+
+                    var parKlantNaam = comSaldo.CreateParameter();
+                    parKlantNaam.ParameterName = "@klantNaam";
+                    parKlantNaam.DbType = DbType.String;
+                    parKlantNaam.Size = 50;
+                    parKlantNaam.Direction = ParameterDirection.Output;
+                    comSaldo.Parameters.Add( parKlantNaam );
+
+                    conBank.Open();
+                    comSaldo.ExecuteNonQuery();
+                    if ( parSaldo.Value.Equals( DBNull.Value ) )
+                    {
+                        throw new Exception( "Rekening bestaat niet" );
+                    }
+                    else return new RekeningInfo( (Decimal)parSaldo.Value, (String)parKlantNaam.Value );
+                }
+            }
+        }
+
     }
 }
