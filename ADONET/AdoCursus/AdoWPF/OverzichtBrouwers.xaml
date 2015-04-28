@@ -10,8 +10,23 @@
         Loaded="Window_Loaded">
     <Window.Resources>
         <CollectionViewSource x:Key="brouwerViewSource"
-                              d:DesignSource="{d:DesignInstance {x:Type AdoGemeenschap:Brouwer},
+                              d:DesignSource="{d:DesignInstance AdoGemeenschap:Brouwer,
 CreateList=True}" />
+        <ControlTemplate x:Key="validationTemplate">
+            <DockPanel>
+                <TextBlock Foreground="Red" FontSize="20">!</TextBlock>
+                <AdornedElementPlaceholder />
+            </DockPanel>
+        </ControlTemplate>
+        <Style x:Key="textBoxInError" TargetType="{x:Type TextBox}">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+                            Value="{Binding RelativeSource={x:Static RelativeSource.Self},Path=(Validation.Errors)[0].ErrorContent}" />
+                    <Setter Property="Background" Value="Yellow" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
     <DockPanel LastChildFill="True">
         <Border Height="30" Background="SkyBlue" BorderBrush="Black"
@@ -100,10 +115,19 @@ CreateList=True}" />
                     <Label Content="Postcode:" Grid.Column="2" Grid.Row="1"
                            HorizontalAlignment="Left" Margin="3"
                            VerticalAlignment="Center" />
-                    <TextBox Grid.Column="3" Grid.Row="1" Height="23"
-                             HorizontalAlignment="Left" Margin="3" Name="postcodeTextBox"
-                             Text="{Binding Path=Postcode}"
-                             VerticalAlignment="Center" Width="120" />
+                    <TextBox Name="textBoxPostcode"
+                             Validation.ErrorTemplate="{StaticResource validationTemplate}"
+                             Style="{StaticResource textBoxInError}"
+                             Grid.Row="1" Grid.Column="3" Margin="5">
+                        <TextBox.Text>
+                            <Binding Path="Postcode" Source="{StaticResource brouwerViewSource}"
+                                     UpdateSourceTrigger="LostFocus">
+                                <Binding.ValidationRules>
+                                    <adoWpf:PostcodeRangeRule2 />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
                     <Label Content="Gemeente:" Grid.Column="0" Grid.Row="2"
                            HorizontalAlignment="Left" Margin="3"
                            VerticalAlignment="Center" />
@@ -125,25 +149,17 @@ CreateList=True}" />
             <DataGrid AutoGenerateColumns="False"
                       EnableRowVirtualization="True"
                       ItemsSource="{Binding}" Name="brouwerDataGrid"
-                      RowDetailsVisibilityMode="VisibleWhenSelected" Width="407"
+                      RowDetailsVisibilityMode="VisibleWhenSelected"
                       FontSize="16" ColumnWidth="Auto" SelectionChanged="brouwerDataGrid_SelectionChanged">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="BrouwerNr" Binding="{Binding BrouwerNr}" />
-                    <DataGridTextColumn Header="BrNaam" Binding="{Binding BrNaam}" />
-                    <DataGridTextColumn Header="Adres" Binding="{Binding Adres}" />
-                    <DataGridTextColumn Header="Postcode"
-                                        Binding="{Binding Postcode,ValidatesOnExceptions=True}" />
-                    <DataGridTextColumn Header="Gemeente" Binding="{Binding Gemeente}" />
-                    <DataGridTextColumn Header="Omzet" Binding="{Binding Omzet}" />
-                </DataGrid.Columns>
                 <DataGrid.RowValidationRules>
                     <adoWpf:PostcodeRangeRule ValidationStep="UpdatedValue" />
                 </DataGrid.RowValidationRules>
                 <DataGrid.RowValidationErrorTemplate>
                     <ControlTemplate>
                         <Grid Margin="0,-2,0,-2"
-                              ToolTip="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}},
-                            Path=(Validation.Errors)[0].ErrorContent}">
+                              ToolTip="{Binding RelativeSource={RelativeSource FindAncestor,
+AncestorType={x:Type DataGridRow}},
+Path=(Validation.Errors)[0].ErrorContent}">
                             <Ellipse StrokeThickness="0" Fill="Red"
                                      Width="{TemplateBinding FontSize}"
                                      Height="{TemplateBinding FontSize}" />
@@ -153,6 +169,16 @@ CreateList=True}" />
                         </Grid>
                     </ControlTemplate>
                 </DataGrid.RowValidationErrorTemplate>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="BrouwerNr" Binding="{Binding BrouwerNr}" />
+                    <DataGridTextColumn Header="BrNaam" Binding="{Binding BrNaam}" />
+                    <DataGridTextColumn Header="Adres" Binding="{Binding Adres}" />
+                    <DataGridTextColumn Header="Postcode"
+                                        Binding="{Binding Postcode,ValidatesOnExceptions=True}" />
+                    <DataGridTextColumn Header="Gemeente" Binding="{Binding Gemeente}" />
+                    <DataGridTextColumn Header="Omzet" Binding="{Binding Omzet}" />
+                </DataGrid.Columns>
+
             </DataGrid>
         </Border>
     </DockPanel>
