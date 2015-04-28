@@ -4,7 +4,7 @@ namespace AdoGemeenschap
 {
     public class Brouwer
     {
-        private short PostcodeValue;
+        private short postcodeValue;
 
         public Brouwer(int brouwerNr, string brNaam, string adres, short postcode, string gemeente, int? omzet)
         {
@@ -22,15 +22,8 @@ namespace AdoGemeenschap
 
         public short Postcode
         {
-            get { return PostcodeValue; }
-            set
-            {
-                if (value < 1000 || value > 9999)
-                {
-                    throw new Exception("Postcode moet tussen 1000 en 9999 liggen");
-                }
-                PostcodeValue = value;
-            }
+            get { return postcodeValue; }
+            set { postcodeValue = value; }
         }
 
         public string Gemeente { get; set; }

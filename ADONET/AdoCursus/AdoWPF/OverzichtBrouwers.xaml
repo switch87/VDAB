@@ -6,6 +6,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:AdoGemeenschap="clr-namespace:AdoGemeenschap;assembly=AdoGemeenschap"
+        xmlns:adoWpf="clr-namespace:AdoWPF"
         Loaded="Window_Loaded">
     <Window.Resources>
         <CollectionViewSource x:Key="brouwerViewSource"
@@ -34,12 +35,12 @@ CreateList=True}" />
                         Click="goToLastButton_Click" />
                 <TextBox Name="textBoxGo" Width="37"
                          HorizontalContentAlignment="Center"
-                         VerticalContentAlignment="Center"></TextBox>
-                <Label Content="van" Height="28" Name="label1" Width="30"></Label>
-                <Label Height="28" Name="labelTotalRowCount" Width="38"></Label>
+                         VerticalContentAlignment="Center" />
+                <Label Content="van" Height="28" Name="label1" Width="30" />
+                <Label Height="28" Name="labelTotalRowCount" Width="38" />
                 <Button Content="Go!" Name="goButton" Width="Auto"
                         Background="BlanchedAlmond" FontWeight="Bold"
-                        Click="goButton_Click"></Button>
+                        Click="goButton_Click" />
                 <TextBox HorizontalAlignment="Left" Name="textBoxZoeken"
                          Width="120"
                          AcceptsReturn="False" KeyUp="textBoxZoeken_KeyUp" />
@@ -50,23 +51,23 @@ CreateList=True}" />
             </StackPanel>
         </Border>
         <Border Height="120" Background="SkyBlue" BorderBrush="Black"
-BorderThickness="1" DockPanel.Dock="Bottom"
-DataContext="{StaticResource brouwerViewSource}">
+                BorderThickness="1" DockPanel.Dock="Bottom"
+                DataContext="{StaticResource brouwerViewSource}">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
-Margin="4" Height="120">
+                        Margin="4" Height="120">
                 <ListBox Height="100" HorizontalAlignment="Left" Margin="0,0,0,0"
-Name="listBoxBrouwers" VerticalAlignment="Top" Width="120"
-ItemsSource="{Binding}" DisplayMemberPath="BrNaam"/>
+                         Name="listBoxBrouwers" VerticalAlignment="Top" Width="120"
+                         ItemsSource="{Binding}" DisplayMemberPath="BrNaam" />
             </StackPanel>
         </Border>
         <Border Height="120" Background="SkyBlue" BorderBrush="Black"
                 BorderThickness="1"
-                DockPanel.Dock="Bottom" >
+                DockPanel.Dock="Bottom">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
-                    Margin="4"
-                    Height="120">
+                        Margin="4"
+                        Height="120">
                 <Grid DataContext="{StaticResource brouwerViewSource}"
-                        HorizontalAlignment="Left" Name="grid1" VerticalAlignment="Top">
+                      HorizontalAlignment="Left" Name="grid1" VerticalAlignment="Top">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
@@ -74,59 +75,85 @@ ItemsSource="{Binding}" DisplayMemberPath="BrNaam"/>
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="33"/>
-                        <RowDefinition Height="33"/>
-                        <RowDefinition Height="33"/>
+                        <RowDefinition Height="33" />
+                        <RowDefinition Height="33" />
+                        <RowDefinition Height="33" />
                     </Grid.RowDefinitions>
                     <Label Content="Brouwer Nr:" Grid.Column="0"
-                            Grid.Row="0" />
+                           Grid.Row="0" />
                     <Label Content="{Binding Path=BrouwerNr}" Grid.Column="1"
-                            Grid.Row="0" Margin="3" Name="brouwerNrLabel" />
+                           Grid.Row="0" Margin="3" Name="brouwerNrLabel" />
                     <Label Content="Br Naam:" Grid.Column="2" Grid.Row="0"
-                            HorizontalAlignment="Left" Margin="3"
-                            VerticalAlignment="Center" />
+                           HorizontalAlignment="Left" Margin="3"
+                           VerticalAlignment="Center" />
                     <TextBox Grid.Column="3" Grid.Row="0" Height="23"
-                            HorizontalAlignment="Left" Margin="3" Name="brNaamTextBox"
-                            Text="{Binding Path=BrNaam}"
-                            VerticalAlignment="Center" Width="120" />
+                             HorizontalAlignment="Left" Margin="3" Name="brNaamTextBox"
+                             Text="{Binding Path=BrNaam}"
+                             VerticalAlignment="Center" Width="120" />
                     <Label Content="Adres:" Grid.Column="0" Grid.Row="1"
-                            HorizontalAlignment="Left" Margin="3"
-                            VerticalAlignment="Center" />
+                           HorizontalAlignment="Left" Margin="3"
+                           VerticalAlignment="Center" />
                     <TextBox Grid.Column="1" Grid.Row="1" Height="23"
-                            HorizontalAlignment="Left" Margin="3" Name="adresTextBox"
-                            Text="{Binding Path=Adres}"
-                            VerticalAlignment="Center" Width="120" />
+                             HorizontalAlignment="Left" Margin="3" Name="adresTextBox"
+                             Text="{Binding Path=Adres}"
+                             VerticalAlignment="Center" Width="120" />
                     <Label Content="Postcode:" Grid.Column="2" Grid.Row="1"
-                            HorizontalAlignment="Left" Margin="3"
-                            VerticalAlignment="Center" />
+                           HorizontalAlignment="Left" Margin="3"
+                           VerticalAlignment="Center" />
                     <TextBox Grid.Column="3" Grid.Row="1" Height="23"
-                            HorizontalAlignment="Left" Margin="3" Name="postcodeTextBox"
-                            Text="{Binding Path=Postcode}"
-                            VerticalAlignment="Center" Width="120" />
+                             HorizontalAlignment="Left" Margin="3" Name="postcodeTextBox"
+                             Text="{Binding Path=Postcode}"
+                             VerticalAlignment="Center" Width="120" />
                     <Label Content="Gemeente:" Grid.Column="0" Grid.Row="2"
-                            HorizontalAlignment="Left" Margin="3"
-                            VerticalAlignment="Center" />
+                           HorizontalAlignment="Left" Margin="3"
+                           VerticalAlignment="Center" />
                     <TextBox Grid.Column="1" Grid.Row="2" Height="23"
-                            HorizontalAlignment="Left" Margin="3" Name="gemeenteTextBox"
-                            Text="{Binding Path=Gemeente}"
-                            VerticalAlignment="Center" Width="120" />
+                             HorizontalAlignment="Left" Margin="3" Name="gemeenteTextBox"
+                             Text="{Binding Path=Gemeente}"
+                             VerticalAlignment="Center" Width="120" />
                     <Label Content="Omzet:" Grid.Column="2" Grid.Row="2"
-                            HorizontalAlignment="Left" Margin="3"
-                            VerticalAlignment="Center" />
+                           HorizontalAlignment="Left" Margin="3"
+                           VerticalAlignment="Center" />
                     <TextBox Grid.Column="3" Grid.Row="2" Height="23"
-                            HorizontalAlignment="Left" Margin="3" Name="omzetTextBox"
-                            Text="{Binding Path=Omzet}"/>
+                             HorizontalAlignment="Left" Margin="3" Name="omzetTextBox"
+                             Text="{Binding Path=Omzet}" />
                 </Grid>
             </StackPanel>
         </Border>
         <Border DataContext="{StaticResource brouwerViewSource}"
                 Background="SkyBlue" BorderBrush="Black" BorderThickness="1">
-            <DataGrid AutoGenerateColumns="True"
+            <DataGrid AutoGenerateColumns="False"
                       EnableRowVirtualization="True"
                       ItemsSource="{Binding}" Name="brouwerDataGrid"
-                      RowDetailsVisibilityMode="VisibleWhenSelected" Width="Auto"
-                      FontSize="16" ColumnWidth="Auto" SelectionChanged="brouwerDataGrid_SelectionChanged" />
+                      RowDetailsVisibilityMode="VisibleWhenSelected" Width="407"
+                      FontSize="16" ColumnWidth="Auto" SelectionChanged="brouwerDataGrid_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="BrouwerNr" Binding="{Binding BrouwerNr}" />
+                    <DataGridTextColumn Header="BrNaam" Binding="{Binding BrNaam}" />
+                    <DataGridTextColumn Header="Adres" Binding="{Binding Adres}" />
+                    <DataGridTextColumn Header="Postcode"
+                                        Binding="{Binding Postcode,ValidatesOnExceptions=True}" />
+                    <DataGridTextColumn Header="Gemeente" Binding="{Binding Gemeente}" />
+                    <DataGridTextColumn Header="Omzet" Binding="{Binding Omzet}" />
+                </DataGrid.Columns>
+                <DataGrid.RowValidationRules>
+                    <adoWpf:PostcodeRangeRule ValidationStep="UpdatedValue" />
+                </DataGrid.RowValidationRules>
+                <DataGrid.RowValidationErrorTemplate>
+                    <ControlTemplate>
+                        <Grid Margin="0,-2,0,-2"
+                              ToolTip="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}},
+                            Path=(Validation.Errors)[0].ErrorContent}">
+                            <Ellipse StrokeThickness="0" Fill="Red"
+                                     Width="{TemplateBinding FontSize}"
+                                     Height="{TemplateBinding FontSize}" />
+                            <TextBlock Text="!" FontSize="{TemplateBinding FontSize}"
+                                       FontWeight="Bold" Foreground="White"
+                                       HorizontalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </DataGrid.RowValidationErrorTemplate>
+            </DataGrid>
         </Border>
-
     </DockPanel>
 </Window>
