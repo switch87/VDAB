@@ -85,8 +85,11 @@ namespace AdoWPF
                 !( brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 1 );
             if ( brouwerDataGrid.Items.Count != 0 )
             {
-                if ( brouwerDataGrid.SelectedItem != null )
-                    brouwerDataGrid.ScrollIntoView( brouwerDataGrid.SelectedItem );
+                if (brouwerDataGrid.SelectedItem != null)
+                {
+                    brouwerDataGrid.ScrollIntoView(brouwerDataGrid.SelectedItem);
+                    listBoxBrouwers.ScrollIntoView(brouwerDataGrid.SelectedItem);
+                }
             }
             textBoxGo.Text = ( brouwerViewSource.View.CurrentPosition + 1 ).ToString();
         }

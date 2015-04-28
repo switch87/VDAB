@@ -50,6 +50,16 @@ CreateList=True}" />
             </StackPanel>
         </Border>
         <Border Height="120" Background="SkyBlue" BorderBrush="Black"
+BorderThickness="1" DockPanel.Dock="Bottom"
+DataContext="{StaticResource brouwerViewSource}">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+Margin="4" Height="120">
+                <ListBox Height="100" HorizontalAlignment="Left" Margin="0,0,0,0"
+Name="listBoxBrouwers" VerticalAlignment="Top" Width="120"
+ItemsSource="{Binding}" DisplayMemberPath="BrNaam"/>
+            </StackPanel>
+        </Border>
+        <Border Height="120" Background="SkyBlue" BorderBrush="Black"
                 BorderThickness="1"
                 DockPanel.Dock="Bottom" >
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
