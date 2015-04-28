@@ -17,54 +17,52 @@ namespace AdoWPF
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Window_Loaded( object sender, RoutedEventArgs e )
         {
             VulDeGrid();
             textBoxZoeken.Focus();
         }
 
-        private void buttonZoeken_Click(object sender, RoutedEventArgs e)
+        private void buttonZoeken_Click( object sender, RoutedEventArgs e )
         {
             VulDeGrid();
         }
 
         private void VulDeGrid()
         {
-            var brouwerViewSource =
-                (CollectionViewSource) (FindResource("brouwerViewSource"));
+            brouwerViewSource = (CollectionViewSource)( this.FindResource( "brouwerViewSource" ) );
             var manager = new BrouwerManager();
-            brouwerViewSource.Source =
-                manager.GetBrouwersBeginNaam(textBoxZoeken.Text);
+            brouwerViewSource.Source = manager.GetBrouwersBeginNaam( textBoxZoeken.Text );
             goUpdate();
         }
 
-        private void textBoxZoeken_KeyUp(object sender, KeyEventArgs e)
+        private void textBoxZoeken_KeyUp( object sender, KeyEventArgs e )
         {
-            if (e.Key == Key.Enter)
+            if ( e.Key == Key.Enter )
             {
                 VulDeGrid();
             }
         }
 
-        private void goToFirstButton_Click(object sender, RoutedEventArgs e)
+        private void goToFirstButton_Click( object sender, RoutedEventArgs e )
         {
             brouwerViewSource.View.MoveCurrentToFirst();
             goUpdate();
         }
 
-        private void goToPreviousButton_Click(object sender, RoutedEventArgs e)
+        private void goToPreviousButton_Click( object sender, RoutedEventArgs e )
         {
             brouwerViewSource.View.MoveCurrentToPrevious();
             goUpdate();
         }
 
-        private void goToNextButton_Click(object sender, RoutedEventArgs e)
+        private void goToNextButton_Click( object sender, RoutedEventArgs e )
         {
             brouwerViewSource.View.MoveCurrentToNext();
             goUpdate();
         }
 
-        private void goToLastButton_Click(object sender, RoutedEventArgs e)
+        private void goToLastButton_Click( object sender, RoutedEventArgs e )
         {
             brouwerViewSource.View.MoveCurrentToLast();
             goUpdate();
@@ -72,16 +70,16 @@ namespace AdoWPF
 
         private void goUpdate()
         {
-            goToPreviousButton.IsEnabled = !(brouwerViewSource.View.CurrentPosition == 0);
-            goToFirstButton.IsEnabled = !(brouwerViewSource.View.CurrentPosition == 0);
+            goToPreviousButton.IsEnabled = !( brouwerViewSource.View.CurrentPosition == 0 );
+            goToFirstButton.IsEnabled = !( brouwerViewSource.View.CurrentPosition == 0 );
             goToNextButton.IsEnabled =
-                !(brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 1);
+                !( brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 1 );
             goToLastButton.IsEnabled =
-                !(brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 1);
-            if (brouwerDataGrid.Items.Count != 0)
+                !( brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 1 );
+            if ( brouwerDataGrid.Items.Count != 0 )
             {
-                if (brouwerDataGrid.SelectedItem != null)
-                    brouwerDataGrid.ScrollIntoView(brouwerDataGrid.SelectedItem);
+                if ( brouwerDataGrid.SelectedItem != null )
+                    brouwerDataGrid.ScrollIntoView( brouwerDataGrid.SelectedItem );
             }
         }
     }
