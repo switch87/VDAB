@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
 using AdoGemeenschap;
@@ -30,9 +32,14 @@ namespace AdoWPF
 
         private void VulDeGrid()
         {
+            int totalRowcount;
             brouwerViewSource = (CollectionViewSource)( this.FindResource( "brouwerViewSource" ) );
             var manager = new BrouwerManager();
-            brouwerViewSource.Source = manager.GetBrouwersBeginNaam( textBoxZoeken.Text );
+            List<Brouwer> brouwers = new List<Brouwer>();
+            brouwers = manager.GetBrouwersBeginNaam( textBoxZoeken.Text );
+            totalRowcount = brouwers.Count();
+            labelTotalRowCount.Content = totalRowcount;
+            brouwerViewSource.Source = brouwers;
             goUpdate();
         }
 
@@ -81,6 +88,28 @@ namespace AdoWPF
                 if ( brouwerDataGrid.SelectedItem != null )
                     brouwerDataGrid.ScrollIntoView( brouwerDataGrid.SelectedItem );
             }
+            textBoxGo.Text = ( brouwerViewSource.View.CurrentPosition + 1 ).ToString();
+        }
+
+
+        private void goButton_Click( object sender, RoutedEventArgs e )
+        {
+            int position;
+            int.TryParse( textBoxGo.Text, out position );
+            if ( position > 0 && position <= brouwerDataGrid.Items.Count )
+            {
+                brouwerViewSource.View.MoveCurrentToPosition( position - 1 );
+            }
+            else
+            {
+                MessageBox.Show( "The input index is not valid." );
+            }
+            goUpdate();
+        }
+
+        private void brouwerDataGrid_SelectionChanged( object sender, System.Windows.Controls.SelectionChangedEventArgs e )
+        {
+            goUpdate();
         }
     }
 }

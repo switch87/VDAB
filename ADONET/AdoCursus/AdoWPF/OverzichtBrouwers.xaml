@@ -32,6 +32,14 @@ CreateList=True}" />
                         Width="Auto"
                         FontWeight="Bold" Background="BlanchedAlmond"
                         Click="goToLastButton_Click" />
+                <TextBox Name="textBoxGo" Width="37"
+                         HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center"></TextBox>
+                <Label Content="van" Height="28" Name="label1" Width="30"></Label>
+                <Label Height="28" Name="labelTotalRowCount" Width="38"></Label>
+                <Button Content="Go!" Name="goButton" Width="Auto"
+                        Background="BlanchedAlmond" FontWeight="Bold"
+                        Click="goButton_Click"></Button>
                 <TextBox HorizontalAlignment="Left" Name="textBoxZoeken"
                          Width="120"
                          AcceptsReturn="False" KeyUp="textBoxZoeken_KeyUp" />
@@ -47,7 +55,7 @@ CreateList=True}" />
                       EnableRowVirtualization="True"
                       ItemsSource="{Binding}" Name="brouwerDataGrid"
                       RowDetailsVisibilityMode="VisibleWhenSelected" Width="Auto"
-                      FontSize="16" ColumnWidth="Auto" />
+                      FontSize="16" ColumnWidth="Auto" SelectionChanged="brouwerDataGrid_SelectionChanged" />
         </Border>
     </DockPanel>
 </Window>
