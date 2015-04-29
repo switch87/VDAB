@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Windows;
 using System.Windows.Data;
@@ -17,6 +18,19 @@ namespace AdoWPF
 
         public ObservableCollection<Brouwer> brouwersOb =
             new ObservableCollection<Brouwer>();
+
+        public List<Brouwer> OudeBrouwers = new List<Brouwer>();
+
+        private void OnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            if (e.OldItems != null)
+            {
+                foreach (Brouwer oudeBrouwer in e.OldItems)
+                {
+                    OudeBrouwers.Add(oudeBrouwer);
+                }
+            }
+        }
 
         public OverzichtBrouwers()
         {
