@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfOpgave3.WPFOpgave6"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPFOpgave6" Height="300" Width="300">
+    <Grid>
+        <Label Content="Plantnummer:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Naam:" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top"/>
+        <Label Content="Soort:" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top"/>
+        <Label Content="Leverancier:" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top"/>
+        <Label Content="Kleur:" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top"/>
+        <Label Content="Kostprijs:" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="textBoxNummer" HorizontalAlignment="Left" Height="23" Margin="107,12,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="48" RenderTransformOrigin="-0.508,0.652"/>
+        <Button Name="buttonOpzoeken" Content="Button" HorizontalAlignment="Left" Margin="181,12,0,0" VerticalAlignment="Top" Width="101" Click="buttonOpzoeken_Click"/>
+        <Label Name="labelNaam" Content="" HorizontalAlignment="Left" Margin="124,52,-591,0" VerticalAlignment="Top" Width="759"/>
+        <Label Name="labelSoort" Content="" HorizontalAlignment="Left" Margin="124,83,0,0" VerticalAlignment="Top" Width="103"/>
+        <Label Name="labelLeverancier" Content="" HorizontalAlignment="Left" Margin="124,114,0,0" VerticalAlignment="Top" Width="103"/>
+        <Label Name="labelKleur" Content="" HorizontalAlignment="Left" Margin="124,145,0,0" VerticalAlignment="Top" Width="103"/>
+        <Label Name="labelKostprijs" HorizontalAlignment="Left" Margin="124,176,0,0" VerticalAlignment="Top" Width="103"/>
+
+    </Grid>
+</Window>

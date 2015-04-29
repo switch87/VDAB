@@ -5,7 +5,7 @@ using TuinCentrumGemeenschap;
 namespace WpfOpgave2
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -14,18 +14,18 @@ namespace WpfOpgave2
             InitializeComponent();
         }
 
-        private void Button_Click( object sender, RoutedEventArgs e )
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 var manager = new TuincentrumDbManager();
-                using ( var conTuinCentrum = manager.GetConnection() )
+                using (var conTuinCentrum = manager.GetConnection())
                 {
                     conTuinCentrum.Open();
                     LabelStatus.Content = "Tuincentrum geopend";
                 }
             }
-            catch ( Exception ex )
+            catch (Exception ex)
             {
                 LabelStatus.Content = ex.Message;
             }

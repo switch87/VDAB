@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="KlantenManager.cs" />
     <Compile Include="PlantenManager.cs" />
+    <Compile Include="PlantInfo.cs" />
     <Compile Include="TuincentrumDbManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
