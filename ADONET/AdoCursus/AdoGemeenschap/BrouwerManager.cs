@@ -8,7 +8,7 @@ namespace AdoGemeenschap
     {
         public ObservableCollection<Brouwer> GetBrouwersBeginNaam(string beginNaam)
         {
-            ObservableCollection<Brouwer> brouwers =
+            var brouwers =
                 new ObservableCollection<Brouwer>();
             var manager = new BierenDbManager();
             using (var conBieren = manager.GetConnection())
@@ -72,7 +72,7 @@ namespace AdoGemeenschap
                     parBrouwerNr.ParameterName = "@brouwernr";
                     comDelete.Parameters.Add(parBrouwerNr);
                     conBieren.Open();
-                    foreach (Brouwer eenBrouwer in brouwers)
+                    foreach (var eenBrouwer in brouwers)
                     {
                         parBrouwerNr.Value = eenBrouwer.BrouwerNr;
                         comDelete.ExecuteNonQuery();

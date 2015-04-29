@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 using AdoGemeenschap;
@@ -14,12 +15,16 @@ namespace AdoWPF
     /// </summary>
     public partial class OverzichtBrouwers : Window
     {
-        private CollectionViewSource brouwerViewSource;
-
         public ObservableCollection<Brouwer> brouwersOb =
             new ObservableCollection<Brouwer>();
 
+        private CollectionViewSource brouwerViewSource;
         public List<Brouwer> OudeBrouwers = new List<Brouwer>();
+
+        public OverzichtBrouwers()
+        {
+            InitializeComponent();
+        }
 
         private void OnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
@@ -30,11 +35,6 @@ namespace AdoWPF
                     OudeBrouwers.Add(oudeBrouwer);
                 }
             }
-        }
-
-        public OverzichtBrouwers()
-        {
-            InitializeComponent();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@ namespace AdoWPF
         private void VulDeGrid()
         {
             int totalRowcount;
-            brouwerViewSource = (CollectionViewSource) (this.FindResource("brouwerViewSource"));
+            brouwerViewSource = (CollectionViewSource) (FindResource("brouwerViewSource"));
             var manager = new BrouwerManager();
             brouwersOb = manager.GetBrouwersBeginNaam(textBoxZoeken.Text);
             totalRowcount = brouwersOb.Count();
@@ -97,9 +97,9 @@ namespace AdoWPF
             goToPreviousButton.IsEnabled = !(brouwerViewSource.View.CurrentPosition == 0);
             goToFirstButton.IsEnabled = !(brouwerViewSource.View.CurrentPosition == 0);
             goToNextButton.IsEnabled =
-                !(brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 1);
+                !(brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 2);
             goToLastButton.IsEnabled =
-                !(brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 1);
+                !(brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 2);
             if (brouwerDataGrid.Items.Count != 0)
             {
                 if (brouwerDataGrid.SelectedItem != null)
@@ -110,7 +110,6 @@ namespace AdoWPF
             }
             textBoxGo.Text = (brouwerViewSource.View.CurrentPosition + 1).ToString();
         }
-
 
         private void goButton_Click(object sender, RoutedEventArgs e)
         {
@@ -127,7 +126,7 @@ namespace AdoWPF
             goUpdate();
         }
 
-        private void brouwerDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void brouwerDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             goUpdate();
         }

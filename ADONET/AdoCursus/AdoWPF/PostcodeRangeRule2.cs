@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 
 namespace AdoWPF
@@ -12,7 +8,7 @@ namespace AdoWPF
     {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {
-            int postcode = 0;
+            var postcode = 0;
             try
             {
                 if (((string) value).Length > 0)
@@ -26,10 +22,7 @@ namespace AdoWPF
             {
                 return new ValidationResult(false, "de postcode moet > 999 en < 1000 zijn");
             }
-            else
-            {
-                return new ValidationResult(true, null);
-            }
+            return new ValidationResult(true, null);
         }
     }
 }
