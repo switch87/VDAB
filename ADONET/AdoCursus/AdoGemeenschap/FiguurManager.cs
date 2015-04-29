@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using AdoGemeenschap;
 
@@ -56,7 +57,8 @@ public class FiguurManager
                     parNaam.Value = eenFiguur.Naam;
                     parVersie.Value = eenFiguur.Versie;
                     parID.Value = eenFiguur.ID;
-                    comUpdate.ExecuteNonQuery();
+                    if (comUpdate.ExecuteNonQuery() == 0)
+                        throw new Exception("Iemand was je voor");
                 }
             }
         }
