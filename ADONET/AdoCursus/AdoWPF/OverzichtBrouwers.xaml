@@ -155,7 +155,9 @@
                       EnableRowVirtualization="True"
                       ItemsSource="{Binding}" Name="brouwerDataGrid"
                       RowDetailsVisibilityMode="VisibleWhenSelected"
-                      FontSize="16" ColumnWidth="Auto" SelectionChanged="brouwerDataGrid_SelectionChanged">
+                      FontSize="16" ColumnWidth="Auto" SelectionChanged="brouwerDataGrid_SelectionChanged"
+                      CanUserSortColumns="True"
+                      RowEditEnding="brouwerDataGrid_RowEditEnding">
                 <DataGrid.RowValidationRules>
                     <adoWpf:PostcodeRangeRule ValidationStep="UpdatedValue" />
                 </DataGrid.RowValidationRules>

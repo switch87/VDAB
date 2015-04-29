@@ -19,12 +19,25 @@ namespace AdoWPF
             new ObservableCollection<Brouwer>();
 
         private CollectionViewSource brouwerViewSource;
+        public List<Brouwer> GewijzigdeBrouwers = new List<Brouwer>();
         public List<Brouwer> NieuweBrouwers = new List<Brouwer>();
         public List<Brouwer> OudeBrouwers = new List<Brouwer>();
 
         public OverzichtBrouwers()
         {
             InitializeComponent();
+        }
+
+        private void brouwerDataGrid_RowEditEnding(object sender,
+            DataGridRowEditEndingEventArgs e)
+        {
+            var o =
+                brouwerDataGrid.ItemContainerGenerator.ItemFromContainer(e.Row);
+            if (brouwersOb.Contains(o))
+            {
+                GewijzigdeBrouwers.Add((Brouwer) brouwerDataGrid.ItemContainerGenerator.
+                    ItemFromContainer(e.Row));
+            }
         }
 
         private void OnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
@@ -139,23 +152,30 @@ namespace AdoWPF
             goUpdate();
         }
 
-        private void buttonSave_Click( object sender, RoutedEventArgs e )
+        private void buttonSave_Click(object sender, RoutedEventArgs e)
         {
             var manager = new BrouwerManager();
-            if ( OudeBrouwers.Count() != 0 )
+            if (OudeBrouwers.Count() != 0)
             {
-                manager.SchrijfVerwijderingen( OudeBrouwers );
+                manager.SchrijfVerwijderingen(OudeBrouwers);
                 labelTotalRowCount.Content =
-                (int)labelTotalRowCount.Content - OudeBrouwers.Count();
+                    (int) labelTotalRowCount.Content - OudeBrouwers.Count();
             }
             OudeBrouwers.Clear();
-            if ( NieuweBrouwers.Count() != 0 )
+
+            if (NieuweBrouwers.Count() != 0)
             {
-                manager.SchrijfToevoegingen( NieuweBrouwers );
+                manager.SchrijfToevoegingen(NieuweBrouwers);
                 labelTotalRowCount.Content =
-                (int)labelTotalRowCount.Content + NieuweBrouwers.Count();
+                    (int) labelTotalRowCount.Content + NieuweBrouwers.Count();
             }
             NieuweBrouwers.Clear();
+
+            if (GewijzigdeBrouwers.Count() != 0)
+            {
+                manager.SchrijfWijzigingen(GewijzigdeBrouwers);
+            }
+            GewijzigdeBrouwers.Clear();
         }
     }
 }
