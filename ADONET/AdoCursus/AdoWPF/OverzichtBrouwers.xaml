@@ -7,11 +7,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:AdoGemeenschap="clr-namespace:AdoGemeenschap;assembly=AdoGemeenschap"
         xmlns:adoWpf="clr-namespace:AdoWPF"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         Loaded="Window_Loaded">
     <Window.Resources>
         <CollectionViewSource x:Key="brouwerViewSource"
                               d:DesignSource="{d:DesignInstance AdoGemeenschap:Brouwer,
-CreateList=True}" />
+                                CreateList=True}" />
         <ControlTemplate x:Key="validationTemplate">
             <DockPanel>
                 <TextBlock Foreground="Red" FontSize="20">!</TextBlock>
@@ -140,7 +141,8 @@ CreateList=True}" />
                            VerticalAlignment="Center" />
                     <TextBox Grid.Column="3" Grid.Row="2" Height="23"
                              HorizontalAlignment="Left" Margin="3" Name="omzetTextBox"
-                             Text="{Binding Path=Omzet}" />
+                             Text="{Binding Path=Omzet, TargetNullValue={x:Static sys:String.Empty},
+                                    ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
                 </Grid>
             </StackPanel>
         </Border>
@@ -158,8 +160,8 @@ CreateList=True}" />
                     <ControlTemplate>
                         <Grid Margin="0,-2,0,-2"
                               ToolTip="{Binding RelativeSource={RelativeSource FindAncestor,
-AncestorType={x:Type DataGridRow}},
-Path=(Validation.Errors)[0].ErrorContent}">
+                                AncestorType={x:Type DataGridRow}},
+                                Path=(Validation.Errors)[0].ErrorContent}">
                             <Ellipse StrokeThickness="0" Fill="Red"
                                      Width="{TemplateBinding FontSize}"
                                      Height="{TemplateBinding FontSize}" />
@@ -176,7 +178,8 @@ Path=(Validation.Errors)[0].ErrorContent}">
                     <DataGridTextColumn Header="Postcode"
                                         Binding="{Binding Postcode,ValidatesOnExceptions=True}" />
                     <DataGridTextColumn Header="Gemeente" Binding="{Binding Gemeente}" />
-                    <DataGridTextColumn Header="Omzet" Binding="{Binding Omzet}" />
+                    <DataGridTextColumn Header="Omzet"
+                                        Binding="{Binding Omzet,TargetNullValue={x:Static sys:String.Empty}}" />
                 </DataGrid.Columns>
 
             </DataGrid>
