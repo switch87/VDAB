@@ -1,55 +1,57 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 
 namespace AdoGemeenschap
 {
     public class BrouwerManager
     {
-        public List<Brouwer> GetBrouwersBeginNaam( string beginNaam )
+        public ObservableCollection<Brouwer> GetBrouwersBeginNaam(string beginNaam)
         {
-            var brouwers = new List<Brouwer>();
+            ObservableCollection<Brouwer> brouwers =
+                new ObservableCollection<Brouwer>();
             var manager = new BierenDbManager();
-            using ( var conBieren = manager.GetConnection() )
+            using (var conBieren = manager.GetConnection())
             {
-                using ( var comBrouwers = conBieren.CreateCommand() )
+                using (var comBrouwers = conBieren.CreateCommand())
                 {
                     comBrouwers.CommandType = CommandType.Text;
-                    if ( beginNaam != string.Empty )
+                    if (beginNaam != string.Empty)
                     {
                         comBrouwers.CommandText = "select * from Brouwers where BrNaam like @zoals order by BrNaam";
                         var parZoals = comBrouwers.CreateParameter();
                         parZoals.ParameterName = "@zoals";
                         parZoals.Value = beginNaam + "%";
-                        comBrouwers.Parameters.Add( parZoals );
+                        comBrouwers.Parameters.Add(parZoals);
                     }
                     else
                     {
                         comBrouwers.CommandText = "select * from Brouwers";
                     }
                     conBieren.Open();
-                    using ( var rdrBrouwers = comBrouwers.ExecuteReader() )
+                    using (var rdrBrouwers = comBrouwers.ExecuteReader())
                     {
-                        var brouwerNrPos = rdrBrouwers.GetOrdinal( "BrouwerNr" );
-                        var brNaamPos = rdrBrouwers.GetOrdinal( "BrNaam" );
-                        var adresPos = rdrBrouwers.GetOrdinal( "Adres" );
-                        var postcodePos = rdrBrouwers.GetOrdinal( "Postcode" );
-                        var gemeentePos = rdrBrouwers.GetOrdinal( "Gemeente" );
-                        var omzetPos = rdrBrouwers.GetOrdinal( "Omzet" );
+                        var brouwerNrPos = rdrBrouwers.GetOrdinal("BrouwerNr");
+                        var brNaamPos = rdrBrouwers.GetOrdinal("BrNaam");
+                        var adresPos = rdrBrouwers.GetOrdinal("Adres");
+                        var postcodePos = rdrBrouwers.GetOrdinal("Postcode");
+                        var gemeentePos = rdrBrouwers.GetOrdinal("Gemeente");
+                        var omzetPos = rdrBrouwers.GetOrdinal("Omzet");
 
-                        while ( rdrBrouwers.Read() )
+                        while (rdrBrouwers.Read())
                         {
                             int? omzet;
-                            if ( rdrBrouwers.IsDBNull( omzetPos ) )
+                            if (rdrBrouwers.IsDBNull(omzetPos))
                             {
                                 omzet = null;
                             }
                             else
                             {
-                                omzet = rdrBrouwers.GetInt32( omzetPos );
+                                omzet = rdrBrouwers.GetInt32(omzetPos);
                             }
-                            brouwers.Add( new Brouwer( rdrBrouwers.GetInt32( brouwerNrPos ),
-                                rdrBrouwers.GetString( brNaamPos ), rdrBrouwers.GetString( adresPos ),
-                                rdrBrouwers.GetInt16( postcodePos ), rdrBrouwers.GetString( gemeentePos ), omzet ) );
+                            brouwers.Add(new Brouwer(rdrBrouwers.GetInt32(brouwerNrPos),
+                                rdrBrouwers.GetString(brNaamPos), rdrBrouwers.GetString(adresPos),
+                                rdrBrouwers.GetInt16(postcodePos), rdrBrouwers.GetString(gemeentePos), omzet));
                         }
                     }
                 }

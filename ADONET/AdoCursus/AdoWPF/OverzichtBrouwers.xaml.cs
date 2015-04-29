@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Data;
@@ -14,18 +15,21 @@ namespace AdoWPF
     {
         private CollectionViewSource brouwerViewSource;
 
+        public ObservableCollection<Brouwer> brouwersOb =
+            new ObservableCollection<Brouwer>();
+
         public OverzichtBrouwers()
         {
             InitializeComponent();
         }
 
-        private void Window_Loaded( object sender, RoutedEventArgs e )
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             VulDeGrid();
             textBoxZoeken.Focus();
         }
 
-        private void buttonZoeken_Click( object sender, RoutedEventArgs e )
+        private void buttonZoeken_Click(object sender, RoutedEventArgs e)
         {
             VulDeGrid();
         }
@@ -33,43 +37,42 @@ namespace AdoWPF
         private void VulDeGrid()
         {
             int totalRowcount;
-            brouwerViewSource = (CollectionViewSource)( this.FindResource( "brouwerViewSource" ) );
+            brouwerViewSource = (CollectionViewSource) (this.FindResource("brouwerViewSource"));
             var manager = new BrouwerManager();
-            List<Brouwer> brouwers = new List<Brouwer>();
-            brouwers = manager.GetBrouwersBeginNaam( textBoxZoeken.Text );
-            totalRowcount = brouwers.Count();
+            brouwersOb = manager.GetBrouwersBeginNaam(textBoxZoeken.Text);
+            totalRowcount = brouwersOb.Count();
             labelTotalRowCount.Content = totalRowcount;
-            brouwerViewSource.Source = brouwers;
+            brouwerViewSource.Source = brouwersOb;
             goUpdate();
         }
 
-        private void textBoxZoeken_KeyUp( object sender, KeyEventArgs e )
+        private void textBoxZoeken_KeyUp(object sender, KeyEventArgs e)
         {
-            if ( e.Key == Key.Enter )
+            if (e.Key == Key.Enter)
             {
                 VulDeGrid();
             }
         }
 
-        private void goToFirstButton_Click( object sender, RoutedEventArgs e )
+        private void goToFirstButton_Click(object sender, RoutedEventArgs e)
         {
             brouwerViewSource.View.MoveCurrentToFirst();
             goUpdate();
         }
 
-        private void goToPreviousButton_Click( object sender, RoutedEventArgs e )
+        private void goToPreviousButton_Click(object sender, RoutedEventArgs e)
         {
             brouwerViewSource.View.MoveCurrentToPrevious();
             goUpdate();
         }
 
-        private void goToNextButton_Click( object sender, RoutedEventArgs e )
+        private void goToNextButton_Click(object sender, RoutedEventArgs e)
         {
             brouwerViewSource.View.MoveCurrentToNext();
             goUpdate();
         }
 
-        private void goToLastButton_Click( object sender, RoutedEventArgs e )
+        private void goToLastButton_Click(object sender, RoutedEventArgs e)
         {
             brouwerViewSource.View.MoveCurrentToLast();
             goUpdate();
@@ -77,13 +80,13 @@ namespace AdoWPF
 
         private void goUpdate()
         {
-            goToPreviousButton.IsEnabled = !( brouwerViewSource.View.CurrentPosition == 0 );
-            goToFirstButton.IsEnabled = !( brouwerViewSource.View.CurrentPosition == 0 );
+            goToPreviousButton.IsEnabled = !(brouwerViewSource.View.CurrentPosition == 0);
+            goToFirstButton.IsEnabled = !(brouwerViewSource.View.CurrentPosition == 0);
             goToNextButton.IsEnabled =
-                !( brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 1 );
+                !(brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 1);
             goToLastButton.IsEnabled =
-                !( brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 1 );
-            if ( brouwerDataGrid.Items.Count != 0 )
+                !(brouwerViewSource.View.CurrentPosition == brouwerDataGrid.Items.Count - 1);
+            if (brouwerDataGrid.Items.Count != 0)
             {
                 if (brouwerDataGrid.SelectedItem != null)
                 {
@@ -91,26 +94,26 @@ namespace AdoWPF
                     listBoxBrouwers.ScrollIntoView(brouwerDataGrid.SelectedItem);
                 }
             }
-            textBoxGo.Text = ( brouwerViewSource.View.CurrentPosition + 1 ).ToString();
+            textBoxGo.Text = (brouwerViewSource.View.CurrentPosition + 1).ToString();
         }
 
 
-        private void goButton_Click( object sender, RoutedEventArgs e )
+        private void goButton_Click(object sender, RoutedEventArgs e)
         {
             int position;
-            int.TryParse( textBoxGo.Text, out position );
-            if ( position > 0 && position <= brouwerDataGrid.Items.Count )
+            int.TryParse(textBoxGo.Text, out position);
+            if (position > 0 && position <= brouwerDataGrid.Items.Count)
             {
-                brouwerViewSource.View.MoveCurrentToPosition( position - 1 );
+                brouwerViewSource.View.MoveCurrentToPosition(position - 1);
             }
             else
             {
-                MessageBox.Show( "The input index is not valid." );
+                MessageBox.Show("The input index is not valid.");
             }
             goUpdate();
         }
 
-        private void brouwerDataGrid_SelectionChanged( object sender, System.Windows.Controls.SelectionChangedEventArgs e )
+        private void brouwerDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             goUpdate();
         }
