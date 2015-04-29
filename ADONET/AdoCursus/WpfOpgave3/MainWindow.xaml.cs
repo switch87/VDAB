@@ -5,7 +5,7 @@ using TuinCentrumGemeenschap;
 namespace WpfOpgave3
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow
     {
@@ -14,32 +14,32 @@ namespace WpfOpgave3
             InitializeComponent();
         }
 
-        private void Toevoegen_Click( object sender, RoutedEventArgs e )
+        private void Toevoegen_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 var manager = new KlantenManager();
-                if ( manager.Klanttoevoegen( NaamBox.Text, AdresBox.Text, PostNrBox.Text, WoonplaatsBox.Text ) )
+                if (manager.Klanttoevoegen(NaamBox.Text, AdresBox.Text, PostNrBox.Text, WoonplaatsBox.Text))
                 {
                     LabelStatus.Content = "Nieuwe klant toegevoegd";
                 }
                 else LabelStatus.Content = "Nieuwe klant NIET toegevoegd";
             }
-            catch ( Exception ex )
+            catch (Exception ex)
             {
                 LabelStatus.Content = ex.Message;
             }
         }
 
-        private void buttonVervang_Click( object sender, RoutedEventArgs e )
+        private void buttonVervang_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 var tuinManager = new KlantenManager();
-                tuinManager.VervangLeverancier( 2, 3 );
+                tuinManager.VervangLeverancier(2, 3);
                 LabelStatus.Content = "Leverancier 2 is verwijderd en vervangen door 3";
             }
-            catch ( Exception ex )
+            catch (Exception ex)
             {
                 LabelStatus.Content = ex.Message;
             }
