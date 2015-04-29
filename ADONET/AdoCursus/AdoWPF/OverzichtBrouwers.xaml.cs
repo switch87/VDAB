@@ -139,16 +139,23 @@ namespace AdoWPF
             goUpdate();
         }
 
-        private void buttonSave_Click(object sender, RoutedEventArgs e)
+        private void buttonSave_Click( object sender, RoutedEventArgs e )
         {
             var manager = new BrouwerManager();
-            if (OudeBrouwers.Count() != 0)
+            if ( OudeBrouwers.Count() != 0 )
             {
-                manager.SchrijfVerwijderingen(OudeBrouwers);
+                manager.SchrijfVerwijderingen( OudeBrouwers );
                 labelTotalRowCount.Content =
-                    (int) labelTotalRowCount.Content - OudeBrouwers.Count();
+                (int)labelTotalRowCount.Content - OudeBrouwers.Count();
             }
             OudeBrouwers.Clear();
+            if ( NieuweBrouwers.Count() != 0 )
+            {
+                manager.SchrijfToevoegingen( NieuweBrouwers );
+                labelTotalRowCount.Content =
+                (int)labelTotalRowCount.Content + NieuweBrouwers.Count();
+            }
+            NieuweBrouwers.Clear();
         }
     }
 }
