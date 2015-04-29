@@ -58,5 +58,27 @@ namespace AdoGemeenschap
             }
             return brouwers;
         }
+
+        public void SchrijfVerwijderingen(List<Brouwer> brouwers)
+        {
+            var manager = new BierenDbManager();
+            using (var conBieren = manager.GetConnection())
+            {
+                using (var comDelete = conBieren.CreateCommand())
+                {
+                    comDelete.CommandType = CommandType.Text;
+                    comDelete.CommandText = "delete from brouwers where BrouwerNr=@brouwernr";
+                    var parBrouwerNr = comDelete.CreateParameter();
+                    parBrouwerNr.ParameterName = "@brouwernr";
+                    comDelete.Parameters.Add(parBrouwerNr);
+                    conBieren.Open();
+                    foreach (Brouwer eenBrouwer in brouwers)
+                    {
+                        parBrouwerNr.Value = eenBrouwer.BrouwerNr;
+                        comDelete.ExecuteNonQuery();
+                    } // foreach
+                } // comDelete
+            } // conBieren
+        }
     }
 }

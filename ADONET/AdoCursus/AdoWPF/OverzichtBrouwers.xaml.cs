@@ -131,5 +131,17 @@ namespace AdoWPF
         {
             goUpdate();
         }
+
+        private void buttonSave_Click(object sender, RoutedEventArgs e)
+        {
+            var manager = new BrouwerManager();
+            if (OudeBrouwers.Count() != 0)
+            {
+                manager.SchrijfVerwijderingen(OudeBrouwers);
+                labelTotalRowCount.Content =
+                    (int) labelTotalRowCount.Content - OudeBrouwers.Count();
+            }
+            OudeBrouwers.Clear();
+        }
     }
 }
