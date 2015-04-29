@@ -13,7 +13,6 @@ namespace AdoWPF
     public partial class StripFiguren : Window
     {
         private List<Figuur> figuren = new List<Figuur>();
-        public List<Figuur> GewijzigdeFiguren = new List<Figuur>();
 
         public StripFiguren()
         {
@@ -30,25 +29,28 @@ namespace AdoWPF
             figuurViewSource.Source = figuren;
         }
 
-        private void figuurDataGrid_RowEditEnding(object sender,
-            DataGridRowEditEndingEventArgs e)
+        public List<Figuur> GewijzigdeFiguren = new List<Figuur>();
+        private void figuurDataGrid_RowEditEnding( object sender,
+        DataGridRowEditEndingEventArgs e )
         {
-            var o =
-                figuurDataGrid.ItemContainerGenerator.ItemFromContainer(e.Row);
-            if (figuren.Contains(o))
+            object o =
+            figuurDataGrid.ItemContainerGenerator.ItemFromContainer( e.Row );
+            if ( figuren.Contains( o ) )
             {
-                GewijzigdeFiguren.Add((Figuur) figuurDataGrid.ItemContainerGenerator.
-                    ItemFromContainer(e.Row));
+                GewijzigdeFiguren.Add( (Figuur)figuurDataGrid.ItemContainerGenerator.
+                ItemFromContainer( e.Row ) );
             }
         }
 
-        private void buttonSave_Click(object sender, RoutedEventArgs e)
+        private void buttonSave_Click( object sender, RoutedEventArgs e )
         {
             var manager = new FiguurManager();
-            if (GewijzigdeFiguren.Count() != 0)
+            if ( GewijzigdeFiguren.Count() != 0 )
             {
-                manager.SchrijfWijzigingen(GewijzigdeFiguren);
+                manager.SchrijfWijzigingen( GewijzigdeFiguren );
             }
         }
+
+
     }
 }

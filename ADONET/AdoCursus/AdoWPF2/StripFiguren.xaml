@@ -12,22 +12,22 @@
     </Window.Resources>
     <DockPanel LastChildFill="True">
         <Border Background="PapayaWhip" BorderBrush="Black"
-                BorderThickness="1" DockPanel.Dock="Top">
+BorderThickness="1" DockPanel.Dock="Top">
             <DataGrid DataContext="{StaticResource figuurViewSource}"
-                      AutoGenerateColumns="False"
-                      EnableRowVirtualization="True"
-                      Height="200" HorizontalAlignment="Left"
-                      ItemsSource="{Binding}"
-                      Name="figuurDataGrid"
-                      RowDetailsVisibilityMode="VisibleWhenSelected"
-                      VerticalAlignment="Top" Width="250">
+AutoGenerateColumns="False"
+EnableRowVirtualization="True"
+Height="200" HorizontalAlignment="Left"
+ItemsSource="{Binding}"
+Name="figuurDataGrid"
+RowDetailsVisibilityMode="VisibleWhenSelected"
+VerticalAlignment="Top" Width="250">
                 <DataGrid.Columns>
                     <DataGridTextColumn x:Name="iDColumn"
-                                        Binding="{Binding Path=ID}" Header="ID"
-                                        Width="SizeToHeader" />
+Binding="{Binding Path=ID}" Header="ID"
+Width="SizeToHeader" />
                     <DataGridTextColumn x:Name="naamColumn"
-                                        Binding="{Binding Path=Naam}"
-                                        Header="Naam" Width="*" />
+Binding="{Binding Path=Naam}"
+Header="Naam" Width="*" />
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
