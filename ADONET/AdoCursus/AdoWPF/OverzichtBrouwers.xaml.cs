@@ -19,6 +19,7 @@ namespace AdoWPF
             new ObservableCollection<Brouwer>();
 
         private CollectionViewSource brouwerViewSource;
+        public List<Brouwer> NieuweBrouwers = new List<Brouwer>();
         public List<Brouwer> OudeBrouwers = new List<Brouwer>();
 
         public OverzichtBrouwers()
@@ -33,6 +34,13 @@ namespace AdoWPF
                 foreach (Brouwer oudeBrouwer in e.OldItems)
                 {
                     OudeBrouwers.Add(oudeBrouwer);
+                }
+            }
+            if (e.NewItems != null)
+            {
+                foreach (Brouwer nieuweBrouwer in e.NewItems)
+                {
+                    NieuweBrouwers.Add(nieuweBrouwer);
                 }
             }
         }
