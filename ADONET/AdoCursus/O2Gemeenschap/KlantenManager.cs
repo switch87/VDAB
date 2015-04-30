@@ -42,6 +42,43 @@ namespace TuinCentrumGemeenschap
             }
         }
 
+        public long Klanttoevoegen2( string naam, string adres, string postNr, string woonplaats )
+        {
+            var dbManager = new TuincentrumDbManager();
+
+            using ( var conTuincentrum = dbManager.GetConnection() )
+            {
+                using ( var comNieuweKlant = conTuincentrum.CreateCommand() )
+                {
+                    comNieuweKlant.CommandType = CommandType.StoredProcedure;
+                    comNieuweKlant.CommandText = "leverancierToevoegen";
+
+                    var parNaam = comNieuweKlant.CreateParameter();
+                    var parAdres = comNieuweKlant.CreateParameter();
+                    var parPostNr = comNieuweKlant.CreateParameter();
+                    var parWoonplaats = comNieuweKlant.CreateParameter();
+
+                    parNaam.ParameterName = "@naam";
+                    parAdres.ParameterName = "@adres";
+                    parPostNr.ParameterName = "@postNr";
+                    parWoonplaats.ParameterName = "@woonplaats";
+
+                    parNaam.Value = naam;
+                    parAdres.Value = adres;
+                    parPostNr.Value = postNr;
+                    parWoonplaats.Value = woonplaats;
+
+                    comNieuweKlant.Parameters.Add( parNaam );
+                    comNieuweKlant.Parameters.Add( parAdres );
+                    comNieuweKlant.Parameters.Add( parPostNr );
+                    comNieuweKlant.Parameters.Add( parWoonplaats );
+
+                    conTuincentrum.Open();
+                    return Convert.ToInt64(comNieuweKlant.ExecuteNonQuery());
+                }
+            }
+        }
+
         public void VervangLeverancier(int oudLevNr, int nieuwLevNr)
         {
             var manager = new TuincentrumDbManager();

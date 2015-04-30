@@ -54,11 +54,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="TuincentrumDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TuincentrumDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="WPFOpgave5.xaml.cs">
       <DependentUpon>WPFOpgave5.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPFOpgave6.xaml.cs">
       <DependentUpon>WPFOpgave6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPFOpgave8.xaml.cs">
+      <DependentUpon>WPFOpgave8.xaml</DependentUpon>
     </Compile>
     <Page Include="WPFOpgave3.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -77,6 +85,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPFOpgave6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPFOpgave8.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,6 +116,17 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="TuincentrumDataSet.xsc">
+      <DependentUpon>TuincentrumDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TuincentrumDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TuincentrumDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TuincentrumDataSet.xss">
+      <DependentUpon>TuincentrumDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

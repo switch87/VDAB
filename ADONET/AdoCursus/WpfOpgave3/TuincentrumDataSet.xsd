@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TuincentrumDataSet" targetNamespace="http://tempuri.org/TuincentrumDataSet.xsd" xmlns:mstns="http://tempuri.org/TuincentrumDataSet.xsd" xmlns="http://tempuri.org/TuincentrumDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TuincentrumConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TuincentrumConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WpfOpgave3.Properties.Settings.GlobalReference.Default.TuincentrumConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PlantenTableAdapter" GeneratorDataComponentClassName="PlantenTableAdapter" Name="Planten" UserDataComponentName="PlantenTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TuincentrumConnectionString (Settings)" DbObjectName="Tuincentrum.dbo.Planten" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Naam FROM dbo.Planten</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Naam" DataSetColumn="Naam" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SoortenTableAdapter" GeneratorDataComponentClassName="SoortenTableAdapter" Name="Soorten" UserDataComponentName="SoortenTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TuincentrumConnectionString (Settings)" DbObjectName="Tuincentrum.dbo.Soorten" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Soort FROM dbo.Soorten</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Soort" DataSetColumn="Soort" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TuincentrumDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TuincentrumDataSet" msprop:Generator_UserDSName="TuincentrumDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Planten" msprop:Generator_TableClassName="PlantenDataTable" msprop:Generator_TableVarName="tablePlanten" msprop:Generator_TablePropName="Planten" msprop:Generator_RowDeletingName="PlantenRowDeleting" msprop:Generator_RowChangingName="PlantenRowChanging" msprop:Generator_RowEvHandlerName="PlantenRowChangeEventHandler" msprop:Generator_RowDeletedName="PlantenRowDeleted" msprop:Generator_UserTableName="Planten" msprop:Generator_RowChangedName="PlantenRowChanged" msprop:Generator_RowEvArgName="PlantenRowChangeEvent" msprop:Generator_RowClassName="PlantenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Naam" msprop:Generator_ColumnVarNameInTable="columnNaam" msprop:Generator_ColumnPropNameInRow="Naam" msprop:Generator_ColumnPropNameInTable="NaamColumn" msprop:Generator_UserColumnName="Naam">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Soorten" msprop:Generator_TableClassName="SoortenDataTable" msprop:Generator_TableVarName="tableSoorten" msprop:Generator_TablePropName="Soorten" msprop:Generator_RowDeletingName="SoortenRowDeleting" msprop:Generator_RowChangingName="SoortenRowChanging" msprop:Generator_RowEvHandlerName="SoortenRowChangeEventHandler" msprop:Generator_RowDeletedName="SoortenRowDeleted" msprop:Generator_UserTableName="Soorten" msprop:Generator_RowChangedName="SoortenRowChanged" msprop:Generator_RowEvArgName="SoortenRowChangeEvent" msprop:Generator_RowClassName="SoortenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Soort" msprop:Generator_ColumnVarNameInTable="columnSoort" msprop:Generator_ColumnPropNameInRow="Soort" msprop:Generator_ColumnPropNameInTable="SoortColumn" msprop:Generator_UserColumnName="Soort">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

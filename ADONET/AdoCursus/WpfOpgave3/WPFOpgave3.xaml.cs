@@ -19,11 +19,8 @@ namespace WpfOpgave3
             try
             {
                 var manager = new KlantenManager();
-                if (manager.Klanttoevoegen(NaamBox.Text, AdresBox.Text, PostNrBox.Text, WoonplaatsBox.Text))
-                {
-                    LabelStatus.Content = "Nieuwe klant toegevoegd";
-                }
-                else LabelStatus.Content = "Nieuwe klant NIET toegevoegd";
+                long klantnr = manager.Klanttoevoegen2(NaamBox.Text, AdresBox.Text, PostNrBox.Text, WoonplaatsBox.Text);
+                LabelStatus.Content = "Nieuwe klant Nr. "+klantnr+" toegevoegd";
             }
             catch (Exception ex)
             {

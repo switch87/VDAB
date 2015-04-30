@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 
 namespace TuinCentrumGemeenschap
 {
     public class PlantenManager
     {
+        
+
         public decimal GemiddeldeSoortprijsRaadplegen(string soortNaam)
         {
             var dbManager = new TuincentrumDbManager();
@@ -90,5 +93,7 @@ namespace TuinCentrumGemeenschap
                 }
             }
         }
+
+        
     }
 }
