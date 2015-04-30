@@ -34,18 +34,29 @@ namespace WpfOpgave3
         {
             try
             {
-                listBoxInstanties.Items.Clear();
-                var soortNr = ((Soort)comboBoxSoort.SelectedItem).SoortNr;
-                var Manager = new TuincentrumDbManager();
-                var plantInstanties = Manager.GetPlanten( soortNr );
-                foreach (var plant in plantInstanties)
-                {
-                    listBoxInstanties.Items.Add(plant);
-                }
+                var manager = new TuincentrumDbManager();
+                listBoxInstanties.ItemsSource = manager.GetPlanten( Convert.ToInt32(comboBoxSoort.SelectedValue) );
+                listBoxInstanties.DisplayMemberPath = "Naam";
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show( ex.Message ); ;
+            }
+        }
+
+        private void buttonOpslaan_Click( object sender, RoutedEventArgs e )
+        {
+            var manager = new TuincentrumDbManager();
+            try
+            {
+                manager.GewijzigdePlantOpslaan((plant) listBoxInstanties.SelectedItem);
+                
+            }
+            catch (Exception)
+            {
+                
+                throw;
             }
         }
     }

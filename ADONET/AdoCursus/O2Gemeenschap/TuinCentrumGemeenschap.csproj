@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="KlantenManager.cs" />
+    <Compile Include="plant.cs" />
     <Compile Include="PlantenManager.cs" />
     <Compile Include="PlantInfo.cs" />
     <Compile Include="Soort.cs" />
