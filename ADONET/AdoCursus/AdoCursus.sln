@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTaken", "WpfOpgave3\WpfT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoWPF2", "AdoWPF2\AdoWPF2.csproj", "{F0AD1AFB-4F27-4CA5-B33A-A9FEEBBC4C51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Videotheek", "..\..\EindOefeningen\ADO\Videotheek\Videotheek.csproj", "{B051F817-4C69-4DC9-B982-EED4E27B4D57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGemeenschap", "..\..\EindOefeningen\ADO\VideoGemeenschap\VideoGemeenschap.csproj", "{F723B7D4-769D-441A-8F5D-0AA1DDF44953}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{F0AD1AFB-4F27-4CA5-B33A-A9FEEBBC4C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0AD1AFB-4F27-4CA5-B33A-A9FEEBBC4C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0AD1AFB-4F27-4CA5-B33A-A9FEEBBC4C51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B051F817-4C69-4DC9-B982-EED4E27B4D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B051F817-4C69-4DC9-B982-EED4E27B4D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B051F817-4C69-4DC9-B982-EED4E27B4D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B051F817-4C69-4DC9-B982-EED4E27B4D57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F723B7D4-769D-441A-8F5D-0AA1DDF44953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F723B7D4-769D-441A-8F5D-0AA1DDF44953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F723B7D4-769D-441A-8F5D-0AA1DDF44953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F723B7D4-769D-441A-8F5D-0AA1DDF44953}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

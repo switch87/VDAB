@@ -1,7 +1,7 @@
-﻿<Application x:Class="WpfOpgave3.App"
+﻿<Application x:Class="Videotheek.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="WPFOpgave10.xaml">
+             StartupUri="Videotheek.xaml">
     <Application.Resources>
 
     </Application.Resources>

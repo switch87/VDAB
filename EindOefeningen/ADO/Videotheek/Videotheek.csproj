@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B0D0BA3A-36BE-4048-A91A-10EA16519E5A}</ProjectGuid>
+    <ProjectGuid>{B051F817-4C69-4DC9-B982-EED4E27B4D57}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WpfOpgave3</RootNamespace>
-    <AssemblyName>WpfOpgave3</AssemblyName>
+    <RootNamespace>Videotheek</RootNamespace>
+    <AssemblyName>Videotheek</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,28 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="TuincentrumDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TuincentrumDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="WPFOpgave10.xaml.cs">
-      <DependentUpon>WPFOpgave10.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WPFOpgave5.xaml.cs">
-      <DependentUpon>WPFOpgave5.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WPFOpgave6.xaml.cs">
-      <DependentUpon>WPFOpgave6.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WPFOpgave8.xaml.cs">
-      <DependentUpon>WPFOpgave8.xaml</DependentUpon>
-    </Compile>
-    <Page Include="WPFOpgave10.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WPFOpgave3.xaml">
+    <Page Include="Videotheek.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -83,22 +62,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="WPFOpgave3.xaml.cs">
-      <DependentUpon>WPFOpgave3.xaml</DependentUpon>
+    <Compile Include="Videotheek.xaml.cs">
+      <DependentUpon>Videotheek.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="WPFOpgave5.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WPFOpgave6.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WPFOpgave8.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -118,33 +85,23 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Properties\DataSources\TuinCentrumGemeenschap.Leverancier.datasource" />
+    <None Include="Properties\DataSources\VideoGemeenschap.Film.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="TuincentrumDataSet.xsc">
-      <DependentUpon>TuincentrumDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TuincentrumDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TuincentrumDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TuincentrumDataSet.xss">
-      <DependentUpon>TuincentrumDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\O2Gemeenschap\TuinCentrumGemeenschap.csproj">
-      <Project>{84305efe-267f-4f3a-8397-4aa6c387b2a7}</Project>
-      <Name>TuinCentrumGemeenschap</Name>
+    <ProjectReference Include="..\VideoGemeenschap\VideoGemeenschap.csproj">
+      <Project>{f723b7d4-769d-441a-8f5d-0aa1ddf44953}</Project>
+      <Name>VideoGemeenschap</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -14,6 +14,45 @@ namespace TuinCentrumGemeenschap
         private static readonly DbProviderFactory _factory =
             DbProviderFactories.GetFactory(_conTuincentrumSetting.ProviderName);
 
+        public List<Leverancier> GetLeveranciersBeginNaam(string beginNaam)
+        {
+            var leveranciers = new List<Leverancier>();
+            var manager = new TuincentrumDbManager();
+            using (var conPlanten = manager.GetConnection())
+            {
+                using (var comLeveranciers = conPlanten.CreateCommand())
+                {
+                    comLeveranciers.CommandType = CommandType.Text;
+                    if (beginNaam != string.Empty)
+                    {
+                        comLeveranciers.CommandText = "select * from leveranciers where naam like @zoals order by naam";
+                        var parZoals = comLeveranciers.CreateParameter();
+                        parZoals.ParameterName = "@zoals";
+                        parZoals.Value = beginNaam + "%";
+                        comLeveranciers.Parameters.Add(parZoals);
+                    }
+                    else comLeveranciers.CommandText = "select * from leveranciers";
+                    conPlanten.Open();
+                    using (var readerLeveranciers = comLeveranciers.ExecuteReader())
+                    {
+                        var levNrPos = readerLeveranciers.GetOrdinal("levnr");
+                        var naamPos = readerLeveranciers.GetOrdinal("naam");
+                        var adresPos = readerLeveranciers.GetOrdinal("adres");
+                        var postcodePos = readerLeveranciers.GetOrdinal("postnr");
+                        var gemeentePos = readerLeveranciers.GetOrdinal("woonplaats");
+
+                        while (readerLeveranciers.Read())
+                        {
+                            leveranciers.Add(new Leverancier(readerLeveranciers.GetInt32(levNrPos),
+                                readerLeveranciers.GetString(naamPos), readerLeveranciers.GetString(adresPos),
+                                readerLeveranciers.GetString(postcodePos), readerLeveranciers.GetString(gemeentePos)));
+                        }
+                    }
+                }
+            }
+            return leveranciers;
+        }
+
         public DbConnection GetConnection()
         {
             var conTuincentrum = _factory.CreateConnection();
@@ -55,7 +94,8 @@ namespace TuinCentrumGemeenschap
                 using (var comPlanten = conTuinCentrum.CreateCommand())
                 {
                     comPlanten.CommandType = CommandType.Text;
-                    comPlanten.CommandText = "select plantnr, naam, levnr, verkoopprijs, kleur from planten where soortnr=@soortnr order by naam";
+                    comPlanten.CommandText =
+                        "select plantnr, naam, levnr, verkoopprijs, kleur from planten where soortnr=@soortnr order by naam";
                     var parSoortNr = comPlanten.CreateParameter();
                     parSoortNr.ParameterName = "@soortnr";
                     parSoortNr.Value = soortNr;
@@ -88,7 +128,7 @@ namespace TuinCentrumGemeenschap
             {
                 using (var comOpslaan = conTuinCentrum.CreateCommand())
                 {
-                    comOpslaan.CommandType=CommandType.Text;
+                    comOpslaan.CommandType = CommandType.Text;
                     comOpslaan.CommandText =
                         "update planten set Kleur=@kleur,verkoopprijs=@prijs where plantnr=@plantnr";
                     var parKleur = comOpslaan.CreateParameter();
@@ -110,7 +150,6 @@ namespace TuinCentrumGemeenschap
                     conTuinCentrum.Open();
                     if (comOpslaan.ExecuteNonQuery() == 0)
                         throw new Exception("Opslaan mislukt");
-
                 }
             }
         }

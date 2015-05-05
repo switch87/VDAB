@@ -1,0 +1,29 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:TuinCentrumGemeenschap="clr-namespace:TuinCentrumGemeenschap;assembly=TuinCentrumGemeenschap"
+    mc:Ignorable="d" x:Class="WpfOpgave3.WPFOpgave10"
+    Title="WPFOpgave10" Height="300" Width="300" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="leverancierViewSource"
+                              d:DesignSource="{d:DesignInstance {x:Type TuinCentrumGemeenschap:Leverancier}, CreateList=True}" />
+    </Window.Resources>
+    <Grid DataContext="{StaticResource leverancierViewSource}">
+
+        <DataGrid x:Name="leverancierDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="10"
+                  ItemsSource="{Binding}" EnableRowVirtualization="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="adresColumn" Width="SizeToHeader" Header="Adres" Binding="{Binding Adres}" />
+                <DataGridTextColumn x:Name="levNrColumn" Width="SizeToHeader" Header="Lev Nr" Binding="{Binding LevNr}" />
+                <DataGridTextColumn x:Name="naamColumn" Width="SizeToHeader" Header="Naam" Binding="{Binding Naam}" />
+                <DataGridTextColumn x:Name="postcodeColumn" Width="SizeToHeader" Header="Postcode"
+                                    Binding="{Binding Postcode}" />
+                <DataGridTextColumn x:Name="woonplaatsColumn" Width="SizeToHeader" Header="Woonplaats"
+                                    Binding="{Binding Woonplaats}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
