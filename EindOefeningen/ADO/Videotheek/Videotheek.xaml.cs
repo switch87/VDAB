@@ -39,7 +39,7 @@ namespace Videotheek
             }
             catch (Exception ex)
             {
-                MessageBox.Show( ex.Message );
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -54,13 +54,14 @@ namespace Videotheek
                     var film = (Film) ListBoxFilms.SelectedItem;
                     film.Genre = ComboBoxGenres.SelectedIndex + 1;
                     film.InVoorraad = int.Parse(TextBoxInVoorraad.Text);
-                    film.Prijs = decimal.Parse(TextBoxPrijs.Text);
+                    film.Prijs = decimal.Parse(TextBoxPrijs.Text)/100;
+                        // Delen door 100 om te werken met de format in de xaml
                     film.Titel = TextBoxTitel.Text;
                     manager.GewijzigdeFilmOpslaan(film);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show( ex.Message );
+                    MessageBox.Show(ex.Message);
                 }
             }
             else
@@ -72,7 +73,8 @@ namespace Videotheek
                     {
                         Genre = ComboBoxGenres.SelectedIndex + 1,
                         InVoorraad = int.Parse(TextBoxInVoorraad.Text),
-                        Prijs = decimal.Parse(TextBoxPrijs.Text),
+                        Prijs = decimal.Parse(TextBoxPrijs.Text)/100,
+                            // Delen door 100 om te werken met de format in de xaml
                         Titel = TextBoxTitel.Text
                     };
                     ;
@@ -81,7 +83,7 @@ namespace Videotheek
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show( ex.Message );
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
@@ -129,7 +131,7 @@ namespace Videotheek
             }
             catch (Exception ex)
             {
-                MessageBox.Show( ex.Message );
+                MessageBox.Show(ex.Message);
             }
         }
 

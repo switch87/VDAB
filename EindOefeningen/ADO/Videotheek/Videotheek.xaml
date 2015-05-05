@@ -24,7 +24,7 @@
         <TextBox Name="TextBoxUitVoorraad" HorizontalAlignment="Left" Height="23" Margin="116,312,0,0"
                  TextWrapping="Wrap" Text="{Binding UitVoorraad}" VerticalAlignment="Top" Width="120" IsEnabled="False" />
         <TextBox Name="TextBoxPrijs" HorizontalAlignment="Left" Height="23" Margin="116,340,0,0"
-                 TextWrapping="Wrap" Text="{Binding Prijs}" VerticalAlignment="Top" Width="120" />
+                 TextWrapping="Wrap" Text="{Binding Prijs, StringFormat=N2}" VerticalAlignment="Top" Width="120" />
         <TextBox Name="TextBoxTotaalVerhuurd" HorizontalAlignment="Left" Height="23" Margin="116,368,0,0"
                  TextWrapping="Wrap" Text="{Binding TotaalVerhuurd}" VerticalAlignment="Top" Width="120"
                  IsEnabled="False" />
