@@ -56,3 +56,32 @@ C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\ButtonGebruik\obj\Debu
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\ButtonGebruik\obj\Debug\ButtonGebruik.csproj.GenerateResource.Cache
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\ButtonGebruik\obj\Debug\ButtonGebruik.exe
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\ButtonGebruik\obj\Debug\ButtonGebruik.pdb
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\ButtonGebruik.exe.config
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\ButtonGebruik.exe
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\ButtonGebruik.pdb
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\ButtonGebruik.csprojResolveAssemblyReference.cache
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\ButtonGebruikWindow.baml
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\ButtonGebruikWindow.g.cs
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\App.g.cs
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\ButtonGebruik_MarkupCompile.cache
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\ButtonGebruik_MarkupCompile.lref
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\App.baml
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\ButtonGebruik.g.resources
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\ButtonGebruik.Properties.Resources.resources
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\ButtonGebruik.csproj.GenerateResource.Cache
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\ButtonGebruik.exe
+C:\Users\net04\workspace\VDAB\wpf\ButtonGebruik\obj\Debug\ButtonGebruik.pdb

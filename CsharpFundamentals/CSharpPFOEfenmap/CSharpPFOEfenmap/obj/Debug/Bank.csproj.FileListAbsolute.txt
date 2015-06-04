@@ -4,3 +4,9 @@ C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CSharpPFOE
 C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CSharpPFOEfenmap\bin\Debug\Bank.pdb
 C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CSharpPFOEfenmap\obj\Debug\Bank.exe
 C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CSharpPFOEfenmap\obj\Debug\Bank.pdb
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\CSharpPFOEfenmap\bin\Debug\Bank.exe.config
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\CSharpPFOEfenmap\bin\Debug\Bank.exe
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\CSharpPFOEfenmap\bin\Debug\Bank.pdb
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\CSharpPFOEfenmap\obj\Debug\Bank.csprojResolveAssemblyReference.cache
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\CSharpPFOEfenmap\obj\Debug\Bank.exe
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\CSharpPFOEfenmap\obj\Debug\Bank.pdb

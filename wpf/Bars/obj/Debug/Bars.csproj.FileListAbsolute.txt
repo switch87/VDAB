@@ -60,3 +60,34 @@ C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\Bars\obj\Debug\Bars.Pr
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\Bars\obj\Debug\Bars.csproj.GenerateResource.Cache
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\Bars\obj\Debug\Bars.exe
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\Bars\obj\Debug\Bars.pdb
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\Bars.exe.config
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\Bars.exe
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\Bars.pdb
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\net04\workspace\VDAB\wpf\Bars\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\Bars.csprojResolveAssemblyReference.cache
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\Afdrukvoorbeeld.baml
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\Afdrukvoorbeeld.g.cs
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\BarWindow.g.cs
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\App.g.cs
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\Bars_MarkupCompile.cache
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\Bars_MarkupCompile.lref
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\App.baml
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\BarWindow.baml
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\Bars.g.resources
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\Bars.Properties.Resources.resources
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\Bars.csproj.GenerateResource.Cache
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\Bars.exe
+C:\Users\net04\workspace\VDAB\wpf\Bars\obj\Debug\Bars.pdb

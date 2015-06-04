@@ -59,3 +59,34 @@ C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\BloemSamenstellen\obj\
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\BloemSamenstellen\obj\Debug\BloemSamenstellen.csproj.GenerateResource.Cache
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\BloemSamenstellen\obj\Debug\BloemSamenstellen.exe
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\BloemSamenstellen\obj\Debug\BloemSamenstellen.pdb
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\BloemSamenstellen.exe.config
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\BloemSamenstellen.exe
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\BloemSamenstellen.pdb
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\BloemSamenstellen.csprojResolveAssemblyReference.cache
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\BloemWindow.baml
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\ShinyRed.baml
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\Stijlen.baml
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\BloemWindow.g.cs
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\App.g.cs
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\BloemSamenstellen_MarkupCompile.cache
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\BloemSamenstellen_MarkupCompile.lref
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\App.baml
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\BloemSamenstellen.g.resources
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\BloemSamenstellen.Properties.Resources.resources
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\BloemSamenstellen.csproj.GenerateResource.Cache
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\BloemSamenstellen.exe
+C:\Users\net04\workspace\VDAB\wpf\BloemSamenstellen\obj\Debug\BloemSamenstellen.pdb

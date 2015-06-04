@@ -4,3 +4,9 @@ C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CsTaken\bi
 C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CsTaken\bin\Debug\CsTaken.pdb
 C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CsTaken\obj\Debug\CsTaken.exe
 C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\CsTaken\obj\Debug\CsTaken.pdb
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\CsTaken\bin\Debug\CsTaken.exe.config
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\CsTaken\bin\Debug\CsTaken.exe
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\CsTaken\bin\Debug\CsTaken.pdb
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\CsTaken\obj\Debug\CsTaken.csprojResolveAssemblyReference.cache
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\CsTaken\obj\Debug\CsTaken.exe
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\CsTaken\obj\Debug\CsTaken.pdb

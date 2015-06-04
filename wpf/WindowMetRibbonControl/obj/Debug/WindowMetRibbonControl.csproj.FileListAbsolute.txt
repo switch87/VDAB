@@ -56,3 +56,32 @@ C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\WindowMetRibbonControl
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbonControl.csproj.GenerateResource.Cache
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbonControl.exe
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbonControl.pdb
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\WindowMetRibbonControl.exe.config
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\WindowMetRibbonControl.exe
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\WindowMetRibbonControl.pdb
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbonControl.csprojResolveAssemblyReference.cache
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbon.baml
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbon.g.cs
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\App.g.cs
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbonControl_MarkupCompile.cache
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbonControl_MarkupCompile.lref
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\App.baml
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbonControl.g.resources
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbonControl.Properties.Resources.resources
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbonControl.csproj.GenerateResource.Cache
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbonControl.exe
+C:\Users\net04\workspace\VDAB\wpf\WindowMetRibbonControl\obj\Debug\WindowMetRibbonControl.pdb

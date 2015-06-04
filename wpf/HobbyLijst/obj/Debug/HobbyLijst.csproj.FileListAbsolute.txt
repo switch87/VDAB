@@ -56,3 +56,32 @@ C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\HobbyLijst\obj\Debug\H
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\HobbyLijst\obj\Debug\HobbyLijst.csproj.GenerateResource.Cache
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\HobbyLijst\obj\Debug\HobbyLijst.exe
 C:\Users\net04\Documents\Visual Studio 2013\WpfCursus\wpf\HobbyLijst\obj\Debug\HobbyLijst.pdb
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\HobbyLijst.exe.config
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\HobbyLijst.exe
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\HobbyLijst.pdb
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\HobbyLijst.csprojResolveAssemblyReference.cache
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\HobbyLijstWindow.baml
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\HobbyLijstWindow.g.cs
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\App.g.cs
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\HobbyLijst_MarkupCompile.cache
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\HobbyLijst_MarkupCompile.lref
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\App.baml
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\HobbyLijst.g.resources
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\HobbyLijst.Properties.Resources.resources
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\HobbyLijst.csproj.GenerateResource.Cache
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\HobbyLijst.exe
+C:\Users\net04\workspace\VDAB\wpf\HobbyLijst\obj\Debug\HobbyLijst.pdb

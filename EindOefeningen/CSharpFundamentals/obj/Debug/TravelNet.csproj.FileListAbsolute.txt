@@ -1,1 +1,3 @@
 C:\Users\net04\Documents\Visual Studio 2013\PFCOefeningen\PFTaken\TravelNet\bin\Debug\TravelNet.exe.config
+C:\Users\net04\workspace\VDAB\EindOefeningen\CSharpFundamentals\obj\Debug\TravelNet.csprojResolveAssemblyReference.cache
+C:\Users\net04\workspace\VDAB\EindOefeningen\CSharpFundamentals\bin\Debug\TravelNet.exe.config

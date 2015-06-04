@@ -1,0 +1,16 @@
+﻿@using MVCBierenApplication.Models
+@model List<Bier>
+
+<h2>Bieren Weergeven, opdracht 6.4</h2>
+
+<ul>
+    @foreach ( var bier in Model )
+    {
+        var url= "Verwijder/"+bier.ID;
+        
+        <li>
+            @Html.DisplayFor( m => bier.ID ) - @bier.Naam - @Html.DisplayFor( m => bier.Alcohol )
+            <a href="@url"><img src="~/Images/delete.png" alt="delete"/></a>
+        </li>
+    }
+</ul>

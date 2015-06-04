@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "AndereNaam";
+}
+
+<h2>AndereNaam</h2>
+
+@for (var teller = 0; teller < 10; teller++)
+{
+    <br/>
+    @teller
+}
+
+@{
+    <h2>Countdown</h2>
+    var getal = 10;
+    while (getal > 0)
+    {
+        <p>@getal</p>
+        getal--;
+    }
+}
+
+@{
+    <h2>fibonacci-reeks</h2>
+    <p>0, 1
+    @{
+    List<int> fibo = new List<int>() {0, 1};
+        for (int i = 2; i < 15; i++)
+        {
+            fibo.Add(fibo[i - 2] + fibo[i - 1]);
+            @:, @fibo[i]
+        }
+    }
+        <text>, ...</text></p>
+}

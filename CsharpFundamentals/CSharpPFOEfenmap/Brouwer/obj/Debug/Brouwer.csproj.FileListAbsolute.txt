@@ -4,3 +4,9 @@ C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\Brouwer\bi
 C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\Brouwer\obj\Debug\Brouwer.csprojResolveAssemblyReference.cache
 C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\Brouwer\obj\Debug\Brouwers_linq.exe
 C:\Users\net04\Documents\Visual Studio 2013\Projects\CSharpPFOEfenmap\Brouwer\obj\Debug\Brouwers_linq.pdb
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\Brouwer\bin\Debug\Brouwers_linq.exe.config
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\Brouwer\bin\Debug\Brouwers_linq.exe
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\Brouwer\bin\Debug\Brouwers_linq.pdb
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\Brouwer\obj\Debug\Brouwer.csprojResolveAssemblyReference.cache
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\Brouwer\obj\Debug\Brouwers_linq.exe
+C:\Users\net04\workspace\VDAB\CsharpFundamentals\CSharpPFOEfenmap\Brouwer\obj\Debug\Brouwers_linq.pdb
