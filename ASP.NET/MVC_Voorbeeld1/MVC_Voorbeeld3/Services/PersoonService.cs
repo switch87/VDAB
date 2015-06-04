@@ -40,5 +40,13 @@ namespace MVC_Voorbeeld3.Services
                 p.Wedde += p.Wedde * percentage / 100;
             }
         }
+
+        public List<Persoon> VanTotWedde(decimal van, decimal tot)
+        {
+            return ( from persoon in personen.Values
+                     where persoon.Wedde >= van && persoon.Wedde <= tot
+                     orderby persoon.Wedde
+                     select persoon ).ToList();
+        }
     }
 }

@@ -18,7 +18,12 @@ namespace MVC_Voorbeeld3
             BundleConfig.RegisterBundles( BundleTable.Bundles );
             Application.Lock();
             Application.Add( "aantalBezoeken", 0 );
+
             DefaultModelBinder.ResourceClassKey = "Messages";
+
+            ModelBinders.Binders.Add( typeof( decimal ), new DecimalModelBinder() ); 
+            ModelBinders.Binders.Add( typeof( decimal? ), new DecimalModelBinder() );
+
             Application.UnLock();
         }
 

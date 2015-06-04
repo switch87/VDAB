@@ -48,5 +48,26 @@ namespace MVC_Voorbeeld3.Controllers
                 return View( opslagForm );
             }
         }
+
+        [HttpGet]
+        public ActionResult VanTotWedde()
+        {
+            var form = new VanTotWeddeForm();
+            return View( form );
+        }
+
+        [HttpGet]
+        public ActionResult VanTotWeddeResultaat(VanTotWeddeForm form)
+        {
+            if (this.ModelState.IsValid)
+            {
+                // eventjes geduld nog want de code komt zo
+                form.Personen = persoonService.VanTotWedde( form.VanWedde.Value, form.TotWedde.Value );
+                
+            }
+            return View( "VanTotWedde", form );
+        }
+
+
     }
 }
