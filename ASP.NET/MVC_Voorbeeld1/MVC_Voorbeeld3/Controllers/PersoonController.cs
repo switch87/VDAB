@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace MVC_Voorbeeld3.Controllers
 {
-    public class PersoonController:Controller
+    public class PersoonController : Controller
     {
         private PersoonService persoonService = new PersoonService();
         public ActionResult Index()
@@ -17,13 +17,13 @@ namespace MVC_Voorbeeld3.Controllers
         }
 
         [HttpGet]
-        public ActionResult VerwijderForm(int id)
+        public ActionResult VerwijderForm( int id )
         {
             return View( persoonService.FindByID( id ) );
         }
 
         [HttpPost]
-        public ActionResult Verwijderen(int id)
+        public ActionResult Verwijderen( int id )
         {
             persoonService.Delete( id );
             return RedirectToAction( "Index" );
@@ -37,11 +37,12 @@ namespace MVC_Voorbeeld3.Controllers
         }
 
         [HttpPost]
-        public ActionResult Opslag(OpslagForm opslagForm) {
+        public ActionResult Opslag( OpslagForm opslagForm )
+        {
             if ( this.ModelState.IsValid )
             {
                 persoonService.Opslag( opslagForm.VanWedde.Value, opslagForm.TotWedde.Value, opslagForm.Percentage );
-                return RedirectToAction( "Index" ); 
+                return RedirectToAction( "Index" );
             }
             else
             {
@@ -57,17 +58,34 @@ namespace MVC_Voorbeeld3.Controllers
         }
 
         [HttpGet]
-        public ActionResult VanTotWeddeResultaat(VanTotWeddeForm form)
+        public ActionResult VanTotWeddeResultaat( VanTotWeddeForm form )
         {
-            if (this.ModelState.IsValid)
+            if ( this.ModelState.IsValid )
             {
                 // eventjes geduld nog want de code komt zo
                 form.Personen = persoonService.VanTotWedde( form.VanWedde.Value, form.TotWedde.Value );
-                
+
             }
             return View( "VanTotWedde", form );
         }
 
+        [HttpGet]
+        public ActionResult Toevoegen()
+        {
+            var persoon = new Persoon() { Geslacht = Geslacht.Vrouw };
+            return View( persoon );
+        }
+
+        [HttpPost]
+        public ActionResult Toevoegen( Persoon p )
+        {
+            if (this.ModelState.IsValid)
+            {
+                persoonService.Add( p );
+                return RedirectToAction( "Index" );
+            }
+            return View( p );
+        }
 
     }
 }

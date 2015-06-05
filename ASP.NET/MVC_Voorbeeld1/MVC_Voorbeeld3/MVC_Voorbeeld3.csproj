@@ -189,6 +189,7 @@
     <Content Include="Views\Persoon\VerwijderForm.cshtml" />
     <Content Include="Views\Persoon\Opslag.cshtml" />
     <Content Include="Views\Persoon\VanTotWedde.cshtml" />
+    <Content Include="Views\Persoon\Toevoegen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
