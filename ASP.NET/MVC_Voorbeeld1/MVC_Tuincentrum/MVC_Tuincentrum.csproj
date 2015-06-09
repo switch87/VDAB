@@ -199,7 +199,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Tuincentrum.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ZoekSoortForm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\SoortService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -291,6 +293,7 @@
     <Content Include="Views\Leverancier\Details.cshtml" />
     <Content Include="Views\Leverancier\Edit.cshtml" />
     <Content Include="Views\Leverancier\Index.cshtml" />
+    <Content Include="Views\Soort\ZoekForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

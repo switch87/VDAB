@@ -7,11 +7,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MVC_Tuincentrum.Models;
+using MVC_Tuincentrum.Services;
 
 namespace MVC_Tuincentrum.Controllers
 {
     public class SoortController : Controller
     {
+        private SoortService soortService = new SoortService();
         private MVCTuinCentrumEntities db = new MVCTuinCentrumEntities();
 
         // GET: Soort
@@ -122,6 +124,21 @@ namespace MVC_Tuincentrum.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        // GET: /Soort/Zoekform
+        public ViewResult ZoekForm()
+        {
+            return View( new ZoekSoortForm() );
+        }
+
+        public ViewResult BeginNaam( ZoekSoortForm form )
+        {
+            if ( this.ModelState.IsValid )
+            {
+                form.Soorten = soortService.FindByBeginNaam(form.beginNaam);
+            }
+            return View( "ZoekForm", form );
         }
     }
 }
