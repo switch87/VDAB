@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCBierenApplication", "Web
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_Voorbeeld3", "MVC_Voorbeeld3\MVC_Voorbeeld3.csproj", "{EB6EB2AC-F790-4C72-94BD-432928FE73EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_Tuincentrum", "MVC_Tuincentrum\MVC_Tuincentrum.csproj", "{48406C66-AF80-43AA-9675-1D60FC615972}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EB6EB2AC-F790-4C72-94BD-432928FE73EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB6EB2AC-F790-4C72-94BD-432928FE73EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB6EB2AC-F790-4C72-94BD-432928FE73EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48406C66-AF80-43AA-9675-1D60FC615972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48406C66-AF80-43AA-9675-1D60FC615972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48406C66-AF80-43AA-9675-1D60FC615972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48406C66-AF80-43AA-9675-1D60FC615972}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
