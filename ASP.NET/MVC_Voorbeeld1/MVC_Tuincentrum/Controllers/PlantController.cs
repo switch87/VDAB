@@ -132,5 +132,11 @@ namespace MVC_Tuincentrum.Controllers
             }
             base.Dispose(disposing);
         }
+
+        // GET: Plant/Uploaden/5
+        public ViewResult Uploaden(int id)
+        {
+            return View( id );
+        }
     }
 }
