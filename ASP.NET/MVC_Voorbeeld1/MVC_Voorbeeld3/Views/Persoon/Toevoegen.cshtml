@@ -3,7 +3,7 @@
     ViewBag.Title = "Toevoegen";
 }
 <h2>Persoon toevoegen</h2>
-@using ( Html.BeginForm("Toevoegen") )
+@using ( Html.BeginForm( "Toevoegen" ) )
 {
     @Html.LabelFor( m => m.Voornaam )
     @Html.EditorFor( m => m.Voornaam )
@@ -15,10 +15,14 @@
     @Html.EditorFor( m => m.Wedde )
     @Html.LabelFor( m => m.Paswoord )
     @Html.EditorFor( m => m.Paswoord )
+    @Html.LabelFor( m => m.HerhaalPaswoord )
+    @Html.EditorFor( m => m.HerhaalPaswoord )
     @Html.LabelFor( m => m.Geboren )
     @Html.EditorFor( m => m.Geboren )
-    @Html.LabelFor( m => m.Gehuwd )
-    @Html.EditorFor( m => m.Gehuwd )
+    <div>
+        @Html.EditorFor( m => m.Gehuwd )
+        @Html.LabelFor( m => m.Gehuwd )
+    </div>
     @Html.LabelFor( m => m.Opmerkingen )
     @Html.EditorFor( m => m.Opmerkingen )
     @Html.LabelFor( m => m.Geslacht )
