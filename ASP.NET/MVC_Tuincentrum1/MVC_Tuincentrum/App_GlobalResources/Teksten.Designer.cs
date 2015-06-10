@@ -61,6 +61,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Leveranciers.
+        /// </summary>
+        internal static string Leveranciers {
+            get {
+                return ResourceManager.GetString("Leveranciers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Planten.
+        /// </summary>
+        internal static string Planten {
+            get {
+                return ResourceManager.GetString("Planten", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Soorten.
+        /// </summary>
+        internal static string Soorten {
+            get {
+                return ResourceManager.GetString("Soorten", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Welkom op de verbazingwekkende site met plantjes!.
         /// </summary>
         internal static string Welkom {

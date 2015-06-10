@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Leveranciers" xml:space="preserve">
+    <value>Leveranciers</value>
+  </data>
+  <data name="Planten" xml:space="preserve">
+    <value>Planten</value>
+  </data>
+  <data name="Soorten" xml:space="preserve">
+    <value>Soorten</value>
+  </data>
   <data name="Welkom" xml:space="preserve">
     <value>Welkom op de verbazingwekkende site met plantjes!</value>
   </data>
