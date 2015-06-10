@@ -79,6 +79,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to De verkoopprijs moet liggen tussen {1} en {2}.
+        /// </summary>
+        internal static string RangePrijs {
+            get {
+                return ResourceManager.GetString("RangePrijs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Soorten.
         /// </summary>
         internal static string Soorten {

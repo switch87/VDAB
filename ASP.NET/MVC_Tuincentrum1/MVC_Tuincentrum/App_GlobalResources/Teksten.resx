@@ -123,6 +123,9 @@
   <data name="Planten" xml:space="preserve">
     <value>Planten</value>
   </data>
+  <data name="RangePrijs" xml:space="preserve">
+    <value>De verkoopprijs moet liggen tussen {1} en {2}</value>
+  </data>
   <data name="Soorten" xml:space="preserve">
     <value>Soorten</value>
   </data>
