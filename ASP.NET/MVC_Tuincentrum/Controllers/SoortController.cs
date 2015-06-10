@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using MVC_Tuincentrum.Models;
-using MVC_Tuincentrum.Services;
+using MVC_Tuincentrum1.Models;
+using MVC_Tuincentrum1.Services;
 
-namespace MVC_Tuincentrum.Controllers
+namespace MVC_Tuincentrum1.Controllers
 {
     public class SoortController : Controller
     {

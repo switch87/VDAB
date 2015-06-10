@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MVC_Tuincentrum
+namespace MVC_Tuincentrum1
 {
     public class DecimalModelBinder : IModelBinder
     {

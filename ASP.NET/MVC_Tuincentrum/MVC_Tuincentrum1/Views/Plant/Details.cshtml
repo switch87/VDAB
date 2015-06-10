@@ -1,0 +1,64 @@
+﻿@model MVC_Tuincentrum1.Models.Plant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Plant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Naam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Naam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kleur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kleur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VerkoopPrijs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VerkoopPrijs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Leveranciers.Naam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Leveranciers.Naam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soorten.Naam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soorten.Naam)
+        </dd>
+        <dt>
+            Afbeelding
+        </dt>
+        <dd>
+            <img src="../../Images/Fotos/@(Model.PlantNr).jpg" alt="" height="64"/>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PlantNr }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

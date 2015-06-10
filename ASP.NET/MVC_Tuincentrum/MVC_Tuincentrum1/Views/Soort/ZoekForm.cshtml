@@ -1,0 +1,33 @@
+﻿@model MVC_Tuincentrum1.Models.ZoekSoortForm
+@{
+    ViewBag.Title = "ZoekForm";
+}
+
+<h2>Zoek je soort, maar weet waaraan je begint ;)</h2>
+@using ( Html.BeginForm( "BeginNaam", "Soort", FormMethod.Get ) )
+{
+    @Html.LabelFor( m => m.beginNaam )
+    @Html.ValidationMessageFor( m => m.beginNaam )
+    @Html.EditorFor( m => m.beginNaam )
+    <input type="submit" value="zoeken" />
+}
+@if ( Model.Soorten != null )
+{ <table>
+        <thead>
+            <tr>
+                <th>Soort</th>
+                <th>Magazijnnr</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ( var soort in Model.Soorten )
+            {
+                <tr>
+                    <td>@soort.Naam</td>
+                    <td>@soort.MagazijnNr</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using MVC_Tuincentrum.Models;
+using MVC_Tuincentrum1.Models;
 
-namespace MVC_Tuincentrum.Controllers
+namespace MVC_Tuincentrum1.Controllers
 {
     public class LeverancierController : Controller
     {

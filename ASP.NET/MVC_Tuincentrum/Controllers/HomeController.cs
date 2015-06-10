@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MVC_Tuincentrum.Controllers
+namespace MVC_Tuincentrum1.Controllers
 {
     public class HomeController : Controller
     {
