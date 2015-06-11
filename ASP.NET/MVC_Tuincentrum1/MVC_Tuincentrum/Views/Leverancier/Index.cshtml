@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<MVC_Tuincentrum.Models.Leverancier>
-
 @{
     ViewBag.Title = "Index";
 }
@@ -26,26 +25,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Naam)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Adres)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PostNr)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Woonplaats)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.LevNr }) |
-            @Html.ActionLink("Details", "Details", new { id=item.LevNr }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.LevNr })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostNr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Woonplaats)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id = item.LevNr}) |
+                @Html.ActionLink("Details", "Details", new {id = item.LevNr}) |
+                @Html.ActionLink("Delete", "Delete", new {id = item.LevNr})
+            </td>
+        </tr>
+    }
 
 </table>

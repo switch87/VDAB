@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MVCTuinCentrumModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="MVCTuinCentrumModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008"
+              Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator"
+              xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation"
+              xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Leveranciers">
           <Key>
             <PropertyRef Name="LevNr" />
@@ -75,7 +79,10 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="MVCTuinCentrumModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="MVCTuinCentrumModel" Alias="Self" annotation:UseStrongSpatialTypes="false"
+              xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation"
+              xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation"
+              xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Leverancier">
           <Key>
             <PropertyRef Name="LevNr" />
@@ -85,7 +92,8 @@
           <Property Name="Adres" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PostNr" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Woonplaats" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Planten" Relationship="Self.Planten_LeveranciersPlanten" FromRole="Leveranciers" ToRole="Planten" />
+          <NavigationProperty Name="Planten" Relationship="Self.Planten_LeveranciersPlanten" FromRole="Leveranciers"
+                              ToRole="Planten" />
         </EntityType>
         <EntityType Name="Plant">
           <Key>
@@ -97,8 +105,10 @@
           <Property Name="Levnr" Type="Int32" Nullable="false" />
           <Property Name="Kleur" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="VerkoopPrijs" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <NavigationProperty Name="Leveranciers" Relationship="Self.Planten_LeveranciersPlanten" FromRole="Planten" ToRole="Leveranciers" />
-          <NavigationProperty Name="Soorten" Relationship="Self.Planten_SoortenPlanten" FromRole="Planten" ToRole="Soorten" />
+          <NavigationProperty Name="Leveranciers" Relationship="Self.Planten_LeveranciersPlanten" FromRole="Planten"
+                              ToRole="Leveranciers" />
+          <NavigationProperty Name="Soorten" Relationship="Self.Planten_SoortenPlanten" FromRole="Planten"
+                              ToRole="Soorten" />
         </EntityType>
         <EntityType Name="Soort">
           <Key>
@@ -107,7 +117,8 @@
           <Property Name="SoortNr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Naam" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MagazijnNr" Type="Byte" Nullable="false" />
-          <NavigationProperty Name="Planten" Relationship="Self.Planten_SoortenPlanten" FromRole="Soorten" ToRole="Planten" />
+          <NavigationProperty Name="Planten" Relationship="Self.Planten_SoortenPlanten" FromRole="Soorten"
+                              ToRole="Planten" />
         </EntityType>
         <Association Name="Planten_LeveranciersPlanten">
           <End Role="Leveranciers" Type="MVCTuinCentrumModel.Leverancier" Multiplicity="1" />
@@ -151,7 +162,8 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MVCTuinCentrumModelStoreContainer" CdmEntityContainer="MVCTuinCentrumEntities">
+        <EntityContainerMapping StorageEntityContainer="MVCTuinCentrumModelStoreContainer"
+                                CdmEntityContainer="MVCTuinCentrumEntities">
           <EntitySetMapping Name="Leveranciers">
             <EntityTypeMapping TypeName="MVCTuinCentrumModel.Leverancier">
               <MappingFragment StoreEntitySet="Leveranciers">

@@ -9,6 +9,22 @@ namespace MVC_Tuincentrum
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute("FindPlantenByPrijsBetween", "planten",
+                new {controller = "Plant", action = "FindPlantenBetweenPrijzen"},
+                new
+                {
+                    QueryConstraint = new QueryStringConstraint(
+                        new[] {"minprijs", "maxprijs"})
+                });
+
+            routes.MapRoute("FindPlantenByKleur", "planten",
+                new {Controller = "Plant", action = "FindPlantenVanEenKleur"},
+                new
+                {
+                    QueryConstraint = new QueryStringConstraint(
+                        new[] {"kleur"})
+                });
+
             routes.MapRoute("Alleplanten", "Plantenlijst",
                 new {controller = "Plant", action = "Index"}
                 );

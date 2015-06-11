@@ -14,6 +14,27 @@ namespace MVC_Tuincentrum.Controllers
     {
         private readonly MVCTuinCentrumEntities db = new MVCTuinCentrumEntities();
 
+        public ActionResult FindPlantenBetweenPrijzen(decimal minPrijs, decimal maxPrijs)
+        {
+            var plantenLijst = new List<Plant>();
+            plantenLijst = (from plant in db.Planten
+                where plant.VerkoopPrijs >= minPrijs && plant.VerkoopPrijs <= maxPrijs
+                select plant).ToList();
+            ViewBag.minprijs = minPrijs;
+            ViewBag.maxprijs = maxPrijs;
+            return View(plantenLijst);
+        }
+
+        public ActionResult FindPlantenVanEenKleur(string kleur)
+        {
+            var plantenLijst = new List<Plant>();
+            plantenLijst = (from plant in db.Planten
+                where plant.Kleur == kleur
+                select plant).ToList();
+            ViewBag.kleur = kleur;
+            return View(plantenLijst);
+        }
+
         public ActionResult FindPlantenByLeverancier(int? levnr)
         {
             var plantenLijst = new List<Plant>();

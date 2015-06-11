@@ -1,4 +1,4 @@
-﻿@using System.Runtime.Versioning
+﻿@using MVC_Tuincentrum.App_GlobalResources
 @{
     ViewBag.Title = "Index";
 }
@@ -11,15 +11,15 @@
 </div>
 <div class="row">
     <div class="col-md-4">
-        <h2>@Html.ActionLink( MVC_Tuincentrum.App_GlobalResources.Teksten.Planten, "Index", "Plant" )</h2>
+        <h2>@Html.ActionLink(Teksten.Planten, "Index", "Plant")</h2>
         <p>Overzicht van het plantenassortiment.</p>
     </div>
     <div class="col-md-4">
-        <h2>@Html.ActionLink( MVC_Tuincentrum.App_GlobalResources.Teksten.Soorten, "Index", "Soort" )</h2>
+        <h2>@Html.ActionLink(Teksten.Soorten, "Index", "Soort")</h2>
         <p>Informatie over de diverse soorten planten.</p>
     </div>
     <div class="col-md-4">
-        <h2>@Html.ActionLink( MVC_Tuincentrum.App_GlobalResources.Teksten.Leveranciers, "Index", "Leverancier" )</h2>
+        <h2>@Html.ActionLink(Teksten.Leveranciers, "Index", "Leverancier")</h2>
         <p>De leveranciersgegevens.</p>
     </div>
 </div>

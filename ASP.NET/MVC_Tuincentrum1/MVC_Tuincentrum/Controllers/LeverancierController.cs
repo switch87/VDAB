@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using MVC_Tuincentrum.Models;
 
 namespace MVC_Tuincentrum.Controllers
 {
-    [OverrideActionFilters] // ActionFilters, oa statistieken, uitschakelen voor paginas met betrekking tot deze controller.
+    [OverrideActionFilters]
+    // ActionFilters, oa statistieken, uitschakelen voor paginas met betrekking tot deze controller.
     public class LeverancierController : Controller
     {
-        private MVCTuinCentrumEntities db = new MVCTuinCentrumEntities();
-
+        private readonly MVCTuinCentrumEntities db = new MVCTuinCentrumEntities();
         // GET: Leverancier
         public ActionResult Index()
         {
@@ -29,7 +25,7 @@ namespace MVC_Tuincentrum.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Leverancier leverancier = db.Leveranciers.Find(id);
+            var leverancier = db.Leveranciers.Find(id);
             if (leverancier == null)
             {
                 return HttpNotFound();
@@ -67,7 +63,7 @@ namespace MVC_Tuincentrum.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Leverancier leverancier = db.Leveranciers.Find(id);
+            var leverancier = db.Leveranciers.Find(id);
             if (leverancier == null)
             {
                 return HttpNotFound();
@@ -98,7 +94,7 @@ namespace MVC_Tuincentrum.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Leverancier leverancier = db.Leveranciers.Find(id);
+            var leverancier = db.Leveranciers.Find(id);
             if (leverancier == null)
             {
                 return HttpNotFound();
@@ -111,7 +107,7 @@ namespace MVC_Tuincentrum.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Leverancier leverancier = db.Leveranciers.Find(id);
+            var leverancier = db.Leveranciers.Find(id);
             db.Leveranciers.Remove(leverancier);
             db.SaveChanges();
             return RedirectToAction("Index");
