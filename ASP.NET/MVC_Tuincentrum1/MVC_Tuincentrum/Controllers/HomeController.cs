@@ -2,13 +2,17 @@
 
 namespace MVC_Tuincentrum.Controllers
 {
+    [RoutePrefix( "Thuis" )]
+    [Route( "{action=index}" )]
     public class HomeController : Controller
     {
+        //[Route]
         public ActionResult Index()
         {
             return View();
         }
 
+        //[Route("Over")]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -16,6 +20,7 @@ namespace MVC_Tuincentrum.Controllers
             return View();
         }
 
+        //[Route( "Contacteer" )]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
