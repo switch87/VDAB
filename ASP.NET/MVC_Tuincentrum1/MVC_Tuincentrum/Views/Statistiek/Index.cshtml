@@ -1,0 +1,24 @@
+﻿@using MVC_Tuincentrum.Filters
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Statistiek van deze week</h2>
+<table>
+    <thead>
+    <tr>
+        <th>URL</th>
+        <th>Bezoeken</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var entry in 
+        StatistiekActionFilter.Statistiek)
+    {
+        <tr>
+            <td>@entry.Key</td>
+            <td>@entry.Value</td>
+        </tr>
+    }
+    </tbody>
+</table>
