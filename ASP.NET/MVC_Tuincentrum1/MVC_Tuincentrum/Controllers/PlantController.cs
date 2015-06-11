@@ -3,10 +3,12 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using MVC_Tuincentrum.Filters;
 using MVC_Tuincentrum.Models;
 
 namespace MVC_Tuincentrum.Controllers
 {
+    [StatistiekActionFilter]  //Statistiek bijhouden van alle paginas met betrekking tot deze controller
     public class PlantController : Controller
     {
         private readonly MVCTuinCentrumEntities db = new MVCTuinCentrumEntities();

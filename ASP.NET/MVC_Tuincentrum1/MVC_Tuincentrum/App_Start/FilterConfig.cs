@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace MVC_Tuincentrum
 {
@@ -8,7 +7,8 @@ namespace MVC_Tuincentrum
         public static void RegisterGlobalFilters( GlobalFilterCollection filters )
         {
             filters.Add( new HandleErrorAttribute() );
-            filters.Add(new Filters.StatistiekActionFilter());
+            //filters.Add(new Filters.StatistiekActionFilter());
+
         }
     }
 }
