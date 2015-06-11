@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using System.Web.Mvc.Routing;
 using System.Web.Routing;
 
 namespace MVC_Tuincentrum
@@ -9,7 +10,9 @@ namespace MVC_Tuincentrum
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapMvcAttributeRoutes();
+            var constraintsResolver = new DefaultInlineConstraintResolver();
+            constraintsResolver.ConstraintMap.Add("values", typeof(ValuesConstraint)); 
+            routes.MapMvcAttributeRoutes(constraintsResolver);
 
             routes.MapRoute("FindPlantenByPrijsBetween", "planten",
                 new {controller = "Plant", action = "FindPlantenBetweenPrijzen"},

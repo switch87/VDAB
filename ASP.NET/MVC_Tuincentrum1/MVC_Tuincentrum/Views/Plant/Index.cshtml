@@ -54,6 +54,7 @@
                 @Html.ActionLink("Details", "Details", new {id = item.PlantNr}) |
                 @Html.ActionLink("Delete", "Delete", new {id = item.PlantNr})
                 @Html.ActionLink("Foto uploaden", "Uploaden", new {id = item.PlantNr})
+                <a href="@Url.RouteUrl("btwinex", new { btw="inclusief"})">Prijslijst inclusief BTW</a>
             </td>
         </tr>
     }

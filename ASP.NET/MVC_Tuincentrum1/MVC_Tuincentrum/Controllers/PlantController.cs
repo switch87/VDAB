@@ -211,5 +211,12 @@ namespace MVC_Tuincentrum.Controllers
             var planten = db.Planten.Include(p => p.Leveranciers).Include(p => p.Soorten);
             return View("Index", planten.ToList());
         }
+
+        [Route( "plantenprijzen/{btw:values(inclusief|exclusief)}", Name = "btwinex" )]
+        public ActionResult PrijsLijst(string btw)
+        {
+            ViewBag.Btw = btw; 
+            return View( db.Planten.ToList() );
+        }
     }
 }
