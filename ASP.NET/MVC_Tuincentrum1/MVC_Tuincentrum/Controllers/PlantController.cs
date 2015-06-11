@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -8,10 +9,29 @@ using MVC_Tuincentrum.Models;
 
 namespace MVC_Tuincentrum.Controllers
 {
-    [StatistiekActionFilter]  //Statistiek bijhouden van alle paginas met betrekking tot deze controller
+    [StatistiekActionFilter] //Statistiek bijhouden van alle paginas met betrekking tot deze controller
     public class PlantController : Controller
     {
         private readonly MVCTuinCentrumEntities db = new MVCTuinCentrumEntities();
+
+        public ActionResult FindPlantenByLeverancier(int? levnr)
+        {
+            var plantenLijst = new List<Plant>();
+            plantenLijst = (from plant in db.Planten.Include("Leveranciers")
+                where plant.Leveranciers.LevNr == levnr
+                select plant).ToList();
+            return View(plantenLijst);
+        }
+
+        public ActionResult FindPlantenBySoortNaam(string soortnaam)
+        {
+            var plantenLijst = new List<Plant>();
+            plantenLijst = (from plant in db.Planten.Include("Soorten")
+                where plant.Soorten.Naam.StartsWith(soortnaam)
+                select plant).ToList();
+            return View(plantenLijst);
+        }
+
         // GET: Plant
         public ActionResult Index()
         {
