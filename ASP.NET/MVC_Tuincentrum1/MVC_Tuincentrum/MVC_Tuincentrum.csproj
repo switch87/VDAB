@@ -254,6 +254,7 @@
     <Content Include="Views\Plant\FindPlantenByLeverancier.cshtml" />
     <Content Include="Views\Plant\FindPlantenVanEenKleur.cshtml" />
     <Content Include="Views\Plant\FindPlantenBetweenPrijzen.cshtml" />
+    <Content Include="Views\Leverancier\FindLeveranciersMetPostNr.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

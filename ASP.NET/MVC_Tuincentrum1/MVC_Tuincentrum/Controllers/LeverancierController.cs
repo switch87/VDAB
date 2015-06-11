@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -120,6 +121,17 @@ namespace MVC_Tuincentrum.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        [Route("Leveranciers/{postnr}")]
+        public ActionResult FindLeveranciersMetPostNr(string postnr)
+        {
+            List<Leverancier> leveranciersLijst = new List<Leverancier>();
+            leveranciersLijst = (from Leverancier in db.Leveranciers
+                where Leverancier.PostNr == postnr
+                select Leverancier).ToList();
+            ViewBag.postnr = postnr;
+            return View(leveranciersLijst);
         }
     }
 }

@@ -9,6 +9,8 @@ namespace MVC_Tuincentrum
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
             routes.MapRoute("FindPlantenByPrijsBetween", "planten",
                 new {controller = "Plant", action = "FindPlantenBetweenPrijzen"},
                 new
