@@ -10,6 +10,7 @@ using MVC_Tuincentrum.Models;
 
 namespace MVC_Tuincentrum.Controllers
 {
+    [OverrideActionFilters] // ActionFilters, oa statistieken, uitschakelen voor paginas met betrekking tot deze controller.
     public class LeverancierController : Controller
     {
         private MVCTuinCentrumEntities db = new MVCTuinCentrumEntities();
@@ -20,6 +21,7 @@ namespace MVC_Tuincentrum.Controllers
             return View(db.Leveranciers.ToList());
         }
 
+        [OverrideActionFilters] // Actionfilters enkel voor pagina Details uitschakelen
         // GET: Leverancier/Details/5
         public ActionResult Details(int? id)
         {

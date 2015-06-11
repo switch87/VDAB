@@ -7,7 +7,7 @@ namespace MVC_Tuincentrum
         public static void RegisterGlobalFilters( GlobalFilterCollection filters )
         {
             filters.Add( new HandleErrorAttribute() );
-            //filters.Add(new Filters.StatistiekActionFilter());
+            filters.Add(new Filters.StatistiekActionFilter());
 
         }
     }
