@@ -123,10 +123,11 @@ namespace MVC_Tuincentrum.Controllers
             base.Dispose(disposing);
         }
 
-        [Route("Leveranciers/{postnr}")]
+        [Route("Leveranciers/{postnr?}")]
         public ActionResult FindLeveranciersMetPostNr(string postnr)
         {
-            List<Leverancier> leveranciersLijst = new List<Leverancier>();
+            if (postnr == null) return View("Index", db.Leveranciers);
+            var leveranciersLijst = new List<Leverancier>();
             leveranciersLijst = (from Leverancier in db.Leveranciers
                 where Leverancier.PostNr == postnr
                 select Leverancier).ToList();
