@@ -181,14 +181,35 @@ namespace MVC_Tuincentrum.Controllers
         [HttpPost]
         public ActionResult FotoUpload(int id)
         {
-            if (Request.Files.Count > 0)
-            {
-                var foto = Request.Files[0];
-                var absoluutPadNaarDir = HttpContext.Server.MapPath("~/Images/Fotos");
-                var absoluutPadNaarFoto = Path.Combine(absoluutPadNaarDir, id + ".jpg");
-                foto.SaveAs(absoluutPadNaarFoto);
-            }
+            if (Request.Files.Count <= 0) 
+                return RedirectToAction("Index");
+            var foto = Request.Files[0];
+            var absoluutPadNaarDir = HttpContext.Server.MapPath("~/Images/Fotos");
+            var absoluutPadNaarFoto = Path.Combine(absoluutPadNaarDir, id + ".jpg");
+            foto.SaveAs(absoluutPadNaarFoto);
             return RedirectToAction("Index");
+        }
+
+        [Route("plantinfo/{id:int}")]
+        public ActionResult FindPlantById(int id)
+        {
+            var plant = db.Planten.Find(id);
+            if (plant != null)
+                return View("Details", plant);
+            var planten = db.Planten.Include(p => p.Leveranciers).Include(p => p.Soorten);
+            return View("Index", planten.ToList());
+        }
+
+        [Route("plantinfo/{naam}")]
+        public ActionResult FindPlantByName(string naam)
+        {
+            var plant = (from p in db.Planten
+                where p.Naam == naam
+                select p).FirstOrDefault();
+            if (plant != null)
+                return View("Details", plant);
+            var planten = db.Planten.Include(p => p.Leveranciers).Include(p => p.Soorten);
+            return View("Index", planten.ToList());
         }
     }
 }
