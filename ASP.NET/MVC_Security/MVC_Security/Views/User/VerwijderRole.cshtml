@@ -1,0 +1,10 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+@{
+    ViewBag.Title = "Role verwijderen";
+}
+
+<h2>@Model.Name verwijderen?</h2>
+
+<form method="post" action="~/User/VerwijderRoleDoorvoeren/@Model.Id">
+    <input type="submit" value="Delete"/>
+</form>

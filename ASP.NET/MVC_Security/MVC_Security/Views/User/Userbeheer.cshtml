@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Userbeheer";
+}
+
+<h2>Userbeheer</h2>
+
+<table class="zebra">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Delete user</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var gebruiker in Model)
+    {
+        <tr>
+            <td>@gebruiker.Id</td>
+            <td><a href="UserDetail/@gebruiker.Id">@gebruiker.UserName</a></td>
+            <td align="center">
+                <a href="VerwijderUser/@gebruiker.Id">
+                    <img src="~/Images/delete.png" alt="verwijderen"/>
+                </a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
