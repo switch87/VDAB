@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>JS PF project: het Document Object Model</title>
+    <style type="text/css" media="all">
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            color: #333;
+        }
+
+        img {
+            float: right;
+        }
+    </style>
+
+</head>
+<body>
+<div id="container">
+    <h1 id="kop">Het Document Object Model</h1>
+    <!-- dit is HTML commentaar onzichtbaar in het beeld-->
+    <p><img id="mooi" src="../images/linda.jpg" alt="Linda, een front-end programmeur"/>De meeste programmeurs <em>leven</em> op
+        koffie</p>
+
+    <p>Veel programmeurs zijn liefhebbers van <a id="sf" href="http://en.wikipedia.org/wiki/Science-fiction">science-fiction</a>
+    </p>
+
+    <div class="menu">
+        <h2>Onze programmeertalen</h2>
+        <ul>
+            <li>Javascript</li>
+            <li>PHP</li>
+            <li>ASP.Net</li>
+            <li>Java</li>
+        </ul>
+    </div>
+    <form id="colorado" name="colorChoice" action="" method="">
+        <p>kies een kleur:
+            <label>rood<input class="colorRadio" type="radio" name="color" id="redColor" value="red"/></label>
+            <label>blauw<input class="colorRadio" type="radio" name="color" id="blueColor" value="blue"/></label>
+            <label>wit<input class="colorRadio" type="radio" name="color" id="whiteColor" value="white" checked="checked"/></label>
+        </p>
+    </form>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function () {
+        /* wijzig de titel */
+        var eTitel = document.getElementById('kop');
+        eTitel.innerHTML = "De document tree";
+
+        /* wijzig de tekst van het tweede list item */
+        var eBolletjes = document.getElementsByTagName('li');
+        var nAantal = eBolletjes.length;
+        var e2deItem = eBolletjes[1];
+        e2deItem.removeChild(e2deItem.childNodes[0]);
+        var sTekst = document.createTextNode('c#');
+        e2deItem.appendChild(sTekst);
+
+        /* een nieuw item invoegen achteraan de lijst */
+        var eLijst = document.getElementsByTagName('ul')[0];
+        var eItem = document.createElement('li');
+        var sTekst = document.createTextNode('Perl');
+        eItem.appendChild(sTekst);
+        eLijst.appendChild(eItem);
+
+        /* attributen zetten en wijzigen */
+        var eImg = document.getElementsByTagName('img')[0];
+        eImg.src = "../images/elise.jpg";
+        var sTooltip = "Elise, system engineer";
+        eImg.setAttribute("alt", sTooltip);
+        eImg.setAttribute("title", sTooltip)
+
+        /* Taken */
+        var eKoffie = document.getElementsByTagName('p')[0];
+        eKoffie.innerHTML = eKoffie.innerHTML + " en chocolade";
+
+        var eContainer = document.getElementById('container');
+        var eFooter = document.createElement('div');
+        eFooter.id = "footer";
+        eFooter.innerHTML = "&lt;je vindt een job op de <a href='http://www.vdab.be'>vdab</a> website>";
+        eContainer.appendChild(eFooter);
+
+        var eLink = document.getElementById('sf');
+        eLink.setAttribute("href", "http://www.google.be/search?tbm=isch&q=science-fiction");
+        eLink.setAttribute("target", "_blank");
+    }
+
+    var ColorChoice = document.colorChoice.color;
+    colorChange = function() {
+        for (var i = 0; i < ColorChoice.length; i++) {
+            if (ColorChoice[i].checked == true) {
+                document.body.style.background = ColorChoice[i].value;
+                break;
+            }
+        }
+    }
+    document.getElementById("colorado").addEventListener('click',colorChange);
+    colorChange();
+
+
+
+</script>
+</html>

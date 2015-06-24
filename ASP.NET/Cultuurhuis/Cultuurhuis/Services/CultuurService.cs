@@ -35,5 +35,13 @@ namespace Cultuurhuis.Services
                 return query.ToList();
             }
         }
+
+        public Voorstelling GetVoorstelling(int id)
+        {
+            using (var db = new CultuurHuisMVCEntities())
+            {
+                return db.Voorstellingen.Find(id);
+            }
+        }
     }
 }

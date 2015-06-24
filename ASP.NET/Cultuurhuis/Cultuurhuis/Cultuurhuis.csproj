@@ -146,6 +146,7 @@
     <Compile Include="Models\Klant.cs">
       <DependentUpon>Cultuurhuis.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\MandjeItem.cs" />
     <Compile Include="Models\Reservatie.cs">
       <DependentUpon>Cultuurhuis.tt</DependentUpon>
     </Compile>
@@ -153,6 +154,8 @@
       <DependentUpon>Cultuurhuis.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VoorstellingenInfo.cs" />
+    <Compile Include="Models\VoorstellingExtended.cs" />
+    <Compile Include="Models\VoorstellingProperties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CultuurService.cs" />
   </ItemGroup>
@@ -209,6 +212,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\Reserveren.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
