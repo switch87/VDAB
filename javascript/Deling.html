@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        output {
+            background-color: #CCFFCC;
+            padding: 1em;
+        }
+    </style>
+    <script src="static/js/deling.js"></script>
+    <title>JS PF taak: Deling</title>
+</head>
+<body>
+<article id="container">
+    <h1>JS PF taak: Deling</h1>
+
+    <p>deze opdracht deelt het grootste door het kleinste getal</p>
+    <section>
+        <p>Vul twee getallen in en klik op de knop</p>
+
+        <form name="frmDeling" id="frmDeling" method="get" action="">
+            <p>
+                <label for="getal1">eerste getal</label>
+                <input type="text" name="getal1" id="getal1" size="10"/>
+            </p>
+            <p>
+                <label for="getal2">2de getal</label>
+                <input type="text" name="getal2" id="getal2" size="10"/>
+            </p>
+
+            <p>
+                <label></label>
+                <button type="button" id="deKnop">Go</button>
+            </p>
+            <p>
+                <label>resultaat:</label>
+
+            <div id="output"></div>
+            </p>
+        </form>
+    </section>
+</article>
+</body>
+</html>
