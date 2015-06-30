@@ -1,4 +1,8 @@
 window.onload= function(){
+    var eTitle = document.getElementById('title');
+    eTitle.innerHTML+=" for "+navigator.appName+" - "+navigator.appVersion;
+
+
     var sensors=[
         'document.images',
         'document.layers',
