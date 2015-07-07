@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="static/js/nuttig_lib.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            var sTaal = getCookie('taal');
+            var eBody = document.getElementById('body');
+            if (sTaal!=null){
+                window.location.href = "JS_Taak_taalkeuze_"+sTaal+".html";
+                //ebody.innerHTML='<object type="text/html" data="JS_Taak_taalkeuze'+sTaal+'.html" style="width: 100%; height: 1000px"></object>';
+            }
+            else
+            {
+                eBody.innerHTML= '' +
+                        '<h3>Kies een taal</h3>' +
+                        '<ul>' +
+                                '<li><a class="taal" id="nederlands" href=#>Nederlands</a> </li>'+
+                                '<li><a class="taal" id="frans" href=#>Frans</a></li>'+
+                        '</ul>';
+            }
+
+            var aoTalen = document.getElementsByClassName("taal");
+            for (var i = 0; i < aoTalen.length; i++) {
+                aoTalen[i].addEventListener('click', function(e){
+                    e.preventDefault();
+                    setCookie('taal',this.id,360);
+                    window.location.href = "JS_Taak_taalkeuze_"+this.id+".html";
+                });
+
+            }
+        }
+    </script>
+</head>
+<body id="body">
+
+</body>
+</html>

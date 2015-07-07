@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="static/js/nuttig_lib.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            eClear = document.getElementById("unset");
+            eClear.addEventListener('click', function(e){
+                e.preventDefault();
+                clearCookie('taal');
+                window.location.href = "JS_Taak_taalkeuze.html";
+            });
+        }
+    </script>
+</head>
+<body id="body">
+<h2>NEDERLANDS</h2>
+<a href="#" id="unset">Andere taal</a>
+</body>
+</html>
