@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BierenServiceLibrary", "BierenServiceLibrary\BierenServiceLibrary.csproj", "{1AC9CA00-1060-4FB2-9DE6-3525A1FD3A5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlantenServiceLibrary", "..\PlantenServiceLibrary\PlantenServiceLibrary.csproj", "{BE0A7206-972E-43C7-94BD-92514D52897D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AC9CA00-1060-4FB2-9DE6-3525A1FD3A5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AC9CA00-1060-4FB2-9DE6-3525A1FD3A5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AC9CA00-1060-4FB2-9DE6-3525A1FD3A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AC9CA00-1060-4FB2-9DE6-3525A1FD3A5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE0A7206-972E-43C7-94BD-92514D52897D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE0A7206-972E-43C7-94BD-92514D52897D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE0A7206-972E-43C7-94BD-92514D52897D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE0A7206-972E-43C7-94BD-92514D52897D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
