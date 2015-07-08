@@ -54,18 +54,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\BierenServiceReference\bierenservice.wsdl" />
-    <None Include="Service References\BierenServiceReference\bierenservice.xsd">
+    <None Include="Service References\BierenServiceReference\bierenservice1.wsdl" />
+    <None Include="Service References\BierenServiceReference\bierenservice1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\BierenServiceReference\BierenServiceLibrary.xsd">
+    <None Include="Service References\BierenServiceReference\BierenServiceLibrary1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\BierenServiceReference\ConsoleBierenClient.BierenServiceReference.Bier.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\BierenServiceReference\service.wsdl" />
-    <None Include="Service References\BierenServiceReference\service.xsd">
+    <None Include="Service References\BierenServiceReference\service1.wsdl" />
+    <None Include="Service References\BierenServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
