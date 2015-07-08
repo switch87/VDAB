@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://vdab.be/bierenservice" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://vdab.be/bierenservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://vdab.be/bierenservice/Imports">
+      <xsd:import namespace="http://vdab.be/bierenservice" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/BierenServiceLibrary" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBierenService_GetTotaalAantalBieren_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotaalAantalBieren" />
+  </wsdl:message>
+  <wsdl:message name="IBierenService_GetTotaalAantalBieren_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotaalAantalBierenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBierenService_GetAantalBierenTussenAlcohol_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAantalBierenTussenAlcohol" />
+  </wsdl:message>
+  <wsdl:message name="IBierenService_GetAantalBierenTussenAlcohol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAantalBierenTussenAlcoholResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBierenService_GetBierenMetWoord_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBierenMetWoord" />
+  </wsdl:message>
+  <wsdl:message name="IBierenService_GetBierenMetWoord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBierenMetWoordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBierenService_GetStrafsteBieren_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrafsteBieren" />
+  </wsdl:message>
+  <wsdl:message name="IBierenService_GetStrafsteBieren_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrafsteBierenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBierenService">
+    <wsdl:operation name="GetTotaalAantalBieren">
+      <wsdl:input wsaw:Action="http://vdab.be/bierenservice/IBierenService/GetTotaalAantalBieren" message="tns:IBierenService_GetTotaalAantalBieren_InputMessage" />
+      <wsdl:output wsaw:Action="http://vdab.be/bierenservice/IBierenService/GetTotaalAantalBierenResponse" message="tns:IBierenService_GetTotaalAantalBieren_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAantalBierenTussenAlcohol">
+      <wsdl:input wsaw:Action="http://vdab.be/bierenservice/IBierenService/GetAantalBierenTussenAlcohol" message="tns:IBierenService_GetAantalBierenTussenAlcohol_InputMessage" />
+      <wsdl:output wsaw:Action="http://vdab.be/bierenservice/IBierenService/GetAantalBierenTussenAlcoholResponse" message="tns:IBierenService_GetAantalBierenTussenAlcohol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBierenMetWoord">
+      <wsdl:input wsaw:Action="http://vdab.be/bierenservice/IBierenService/GetBierenMetWoord" message="tns:IBierenService_GetBierenMetWoord_InputMessage" />
+      <wsdl:output wsaw:Action="http://vdab.be/bierenservice/IBierenService/GetBierenMetWoordResponse" message="tns:IBierenService_GetBierenMetWoord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrafsteBieren">
+      <wsdl:input wsaw:Action="http://vdab.be/bierenservice/IBierenService/GetStrafsteBieren" message="tns:IBierenService_GetStrafsteBieren_InputMessage" />
+      <wsdl:output wsaw:Action="http://vdab.be/bierenservice/IBierenService/GetStrafsteBierenResponse" message="tns:IBierenService_GetStrafsteBieren_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

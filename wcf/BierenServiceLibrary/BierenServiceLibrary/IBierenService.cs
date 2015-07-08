@@ -14,5 +14,8 @@ namespace BierenServiceLibrary
 
         [OperationContract]
         List<Bier> GetBierenMetWoord(string woord);
+
+        [OperationContract]
+        List<Bier> GetStrafsteBieren();
     }
 }

@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IISBierenServiceHost", "IIS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IISPlantenServiceHost", "..\PlantenServiceLibrary\IISPlantenServiceHost\IISPlantenServiceHost.csproj", "{3321AFF1-244D-4DDE-BD86-B3D5CA0ED1CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBierenClient", "ConsoleBierenClient\ConsoleBierenClient.csproj", "{92C92629-7D35-49B4-8788-6CA058EE51AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolePlantenClient", "ConsolePlantenClient\ConsolePlantenClient.csproj", "{E0105400-20C3-4618-9C2F-379BC5992307}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{3321AFF1-244D-4DDE-BD86-B3D5CA0ED1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3321AFF1-244D-4DDE-BD86-B3D5CA0ED1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3321AFF1-244D-4DDE-BD86-B3D5CA0ED1CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92C92629-7D35-49B4-8788-6CA058EE51AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92C92629-7D35-49B4-8788-6CA058EE51AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92C92629-7D35-49B4-8788-6CA058EE51AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92C92629-7D35-49B4-8788-6CA058EE51AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0105400-20C3-4618-9C2F-379BC5992307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0105400-20C3-4618-9C2F-379BC5992307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0105400-20C3-4618-9C2F-379BC5992307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0105400-20C3-4618-9C2F-379BC5992307}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
