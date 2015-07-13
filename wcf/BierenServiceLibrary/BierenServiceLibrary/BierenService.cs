@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 
 namespace BierenServiceLibrary
 {
+    [ServiceBehavior( InstanceContextMode = InstanceContextMode.PerCall )] // 16 INSTANCE MANAGEMENT: per-call
     public class BierenService : IBierenService
     {
         private static readonly Bier[] Bieren =
