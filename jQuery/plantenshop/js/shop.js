@@ -48,11 +48,21 @@ $(function(){
         slide: function(event, ui) {
             $("#hoogte_min").val($(this).slider("values", 0));
             $("#hoogte_max").val($(this).slider("values", 1));
+        },
+        stop: function(event, ui) {
+            $("#hoogte_min").val($(this).slider("values", 0));
+            $("#hoogte_max").val($(this).slider("values", 1));
         }
     });
 
     $("#hoogte_min").val($("#slider-range-hoogte").slider("values", 0));
     $("#hoogte_max").val($("#slider-range-hoogte").slider("values", 1));
+
+    //toevoegen van een title text aan de slideknoppen
+    $(".ui-slider-handle","#slider-range-hoogte")
+        .first().attr({'title':'Minimum hoogte'})
+        .end()
+        .last().attr({'title':'Maximum hoogte'})
 
 
     $advZoekenLink.click(function(e){
