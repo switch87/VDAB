@@ -15,6 +15,7 @@
 <!-- stylesheets voor alle pagina's via vaste LINK elementen-->
 <link rel='stylesheet' type='text/css' href='css/plantenshop.css'  />
 <link rel='stylesheet' type='text/css' href='css/forms.css'  />
+    <link rel='stylesheet' type='text/css' href='js/vendor/JQUERY/css/jquery-ui.min.css' />
 
 <!-- pagina-gebondenstylesheets --></head>
 
@@ -22,6 +23,8 @@
 
 <!-- algemene JS scripts voor alle pagina's via vaste SCRIPT elementen-->
 <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="js/vendor/JQUERY/js/jquery-1.11.3.min.js"></script>
+<script src="js/vendor/JQUERY/js/jquery-ui.min.js"></script>
 
 <!-- pagina-gebonden JS scripts-->
 {$paginaScripts}

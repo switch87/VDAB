@@ -6,7 +6,7 @@
 
 //=== includes, Classes===============================================================
 
-require_once("services/plantenservice.php"); 
+require_once("services/plantenservice.php");
 
 $PS 	= new PlantenService();
 
@@ -24,7 +24,7 @@ function getScriptElements($arrScriptSources){
 		else{
 			$str .= "<script type='text/javascript' src='".$arrScriptSources."'></script>";
 			}
-	return $str; 
+	return $str;
 }
 
 function getLinkElements($arrLinkSources){
@@ -39,7 +39,7 @@ function getLinkElements($arrLinkSources){
 		else{
 			$str .= "<link type='text/css' rel='stylesheet' href='".$arrLinkSources."' />";
 			}
-	return $str; 
+	return $str;
 }
 
 //=== getInhoud FUNCTIES========================================================================
@@ -53,8 +53,8 @@ function getMenu(){
 				<li><a href='index.php?page=galerij'>Galerij</a></li>
 				<li><a href='index.php?page=about'>Over ons</a></li>
 			</ul>";
-	
-	return $str; 
+
+	return $str;
 }
 
 //*************************************************
@@ -63,8 +63,8 @@ function getFoutePagina(){
 	$str = "<div class='foutbericht'>";
 	$str .= "Deze pagina kan niet gevonden worden. <a href='index.php'>Keer terug naar de startpagina</a>";
 	$str .= "</div><!-- einde #foutbericht -->";
-	
-	return $str; 
+
+	return $str;
 }
 
 //*************************************************
@@ -109,14 +109,14 @@ function getHome(){
     <div class='kol_half'>Bijzonder fraai zijn onze moderne aluminium cilinderbakken met planten. Ook leverbaar zijn planten in rieten manden of terracotta potten, pergola's, houten scheidingswandjes, bruggetjes, banken etc. Bovendien kan Elka Plant uw bloemperken en tuinpartijen completeren met aantrekkelijke waterpartijen zoals kleine en grotere watervallen en vijvers in verschillende vormen en afmetingen, met daarin exclusief fonteinen en waterzuilen, compleet met onderwater verlichting. Zeer spectaculair is de speciale waterstraal, die vele meters overbrugt en - d.m.v. elektronische programmering - lange en korte 'stukjes' waterstraal kan spuiten. Neemt u contact met ons op, zodat wij gezamenlijk uw project kunnen bespreken. Het resultaat zal een perfecte presentatie zijn.
     </div>
   </section>";
-		
-	return $str; 
+
+	return $str;
 }
 
 //*************************************************
 function getAbout(){
 //about pagina
-	
+
 	$str =  "<article>
 <h2>Wie zijn we en wat doen we?</h2>
 <section class='no-toc overbodig'>
@@ -271,7 +271,7 @@ function getAbout(){
   </ul>
 </section>
 </article>";
-  
+
 	return $str;
 }
 
@@ -279,11 +279,11 @@ function getAbout(){
 function getPlanten($soort_id, $kleur, $hoogte_min, $hoogte_max){
 	//Plantenlijst via PHP
 	//non-ajax
-	
+
 	global $PS;
-	
+
 	//======Componenten===================
-	
+
 	$tbl_Planten 		= $PS->geefTabelPlantenAdvanced($soort_id, $kleur, $hoogte_min, $hoogte_max); //tabel
 	$soortendropdown 	= $PS->geefDDAlleSoorten();//dropdown
 	$kleurendropdown 	= $PS->geefDDAlleKleuren();//array van kleuren
@@ -293,14 +293,14 @@ function getPlanten($soort_id, $kleur, $hoogte_min, $hoogte_max){
 	$kleuren_dd 		= $kleurendropdown	->parse();
 
 	//======output===================
-	
+
 	$str =  "<section>
 			<h2>Ons plantenaanbod</h2>
     		<p>Om te kunnen bestellen moet je een geregistreerde klant zijn: <a href='index.php?page=registreer'>registreer hier</a></p>
 			</section>";
-	
-	
-	//zoeken 
+
+
+	//zoeken
 	$str .= "<section>
 			<div id='zoeken'>
       		<p><a id='adv_zoeken_link' href='#'>geavanceerd zoeken</a></p>
@@ -308,31 +308,29 @@ function getPlanten($soort_id, $kleur, $hoogte_min, $hoogte_max){
 			<form name='frm1' id='frm1' class='cmxform' action='index.php' method='get'>
 			<input type='hidden' name='page' value='shop' />
 			<div><label for='soort_id'>Soorten: </label>". $soorten_dd . "</div>";
-    
+
 	//adv zoeken
 		$str .= "<!--start geavanceerd zoeken -->
-				<div id='adv_zoeken' style='display:none' >"; // 
-		
+				<div id='adv_zoeken' >"; //
+
 		$str .= "<div><label for='kleur'>kleur: </label>". $kleuren_dd . "</div>";
 		$str .= "<div>
 					<label for='hoogte'>hoogte tussen: </label>
 					<div class='controlbox vert'>
-					<input type='text' id='hoogte_min' name='hoogte_min' size='4' class='kort' value='0'  /> en
-					<input type='text' id='hoogte_max' name='hoogte_max' size='4' class='kort' value='5000' />
+					<input type='text' id='hoogte_min' name='hoogte_min' size='4' class='kort'   /> en
+					<input type='text' id='hoogte_max' name='hoogte_max' size='4' class='kort'  />
 					</div>
 					</div>";
-						
-		$str .= "<div>
-					<label></label>
-					<div class='controlbox vert'>
 
-					<!--start slider -->
-					
-					<!--einde slider -->
-					
-					</div>
-					</div>";								
-					
+    $str .= "<div>
+<label></label>
+<div class='controlbox vert'>
+<!--start slider -->
+<div id='slider-range-hoogte' class='slider'></div>
+<!--einde slider -->
+</div>
+</div>";
+
 		$str .= "</div>
 				<!--  einde geavanceerd zoeken -->";
 	  
@@ -351,24 +349,24 @@ function getPlanten($soort_id, $kleur, $hoogte_min, $hoogte_max){
 //*************************************************
 function getRegistreer(){
 	//Home pagina
-	
+
 	global $PS;
-	
+
 	//======Componenten===================
-	
+
 	$soortendd 	= $PS->geefDDAlleSoortenMultiple();//dropdown multiple select
 	//keuzelijst object. method parse() returnt HTML
 	$soortendropdown = $soortendd->parse();
-	
-		
-	//======inhoud===================	
-	
-		
+
+
+	//======inhoud===================
+
+
 		$str = "<section>
 				<h2>Registreer</h2>
     			<p>Verplichte velden zijn aangeduid met een asterisk (<abbr class='verplicht' title='verplicht'>*</abbr>).</p>
   				</section>";
-		
+
   		$str .= "<section>
 		
 				  <form id='regForm' name='regForm' method='get' action='reflect_data.php'>
@@ -412,7 +410,7 @@ function getRegistreer(){
 						  Vrouw </label>
 					  </div>
 					</fieldset>";
-					
+
 			$str .= "<fieldset>
 					  <legend>Uw groene keuzes</legend>
 					  <div>
@@ -434,11 +432,11 @@ function getRegistreer(){
 					    </div>
 					  <div>
 						<label for='agree'>U zoekt vnl</label>";
-			
+
 			$str .= $soortendropdown;
-					 
+
 			$str .= "</div></fieldset>";
-			
+
 			$str .= "<fieldset>
 					  <legend>Aanmelding</legend>
 					  <div>
@@ -456,7 +454,7 @@ function getRegistreer(){
 						<input type='password' title='herhaal uw wachtwoord'  id='ww2' name='ww2'  />
 					  </div>
 					</fieldset>";
-			
+
 			$str .= "<fieldset>
 					  <legend>Promoties</legend>
 					  <div>
@@ -465,7 +463,7 @@ function getRegistreer(){
 					  	<input  type='email' title='mijn emailadres'   id='email' name='email'  disabled='disabled' />
 					  </div>
 					</fieldset>";
-					
+
 			$str .= "<fieldset>
 					  <legend>Bevestig</legend>
 					  <div>
@@ -475,9 +473,9 @@ function getRegistreer(){
 					</fieldset>
 				  </form>
 				  ";
-		
-		
-	return $str; 
+
+
+	return $str;
 }
 
 //*************************************************
@@ -488,7 +486,7 @@ function getVerzorging(){
 				<p>Een groot voordeel van vaste planten en kruiden is dat ze weinig onderhoud vragen. Zeker als u voldoende verzorgingsmaatregelen treft.<br />
 				Een beginnersfout is vaak om eerst de planten te kiezen, en zich dan pas af te vragen hoe de grond in de tuin is. Hoewel de grondsoort een vast gegeven is, kun je die natuurlijk wel verbeteren. Laat de aanwezige grond altijd het uitgangspunt zijn bij de plantkeuze. Alle planten groeien het beste en bloeien het mooist als de grond voldoende lucht bevat en vocht kan vasthouden. Anders gezegd: als de bodem goed van structuur is.</p>
 				</section>";
-				
+
   		$str .= "<section>
 				
 				<!--start div verzorging-->
@@ -535,8 +533,8 @@ function getVerzorging(){
 				</div>
 				<!--einde verzorging-->
 				</section>";
-	
-	return $str; 
+
+	return $str;
 }
 
 //*************************************************
@@ -546,10 +544,10 @@ function getGalerij(){
 		<section>
 		<h2>Fotogalerij</h2>
     	<p>Enkele soorten:</p>";
-		
+
 		//extra knoppen hier
 		$str .= "";
-		
+
 		$str .= "</section>";
 		$str .= "
 		<div id='thumblist'>
@@ -626,13 +624,13 @@ function getGalerij(){
     	<img src='images/planten/th_kniphofia.jpg' /></a>
 		<figcaption><b>Kniphofia 'Vuurbal'</b><br>De mooiste kniphofiasoort</figcaption>
     	</figure>
-		</div>";	
-			
-	return $str; 
+		</div>";
+
+	return $str;
 }
 
 function getUsernameDialog(){
-	
+
 	$str = "<!-- ui-dialog -->
    			<div id='dialog_username' class='dialoogvenster' title='Uw gebruikersnaam'>
     		<p>Uw gebruikersnaam is een unieke naam waarmee u wil aanmelden op het systeem. <br />andere gebruikers kennen je onder die naam, niet je echte naam. Die enkel bekend bij de beheerder van de website</p>
@@ -640,8 +638,8 @@ function getUsernameDialog(){
     		<p>De gebruikersnaam moet uniek zijn, als iemand anders ze al heeft zal je gevraagd worden een andere te kiezen</p>
 			</div>
   			<!-- ui-dialog -->";
-  
-	return $str; 
+
+	return $str;
 }
 
 ?>
