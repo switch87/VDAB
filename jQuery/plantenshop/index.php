@@ -99,6 +99,7 @@ else {
 		$tpl['body_id'] 				= "home";	
 		//content
 		$tpl['rechts'] 					= getHome();
+	$tpl['paginaScripts'] = getScriptElements("js/home.js");
 		
 }
 
